@@ -739,7 +739,7 @@ body { padding-top: 56px; }
 /* ═══ FORM ELEMENTE ═══ */
 input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select {
   width: 100%; padding: 14px 16px; font-size: 1rem; border: 2px solid var(--gray-200);
-  border-radius: var(--radius); background: var(--white); transition: border-color 0.2s; -webkit-appearance: none;
+  border-radius: var(--radius); background: var(--white); color: var(--gray-900); transition: border-color 0.2s; -webkit-appearance: none;
 }
 input:focus, select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(245,158,11,0.15); }
 *:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
@@ -1127,8 +1127,9 @@ input[type="range"]::-moz-range-thumb {
 .tariff-desc { font-size: 0.75rem; color: var(--gray-400); }
 
 /* FAQ */
-.faq-section { margin: 32px 0 20px; }
-.faq-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; }
+.faq-section { padding: 40px 0 20px; }
+.faq-section .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
+.faq-section h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 20px; text-align: center; color: var(--gray-900); }
 details { background: var(--white); border-radius: var(--radius); margin-bottom: 8px; box-shadow: var(--shadow); }
 details summary { padding: 14px 16px; cursor: pointer; font-weight: 600; font-size: 0.9rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
 details summary::-webkit-details-marker { display: none; }
@@ -1897,17 +1898,22 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq-section" id="faq-section" aria-label="Häufige Fragen">
-      <h2>Häufige Fragen</h2>
-      <details><summary>Was kostet eine PV-Anlage mit Speicher 2026?</summary><div class="faq-body">Eine PV-Anlage kostet ca. 1.200–1.800 € pro kWp. Ein Speicher ca. 500–900 € pro kWh. Eine 10 kWp Anlage mit 10 kWh Speicher: ca. 18.000–26.000 € (0% MwSt seit 2023).</div></details>
-      <details><summary>Wie lange dauert die Amortisation?</summary><div class="faq-body">Typischerweise 8–14 Jahre. Je höher der Eigenverbrauch und Strompreis, desto schneller.</div></details>
-      <details><summary>Wie hoch ist die Einspeisevergütung?</summary><div class="faq-body">Ca. 8,03 ct/kWh für Anlagen bis 10 kWp (Teileinspeisung). 20 Jahre gesetzlich garantiert. Sinkt halbjährlich um ca. 1%.</div></details>
-      <details><summary>Lohnt sich ein Batteriespeicher?</summary><div class="faq-body">Ein Speicher erhöht den Eigenverbrauch von ca. 25-35% auf 50-70%. Da selbst verbrauchter Strom ca. 32 ct/kWh spart vs. 8 ct/kWh Einspeisung, lohnt sich der Speicher oft trotz höherer Investition.</div></details>
-      <details><summary>Welche Förderungen gibt es?</summary><div class="faq-body">0% MwSt auf PV-Anlagen (seit 2023). KfW-Kredite (KfW 270). Regionale Programme variieren – informiere dich auf foerderdatenbank.de.</div></details>
-    </section>
   </section>
 </main>
+
+<!-- FAQ (immer sichtbar, außerhalb der Ergebnisseite) -->
+<section class="faq-section" id="faq-section" aria-label="Häufige Fragen">
+  <div class="container">
+    <h2>Häufige Fragen</h2>
+    <details><summary>Was kostet eine PV-Anlage mit Speicher 2026?</summary><div class="faq-body">Eine PV-Anlage kostet ca. 1.200–1.800 € pro kWp. Ein Speicher ca. 500–900 € pro kWh. Eine 10 kWp Anlage mit 10 kWh Speicher: ca. 18.000–26.000 € (0% MwSt seit 2023).</div></details>
+    <details><summary>Wie lange dauert die Amortisation?</summary><div class="faq-body">Typischerweise 8–14 Jahre. Je höher der Eigenverbrauch und Strompreis, desto schneller.</div></details>
+    <details><summary>Wie hoch ist die Einspeisevergütung?</summary><div class="faq-body">Ca. 8,03 ct/kWh für Anlagen bis 10 kWp (Teileinspeisung). 20 Jahre gesetzlich garantiert. Sinkt halbjährlich um ca. 1%.</div></details>
+    <details><summary>Lohnt sich ein Batteriespeicher?</summary><div class="faq-body">Ein Speicher erhöht den Eigenverbrauch von ca. 25-35% auf 50-70%. Da selbst verbrauchter Strom ca. 32 ct/kWh spart vs. 8 ct/kWh Einspeisung, lohnt sich der Speicher oft trotz höherer Investition.</div></details>
+    <details><summary>Welche Förderungen gibt es?</summary><div class="faq-body">0% MwSt auf PV-Anlagen (seit 2023). KfW-Kredite (KfW 270). Regionale Programme variieren – informiere dich auf foerderdatenbank.de.</div></details>
+    <details><summary>Wie finde ich den besten Anbieter?</summary><div class="faq-body">Vergleiche mindestens 3 Angebote. Achte auf Modulqualität (25+ Jahre Garantie), Wechselrichter-Marke und Montage-Erfahrung. Über <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600">Tarifcheck.de</a> erhältst du kostenlos bis zu 3 Angebote von geprüften Fachbetrieben.</div></details>
+    <details><summary>Welchen Stromtarif brauche ich mit PV?</summary><div class="faq-body">Mit PV sinkt dein Netzbezug. Achte auf niedrige Grundgebühren und prüfe dynamische Tarife (z.B. Tibber). Für Wärmepumpen gibt es spezielle günstigere Tarife. <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600">Vergleiche jetzt deinen Tarif</a>.</div></details>
+  </div>
+</section>
 
 <!-- Sticky CTA -->
 <div class="sticky-cta" id="stickyCta">
