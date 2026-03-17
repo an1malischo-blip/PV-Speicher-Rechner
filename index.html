@@ -575,22 +575,115 @@ body {
   border-color: rgba(71,85,105,0.5);
 }
 
-/* Alte Header-Klassen beibehalten für Fallback */
-.header {
-  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
-  padding: 32px 0 24px; text-align: center; border-bottom: 3px solid var(--primary);
-  display: none;
+/* ═══ SITE HEADER (sticky) ═══ */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(15,23,42,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.header h1 { font-size: 1.5rem; font-weight: 800; color: var(--gray-900); margin-bottom: 12px; line-height: 1.3; }
-.header .subheadline { font-size: 0.95rem; color: var(--gray-500); max-width: 500px; margin: 0 auto 16px; }
+.site-header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; max-width: 900px; margin: 0 auto;
+}
+.site-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: #F1F5F9; font-weight: 800; font-size: 1.05rem;
+}
+.site-logo-icon {
+  width: 32px; height: 32px; background: linear-gradient(135deg, var(--primary), var(--accent-dark));
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; color: #fff;
+}
+.site-nav { display: flex; align-items: center; gap: 6px; }
+.nav-link {
+  color: #94A3B8; text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  padding: 6px 12px; border-radius: 6px; transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.nav-link:hover, .nav-link.active { color: #F1F5F9; background: rgba(255,255,255,0.08); }
+.nav-link-cta {
+  color: #0F172A; background: var(--primary); font-weight: 700;
+  padding: 8px 16px; border-radius: 8px; font-size: 0.82rem;
+  text-decoration: none; transition: background 0.2s;
+}
+.nav-link-cta:hover { background: var(--primary-dark); }
+.mobile-menu-btn {
+  display: none; background: none; border: none; color: #F1F5F9;
+  cursor: pointer; padding: 6px;
+}
+@media (max-width: 640px) {
+  .site-nav .nav-link { display: none; }
+  .mobile-menu-btn { display: block; }
+  .site-nav.open .nav-link {
+    display: block; position: absolute; top: 100%; left: 0; right: 0;
+    background: rgba(15,23,42,0.98); backdrop-filter: blur(12px);
+    padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .site-nav.open { position: static; }
+}
+/* Offset body for fixed header */
+body { padding-top: 56px; }
+.hero-landing { margin-top: -56px; padding-top: 56px; }
 
-.trust-badges { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
-.trust-badge {
-  display: inline-flex; align-items: center; gap: 6px; background: var(--white);
-  border: 1px solid var(--gray-200); border-radius: 20px; padding: 6px 14px;
-  font-size: 0.8rem; color: var(--gray-700);
+/* ═══ BLOG SECTION ═══ */
+.blog-section {
+  padding: 60px 0 40px;
+  background: var(--bg);
 }
-.trust-badge svg { flex-shrink: 0; }
+.blog-section .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
+.blog-header { text-align: center; margin-bottom: 40px; }
+.blog-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--gray-900); margin-bottom: 8px; }
+.blog-header p { font-size: 0.95rem; color: var(--gray-500); max-width: 600px; margin: 0 auto; }
+.blog-article {
+  background: var(--white); border-radius: var(--radius); padding: 28px 24px;
+  box-shadow: var(--shadow); margin-bottom: 24px;
+}
+.blog-article h3 {
+  font-size: 1.15rem; font-weight: 700; color: var(--gray-900);
+  margin-bottom: 12px; line-height: 1.4;
+}
+.blog-article h4 {
+  font-size: 0.95rem; font-weight: 700; color: var(--gray-800);
+  margin: 20px 0 8px;
+}
+.blog-article p {
+  font-size: 0.9rem; line-height: 1.7; color: var(--gray-600);
+  margin-bottom: 12px;
+}
+.blog-article ul {
+  margin: 8px 0 16px 20px; padding: 0;
+}
+.blog-article li {
+  font-size: 0.9rem; line-height: 1.7; color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.blog-article .blog-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #0F172A; font-weight: 700; font-size: 0.85rem;
+  padding: 10px 20px; border-radius: 8px; text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s; margin-top: 8px;
+}
+.blog-article .blog-cta:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+.blog-toc {
+  background: var(--white); border-radius: var(--radius); padding: 20px 24px;
+  box-shadow: var(--shadow); margin-bottom: 32px; border-left: 4px solid var(--primary);
+}
+.blog-toc h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; color: var(--gray-900); }
+.blog-toc ol { margin: 0; padding: 0 0 0 20px; }
+.blog-toc li { margin-bottom: 6px; }
+.blog-toc a { color: var(--primary-dark); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+.blog-toc a:hover { text-decoration: underline; }
+.blog-key-figure {
+  display: flex; align-items: center; gap: 12px;
+  background: linear-gradient(135deg, #FFFBEB, #FEF3C7); border-radius: 8px;
+  padding: 14px 18px; margin: 16px 0;
+}
+[data-theme="dark"] .blog-key-figure { background: linear-gradient(135deg, #44330a, #3d2e09); }
+.blog-key-figure .fig-val { font-size: 1.3rem; font-weight: 800; color: var(--primary-dark); white-space: nowrap; }
+.blog-key-figure .fig-desc { font-size: 0.85rem; color: var(--gray-600); }
 
 /* Hero responsive */
 @media (max-width: 480px) {
@@ -1080,9 +1173,10 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 [data-reveal-delay="3"] { transition-delay: 0.3s; }
 
 @media print {
-  .hero-landing, .features-strip, .calc-intro, .progress-wrap, .sticky-cta, .tariff-section, .btn-row, .btn-secondary,
+  .site-header, .hero-landing, .features-strip, .calc-intro, .progress-wrap, .sticky-cta, .tariff-section, .btn-row, .btn-secondary,
   .header .trust-badges, .faq-section, .slider-section, .action-bar,
-  .urgency-banner, .social-proof { display: none !important; }
+  .urgency-banner, .social-proof, .blog-section { display: none !important; }
+  body { padding-top: 0; }
   .result-page { display: block !important; padding-bottom: 0; }
   .kpi-card { break-inside: avoid; }
   body { background: white; }
@@ -1201,6 +1295,25 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 <body>
 
 <a href="#rechner" class="skip-link">Zum Rechner springen</a>
+
+<!-- ═══ SITE HEADER ═══ -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="#" class="site-logo" onclick="location.reload();return false">
+      <span class="site-logo-icon" aria-hidden="true">☀</span>
+      <span>PV-Rechner</span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation">
+      <a href="#rechner" class="nav-link" onclick="startCalculator()">Rechner</a>
+      <a href="#blog" class="nav-link">Ratgeber</a>
+      <a href="#faq-section" class="nav-link">FAQ</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="nav-link-cta">Angebot sichern</a>
+      <button class="mobile-menu-btn" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menü" type="button">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
 
 <!-- ═══ HERO LANDING PAGE ═══ -->
 <section class="hero-landing" id="heroLanding" role="banner">
@@ -1785,7 +1898,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
     </section>
 
     <!-- FAQ -->
-    <section class="faq-section" aria-label="Häufige Fragen">
+    <section class="faq-section" id="faq-section" aria-label="Häufige Fragen">
       <h2>Häufige Fragen</h2>
       <details><summary>Was kostet eine PV-Anlage mit Speicher 2026?</summary><div class="faq-body">Eine PV-Anlage kostet ca. 1.200–1.800 € pro kWp. Ein Speicher ca. 500–900 € pro kWh. Eine 10 kWp Anlage mit 10 kWh Speicher: ca. 18.000–26.000 € (0% MwSt seit 2023).</div></details>
       <details><summary>Wie lange dauert die Amortisation?</summary><div class="faq-body">Typischerweise 8–14 Jahre. Je höher der Eigenverbrauch und Strompreis, desto schneller.</div></details>
@@ -1805,6 +1918,205 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 
 <!-- Toast-Notification -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ═══ BLOG / RATGEBER ═══ -->
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <h2>Ratgeber: Photovoltaik & Stromspeicher 2026</h2>
+      <p>Alles, was du vor dem Kauf einer Solaranlage wissen musst — verständlich erklärt, mit aktuellen Zahlen.</p>
+    </div>
+
+    <nav class="blog-toc">
+      <h3>Inhaltsverzeichnis</h3>
+      <ol>
+        <li><a href="#blog-kosten">Was kostet eine PV-Anlage 2026?</a></li>
+        <li><a href="#blog-rendite">Rendite & Amortisation berechnen</a></li>
+        <li><a href="#blog-speicher">Lohnt sich ein Batteriespeicher?</a></li>
+        <li><a href="#blog-eigenverbrauch">Eigenverbrauch maximieren</a></li>
+        <li><a href="#blog-foerderung">Förderungen & Steuervorteile</a></li>
+        <li><a href="#blog-stromtarif">Den richtigen Stromtarif wählen</a></li>
+        <li><a href="#blog-anbieter">Solaranlage kaufen: Anbieter vergleichen</a></li>
+      </ol>
+    </nav>
+
+    <!-- Artikel 1: Kosten -->
+    <article class="blog-article" id="blog-kosten">
+      <h3>1. Was kostet eine Photovoltaikanlage 2026?</h3>
+      <p>Die Preise für Solaranlagen sind in den letzten Jahren deutlich gefallen. Gleichzeitig ist die Technologie effizienter geworden. Eine Investition in PV lohnt sich 2026 mehr denn je.</p>
+
+      <div class="blog-key-figure">
+        <span class="fig-val">1.200–1.600 €</span>
+        <span class="fig-desc">pro kWp (netto) — durchschnittlicher Preis für eine Aufdach-Anlage inkl. Montage (Stand: März 2026)</span>
+      </div>
+
+      <h4>Preisbeispiele nach Anlagengröße</h4>
+      <ul>
+        <li><strong>5 kWp</strong> (kleines Dach, 2 Personen): ca. 7.000–9.000 € — produziert ca. 4.500–5.000 kWh/Jahr</li>
+        <li><strong>10 kWp</strong> (mittleres Dach, 3-4 Personen): ca. 12.000–16.000 € — produziert ca. 9.000–10.000 kWh/Jahr</li>
+        <li><strong>15 kWp</strong> (großes Dach, E-Auto/Wärmepumpe): ca. 18.000–24.000 € — produziert ca. 13.500–15.000 kWh/Jahr</li>
+      </ul>
+
+      <p>Seit dem 1. Januar 2023 gilt die <strong>Mehrwertsteuerbefreiung (0% MwSt)</strong> auf PV-Anlagen bis 30 kWp. Das bedeutet: Du zahlst den Nettopreis — ohne 19% MwSt. Damit sind Solaranlagen effektiv um knapp ein Fünftel günstiger geworden.</p>
+
+      <h4>Was beeinflusst den Preis?</h4>
+      <ul>
+        <li><strong>Dachtyp:</strong> Schrägdach ist günstiger als Flachdach (Aufständerung nötig)</li>
+        <li><strong>Modultyp:</strong> Mono-PERC-Module bieten das beste Preis-Leistungs-Verhältnis, TOPCon/HJT-Module sind effizienter aber teurer</li>
+        <li><strong>Wechselrichter:</strong> String-Wechselrichter (günstiger) vs. Mikro-Wechselrichter (höherer Ertrag bei Verschattung)</li>
+        <li><strong>Region:</strong> In ländlichen Gebieten sind Installationskosten oft niedriger als in Großstädten</li>
+        <li><strong>Speicher:</strong> Ein Batteriespeicher addiert ca. 500–800 €/kWh zum Gesamtpreis</li>
+      </ul>
+
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Jetzt Preise vergleichen auf Tarifcheck.de →</a>
+    </article>
+
+    <!-- Artikel 2: Rendite -->
+    <article class="blog-article" id="blog-rendite">
+      <h3>2. Rendite einer Solaranlage: So rechnest du richtig</h3>
+      <p>Eine Photovoltaikanlage ist nicht nur gut für die Umwelt — sie ist auch eine der besten Geldanlagen. Die Rendite einer PV-Anlage liegt typischerweise bei <strong>5–10% pro Jahr</strong>, und das steuerfrei.</p>
+
+      <div class="blog-key-figure">
+        <span class="fig-val">8–12 Jahre</span>
+        <span class="fig-desc">typische Amortisationszeit — danach produziert deine Anlage bis zu 20 Jahre lang kostenlosen Strom</span>
+      </div>
+
+      <h4>Wie berechnet sich die Rendite?</h4>
+      <p>Die PV-Rendite setzt sich aus zwei Einnahmeströmen zusammen:</p>
+      <ul>
+        <li><strong>Eigenverbrauch:</strong> Jede kWh, die du selbst nutzt, spart dir den vollen Strompreis (ca. 32–36 ct/kWh). Das ist der größte Hebel.</li>
+        <li><strong>Einspeisung:</strong> Überschüssiger Strom wird ins Netz eingespeist und mit der gesetzlich garantierten Einspeisevergütung vergütet (ca. 8,03 ct/kWh für Anlagen bis 10 kWp).</li>
+      </ul>
+
+      <h4>PV-Rendite vs. klassische Geldanlagen</h4>
+      <ul>
+        <li><strong>Solaranlage:</strong> 5–10% p.a. — steuerfrei (Eigenverbrauch unter 30 kWp)</li>
+        <li><strong>ETF-Sparplan:</strong> Ø 7% p.a. — abzüglich ca. 26% Kapitalertragssteuer = effektiv ~5,2%</li>
+        <li><strong>Tagesgeld:</strong> 2,0–2,5% p.a. — ebenfalls steuerpflichtig</li>
+        <li><strong>Inflation:</strong> ca. 2,0% — frisst sichere Anlagen auf</li>
+      </ul>
+      <p>Der entscheidende Vorteil: Strom aus Eigenverbrauch ist <strong>steuerfrei</strong>. Damit schlägt eine PV-Anlage die meisten Geldanlagen nach Steuern deutlich.</p>
+
+      <a href="#rechner" class="blog-cta" onclick="startCalculator()">Deine persönliche Rendite berechnen →</a>
+    </article>
+
+    <!-- Artikel 3: Speicher -->
+    <article class="blog-article" id="blog-speicher">
+      <h3>3. Batteriespeicher: Wann lohnt er sich wirklich?</h3>
+      <p>Ein Batteriespeicher erhöht deinen Eigenverbrauch von typischerweise 25–35% auf 50–70%. Ob sich die Mehrkosten rechnen, hängt von mehreren Faktoren ab.</p>
+
+      <div class="blog-key-figure">
+        <span class="fig-val">500–800 €/kWh</span>
+        <span class="fig-desc">Kosten pro kWh Speicherkapazität (2026) — ein 10 kWh Speicher kostet ca. 5.000–8.000 €</span>
+      </div>
+
+      <h4>Wann lohnt sich ein Speicher?</h4>
+      <ul>
+        <li><strong>Hoher Abendverbrauch:</strong> Familien, die tagsüber arbeiten und abends viel Strom nutzen, profitieren am meisten</li>
+        <li><strong>E-Auto:</strong> Wer das E-Auto über Nacht lädt, kann gespeicherten Solarstrom nutzen statt teuren Netzstrom</li>
+        <li><strong>Wärmepumpe:</strong> In Kombination mit einer Wärmepumpe steigt der Eigenverbrauch nochmals deutlich</li>
+        <li><strong>Hoher Strompreis:</strong> Je höher der Netzstrompreis, desto mehr spart jede selbst verbrauchte kWh</li>
+      </ul>
+
+      <h4>Richtige Speichergröße wählen</h4>
+      <p>Als Faustregel gilt: <strong>1–1,5 kWh Speicher pro kWp PV-Leistung</strong>. Ein zu großer Speicher amortisiert sich langsamer, weil die zusätzliche Kapazität selten vollständig genutzt wird.</p>
+      <ul>
+        <li>5 kWp Anlage → 5–7 kWh Speicher</li>
+        <li>10 kWp Anlage → 10–12 kWh Speicher</li>
+        <li>15 kWp Anlage → 12–15 kWh Speicher</li>
+      </ul>
+    </article>
+
+    <!-- Artikel 4: Eigenverbrauch -->
+    <article class="blog-article" id="blog-eigenverbrauch">
+      <h3>4. Eigenverbrauch maximieren — die 5 besten Strategien</h3>
+      <p>Je mehr Solarstrom du selbst verbrauchst, desto höher deine Ersparnis. Denn Eigenverbrauch spart dir 32+ ct/kWh, während die Einspeisung nur ca. 8 ct/kWh bringt.</p>
+
+      <h4>Strategie 1: Verbrauch in die Sonnenstunden legen</h4>
+      <p>Waschmaschine, Spülmaschine und Trockner tagsüber laufen lassen — am besten zwischen 10 und 15 Uhr, wenn die PV-Anlage am meisten produziert. Viele Geräte haben Timer-Funktionen.</p>
+
+      <h4>Strategie 2: Batteriespeicher nutzen</h4>
+      <p>Ein Speicher fängt den Überschuss tagsüber auf und gibt ihn abends ab. Das steigert den Eigenverbrauch von ~30% auf ~60%.</p>
+
+      <h4>Strategie 3: E-Auto tagsüber laden</h4>
+      <p>Wer ein E-Auto hat und tagsüber zu Hause laden kann (z.B. Home Office), spart besonders viel. Eine Wallbox mit PV-Überschussladung optimiert das automatisch.</p>
+
+      <h4>Strategie 4: Wärmepumpe koppeln</h4>
+      <p>Eine Wärmepumpe verbraucht im Winter zwar mehr als die PV produziert, aber in der Übergangszeit (Frühjahr/Herbst) kann ein großer Teil des Wärmepumpenstroms solar gedeckt werden.</p>
+
+      <h4>Strategie 5: Smart Home & Energiemanagement</h4>
+      <p>Ein Energiemanagementsystem (EMS) steuert Speicher, Wallbox und Wärmepumpe automatisch nach PV-Produktion. Marken wie Fronius, SMA oder Huawei bieten integrierte Lösungen.</p>
+    </article>
+
+    <!-- Artikel 5: Förderung -->
+    <article class="blog-article" id="blog-foerderung">
+      <h3>5. Förderungen & Steuervorteile für PV-Anlagen 2026</h3>
+      <p>Deutschland fördert den Ausbau privater Solaranlagen auf mehreren Ebenen. Hier ein Überblick der wichtigsten Programme:</p>
+
+      <h4>Bundesweite Förderungen</h4>
+      <ul>
+        <li><strong>0% Mehrwertsteuer</strong> auf PV-Anlagen, Speicher und Installation (seit 01/2023, für Anlagen bis 30 kWp)</li>
+        <li><strong>Einspeisevergütung (EEG)</strong> — gesetzlich garantiert für 20 Jahre: ca. 8,03 ct/kWh (Teileinspeisung, ≤10 kWp), ca. 6,95 ct/kWh (>10 kWp)</li>
+        <li><strong>KfW-Kredit 270</strong> — zinsgünstiger Kredit für erneuerbare Energien</li>
+        <li><strong>Einkommensteuerfrei</strong> — Einnahmen aus PV-Anlagen bis 30 kWp sind seit 2023 von der Einkommensteuer befreit</li>
+      </ul>
+
+      <h4>Regionale Förderungen</h4>
+      <p>Viele Bundesländer und Kommunen bieten zusätzliche Förderprogramme. Beispiele:</p>
+      <ul>
+        <li><strong>NRW:</strong> progres.nrw — Förderung für Batteriespeicher</li>
+        <li><strong>Bayern:</strong> EnergieBonusBayern — Zuschüsse für PV + Speicher</li>
+        <li><strong>Berlin:</strong> SolarPLUS — bis zu 15.000 € für Speicher</li>
+        <li><strong>Baden-Württemberg:</strong> Förderprogramm Netzdienliche Speicher</li>
+      </ul>
+      <p>Prüfe auf <a href="https://www.foerderdatenbank.de" target="_blank" rel="noopener noreferrer" style="color:var(--primary-dark);font-weight:600">foerderdatenbank.de</a> welche Programme in deiner Region verfügbar sind.</p>
+    </article>
+
+    <!-- Artikel 6: Stromtarif -->
+    <article class="blog-article" id="blog-stromtarif">
+      <h3>6. Den richtigen Stromtarif für PV-Besitzer wählen</h3>
+      <p>Auch mit einer Solaranlage beziehst du weiterhin Netzstrom — vor allem im Winter und nachts. Der richtige Stromtarif spart dir zusätzlich hunderte Euro pro Jahr.</p>
+
+      <h4>Worauf PV-Besitzer achten sollten</h4>
+      <ul>
+        <li><strong>Geringere Abnahmemenge:</strong> Mit PV sinkt dein Netzbezug oft auf 1.500–2.500 kWh/Jahr. Manche Tarife werden bei kleinen Mengen relativ teuer wegen hoher Grundgebühren.</li>
+        <li><strong>Dynamische Stromtarife:</strong> Tarife wie Tibber oder aWATTar bieten stundenweise variable Preise. In Kombination mit einem Speicher kannst du gezielt günstig laden.</li>
+        <li><strong>Wärmepumpen-Tarif:</strong> Für Wärmepumpen gibt es spezielle günstigere Tarife mit separatem Zähler.</li>
+        <li><strong>Einspeise-Management:</strong> Manche Anbieter bieten spezielle PV-Tarife mit optimiertem Einspeise-Handling.</li>
+      </ul>
+
+      <div class="blog-key-figure">
+        <span class="fig-val">200–400 €/Jahr</span>
+        <span class="fig-desc">zusätzliche Ersparnis durch den Wechsel zum optimalen Stromtarif — laut Verbraucherzentrale</span>
+      </div>
+
+      <p>Vergleiche jetzt deinen Stromtarif und spare zusätzlich zu deiner PV-Anlage:</p>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Stromtarif vergleichen auf Tarifcheck.de →</a>
+    </article>
+
+    <!-- Artikel 7: Anbieter vergleichen -->
+    <article class="blog-article" id="blog-anbieter">
+      <h3>7. Solaranlage kaufen: So findest du den besten Anbieter</h3>
+      <p>Der Markt für Solaranlagen ist groß und unübersichtlich. Damit du nicht zu viel zahlst oder an einen unseriösen Anbieter gerätst, solltest du mehrere Angebote vergleichen.</p>
+
+      <h4>Checkliste für den Anbietervergleich</h4>
+      <ul>
+        <li><strong>Mindestens 3 Angebote einholen</strong> — Preise variieren bis zu 30% zwischen Anbietern</li>
+        <li><strong>Leistungsgarantie prüfen:</strong> Gute Module bieten 25–30 Jahre Leistungsgarantie (mind. 80% der Nennleistung)</li>
+        <li><strong>Wechselrichter-Qualität:</strong> Der Wechselrichter ist die häufigste Fehlerquelle — setze auf Marken wie Fronius, SMA, Huawei oder Enphase</li>
+        <li><strong>Montage-Erfahrung:</strong> Frage nach Referenzen und der Anzahl installierter Anlagen</li>
+        <li><strong>Gewährleistung:</strong> Mindestens 5 Jahre auf die Installation, besser 10 Jahre</li>
+        <li><strong>Monitoring:</strong> Eine App zur Überwachung von Ertrag und Verbrauch sollte enthalten sein</li>
+      </ul>
+
+      <h4>Kostenlos Angebote vergleichen</h4>
+      <p>Über Vergleichsportale wie Tarifcheck.de erhältst du <strong>kostenlos und unverbindlich</strong> bis zu 3 Angebote von geprüften Fachbetrieben in deiner Region. So sparst du Zeit und findest den besten Preis.</p>
+
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Kostenlos Angebote vergleichen →</a>
+    </article>
+
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer" role="contentinfo">
@@ -1878,6 +2190,19 @@ function startCalculator() {
 
 // Hero initialisieren
 initHeroScene();
+
+/* ═══ HEADER SCROLL EFFECT ═══ */
+(function() {
+  const header = document.getElementById('siteHeader');
+  let lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 50);
+    // close mobile menu on scroll
+    document.getElementById('siteNav').classList.remove('open');
+    lastScroll = y;
+  }, { passive: true });
+})();
 
 /* ═══ SCROLL-REVEAL OBSERVER ═══ */
 const revealObserver = new IntersectionObserver((entries) => {
