@@ -1,0 +1,13 @@
+{
+  "name": "pv-speicher-rechner",
+  "version": "1.0.0",
+  "description": "Interaktiver PV-Anlagen & Speicher Rechner – berechne Ertrag, Ersparnis und Amortisation deiner Solaranlage.",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve public",
+    "build": "echo 'Static site – no build step required'",
+    "preview": "npx serve public -l 3000"
+  },
+  "keywords": ["solar", "photovoltaik", "pv", "speicher", "rechner", "calculator"],
+  "license": "MIT"
+}
