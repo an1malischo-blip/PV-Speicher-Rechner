@@ -162,8 +162,8 @@ body {
 .hero-scene {
   position: relative;
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto 32px;
+  max-width: 900px;
+  margin: 0 auto 0;
   z-index: 2;
   animation: heroFadeIn 1.2s ease-out;
 }
@@ -171,42 +171,25 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 8px 32px rgba(245,158,11,0.25));
   animation: heroFloat 6s ease-in-out infinite;
-  will-change: transform, filter;
+  will-change: transform;
+  /* Ränder nahtlos in Seitenhintergrund überblenden + Logo unten rechts ausblenden */
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, black 8%, black 75%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-composite: destination-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, black 8%, black 75%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-composite: intersect;
 }
 @keyframes heroFadeIn {
   0% { opacity: 0; transform: translateY(30px) scale(0.95); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes heroFloat {
-  0%, 100% {
-    transform: translateY(0);
-    filter: drop-shadow(0 8px 32px rgba(245,158,11,0.25));
-  }
-  50% {
-    transform: translateY(-12px);
-    filter: drop-shadow(0 20px 40px rgba(245,158,11,0.35));
-  }
-}
-
-/* Lichtschein hinter dem Bild */
-.hero-scene::before {
-  content: '';
-  position: absolute;
-  top: 10%; left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 60%;
-  background: radial-gradient(ellipse, rgba(245,158,11,0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: glowPulse 4s ease-in-out infinite alternate;
-  pointer-events: none;
-  z-index: -1;
-}
-@keyframes glowPulse {
-  0% { opacity: 0.5; transform: translateX(-50%) scale(1); }
-  100% { opacity: 1; transform: translateX(-50%) scale(1.15); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
 }
 
 /* Hero-Text */
