@@ -3018,6 +3018,7 @@ function checkCookieConsent() {
     document.getElementById('cookieBanner').classList.add('visible');
   } else if (consent === 'accepted') {
     loadTarifcheckWidget();
+    loadGA4();
   }
 }
 
@@ -3025,6 +3026,21 @@ function acceptCookies() {
   localStorage.setItem('cookie_consent', 'accepted');
   document.getElementById('cookieBanner').classList.remove('visible');
   loadTarifcheckWidget();
+  loadGA4();
+}
+
+function loadGA4() {
+  if (document.getElementById('ga4-script')) return;
+  var s = document.createElement('script');
+  s.id = 'ga4-script';
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-N75ZWVQRCG';
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-N75ZWVQRCG', { anonymize_ip: true });
 }
 
 function declineCookies() {
