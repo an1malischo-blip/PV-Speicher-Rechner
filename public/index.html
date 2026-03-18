@@ -38,12 +38,39 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "Was kostet eine PV-Anlage mit Speicher 2026?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Eine PV-Anlage kostet ca. 1.200-1.800 EUR pro kWp, ein Batteriespeicher ca. 500-900 EUR pro kWh. Eine typische 10 kWp Anlage mit 10 kWh Speicher liegt bei ca. 18.000-26.000 EUR (0% MwSt fuer Wohngebaeude)." }},
+      "acceptedAnswer": { "@type": "Answer", "text": "Eine PV-Anlage kostet ca. 1.200-1.600 EUR pro kWp, ein Batteriespeicher ca. 500-800 EUR pro kWh. Eine typische 10 kWp Anlage mit 10 kWh Speicher liegt bei ca. 18.000-24.000 EUR. Seit 2023 gilt 0% MwSt fuer Wohngebaeude bis 30 kWp." }},
     { "@type": "Question", "name": "Wie lange dauert die Amortisation einer Solaranlage?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Die Amortisation liegt typischerweise bei 8-14 Jahren, abhaengig von Eigenverbrauchsanteil, Strompreis und Anlagengroesse." }},
+      "acceptedAnswer": { "@type": "Answer", "text": "Die Amortisation liegt typischerweise bei 8-12 Jahren, abhaengig von Eigenverbrauchsanteil, Strompreis und Anlagengroesse. Danach produziert die Anlage 15-20 weitere Jahre kostenlosen Strom." }},
     { "@type": "Question", "name": "Wie hoch ist die Einspeiseverguetung 2026?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Die Einspeiseverguetung fuer Anlagen bis 10 kWp (Teileinspeisung) betraegt ca. 8,03 ct/kWh. Sie ist fuer 20 Jahre garantiert und sinkt halbjaehrlich um 1%." }}
+      "acceptedAnswer": { "@type": "Answer", "text": "Die Einspeiseverguetung fuer Anlagen bis 10 kWp betraegt ca. 8,03 ct/kWh (Teileinspeisung) bzw. 12,86 ct/kWh (Volleinspeisung). Sie ist fuer 20 Jahre ab Inbetriebnahme garantiert." }},
+    { "@type": "Question", "name": "Lohnt sich ein Batteriespeicher fuer meine Solaranlage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ein Batteriespeicher lohnt sich besonders bei hohem Abendverbrauch, E-Auto oder Waermepumpe. Er steigert den Eigenverbrauch von 25-35% auf 55-70% und spart so 600-900 EUR zusaetzlich pro Jahr." }},
+    { "@type": "Question", "name": "Welche Foerderungen gibt es fuer Solaranlagen 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bundesweit: 0% MwSt auf PV-Anlagen bis 30 kWp, EEG-Einspeiseverguetung fuer 20 Jahre, KfW-Kredit 270, Einkommensteuerbefreiung. Zusaetzlich bieten viele Bundeslaender und Kommunen eigene Foerderprogramme fuer Speicher und Wallboxen." }},
+    { "@type": "Question", "name": "Wie kann ich den Eigenverbrauch meiner PV-Anlage maximieren?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Die wichtigsten Strategien: Verbrauch in Sonnenstunden legen, Batteriespeicher nutzen, E-Auto tagsueber laden, Waermepumpe koppeln, Smart-Home-Energiemanagement einsetzen. Damit sind Eigenverbrauchsquoten von 60-80% moeglich." }},
+    { "@type": "Question", "name": "Wie finde ich den besten Solaranlagen-Anbieter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Immer mindestens 3 Angebote vergleichen — die Preise variieren bis zu 30%. Achte auf Leistungsgarantie (25+ Jahre), Wechselrichter-Qualitaet (Fronius, SMA, Huawei), Montage-Erfahrung und Gewaehrleistung. Vergleichsportale wie Tarifcheck.de vermitteln kostenlos Angebote regionaler Fachbetriebe." }}
   ]
+}
+</script>
+
+<!-- Schema.org: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PV-Speicher-Rechner",
+  "url": "https://pv-speicher-rechner.de",
+  "logo": "https://pv-speicher-rechner.de/favicon.svg",
+  "description": "Kostenloser Photovoltaik-Rechner fuer Deutschland: Berechne Ertrag, Kosten, Eigenverbrauch und Amortisation deiner Solaranlage mit Speicher.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Langwedeler Strasse 82",
+    "addressLocality": "Bremen",
+    "postalCode": "28307",
+    "addressCountry": "DE"
+  }
 }
 </script>
 
@@ -1132,7 +1159,10 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 
   <!-- Hero-Bild -->
   <div class="hero-scene" aria-hidden="true">
-    <img src="hero-bg.png" alt="Solaranlage auf Haus mit Speicher – Illustration" width="700" height="400" loading="eager">
+    <picture>
+      <source srcset="hero-bg.webp" type="image/webp">
+      <img src="hero-bg.png" alt="Haus mit Solaranlage und Batteriespeicher in grüner Landschaft – Illustration für den kostenlosen Photovoltaik-Rechner" width="700" height="400" loading="eager">
+    </picture>
   </div>
 
   <!-- Hero Content -->
@@ -1719,7 +1749,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
         <li><a href="#blog-kosten">Was kostet eine PV-Anlage 2026?</a></li>
         <li><a href="#blog-rendite">Rendite & Amortisation berechnen</a></li>
         <li><a href="#blog-speicher">Lohnt sich ein Batteriespeicher?</a></li>
-        <li><a href="#blog-eigenverbrauch">Eigenverbrauch maximieren</a></li>
+        <li><a href="#blog-eigenverbrauch">Eigenverbrauch maximieren (7 Strategien)</a></li>
         <li><a href="#blog-foerderung">Förderungen & Steuervorteile</a></li>
         <li><a href="#blog-stromtarif">Den richtigen Stromtarif wählen</a></li>
         <li><a href="#blog-anbieter">Solaranlage kaufen: Anbieter vergleichen</a></li>
@@ -1729,7 +1759,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
     <!-- Artikel 1: Kosten -->
     <article class="blog-article" id="blog-kosten">
       <h3>1. Was kostet eine Photovoltaikanlage 2026?</h3>
-      <p>Die Preise für Solaranlagen sind in den letzten Jahren deutlich gefallen. Gleichzeitig ist die Technologie effizienter geworden. Eine Investition in PV lohnt sich 2026 mehr denn je.</p>
+      <p>Die Preise für Solaranlagen sind in den letzten Jahren deutlich gefallen — laut dem Fraunhofer ISE um mehr als 75 % seit 2010. Gleichzeitig ist die Technologie effizienter geworden: Moderne Module erreichen Wirkungsgrade von über 22 %. Eine Investition in Photovoltaik lohnt sich 2026 mehr denn je, denn die Kombination aus niedrigen Modulpreisen, steigenden Stromkosten und steuerlichen Vorteilen sorgt für attraktive Renditen.</p>
 
       <div class="blog-key-figure">
         <span class="fig-val">1.200–1.600 €</span>
@@ -1737,22 +1767,31 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       </div>
 
       <h4>Preisbeispiele nach Anlagengröße</h4>
+      <p>Die folgenden Preise gelten für schlüsselfertige Komplettsysteme inklusive Module, Wechselrichter, Unterkonstruktion, Verkabelung und Montage — ohne Speicher:</p>
       <ul>
-        <li><strong>5 kWp</strong> (kleines Dach, 2 Personen): ca. 7.000–9.000 € — produziert ca. 4.500–5.000 kWh/Jahr</li>
-        <li><strong>10 kWp</strong> (mittleres Dach, 3-4 Personen): ca. 12.000–16.000 € — produziert ca. 9.000–10.000 kWh/Jahr</li>
-        <li><strong>15 kWp</strong> (großes Dach, E-Auto/Wärmepumpe): ca. 18.000–24.000 € — produziert ca. 13.500–15.000 kWh/Jahr</li>
+        <li><strong>5 kWp</strong> (kleines Dach, 1-2 Personen): ca. 7.000–9.000 € — produziert ca. 4.500–5.000 kWh/Jahr, ideal für Einfamilienhäuser mit niedrigem Verbrauch</li>
+        <li><strong>10 kWp</strong> (mittleres Dach, 3-4 Personen): ca. 12.000–16.000 € — produziert ca. 9.000–10.000 kWh/Jahr, der meistverkaufte Standard in Deutschland</li>
+        <li><strong>15 kWp</strong> (großes Dach, E-Auto/Wärmepumpe): ca. 18.000–24.000 € — produziert ca. 13.500–15.000 kWh/Jahr, optimal für Haushalte mit hohem Stromverbrauch</li>
+        <li><strong>20 kWp</strong> (Maximalausbau): ca. 22.000–30.000 € — produziert ca. 18.000–20.000 kWh/Jahr, rechnet sich besonders bei Volleinspeisung oder Gewerbe</li>
       </ul>
 
-      <p>Seit dem 1. Januar 2023 gilt die <strong>Mehrwertsteuerbefreiung (0% MwSt)</strong> auf PV-Anlagen bis 30 kWp. Das bedeutet: Du zahlst den Nettopreis — ohne 19% MwSt. Damit sind Solaranlagen effektiv um knapp ein Fünftel günstiger geworden.</p>
+      <h4>Mehrwertsteuerbefreiung seit 2023</h4>
+      <p>Seit dem 1. Januar 2023 gilt die <strong>Mehrwertsteuerbefreiung (0 % MwSt)</strong> auf PV-Anlagen bis 30 kWp für Wohngebäude. Das bedeutet: Du zahlst den Nettopreis — ohne 19 % MwSt. Damit sind Solaranlagen effektiv um knapp ein Fünftel günstiger geworden. Diese Regelung gilt auch für Batteriespeicher, die zusammen mit der PV-Anlage installiert werden, sowie für Ersatzteile und Erweiterungen bestehender Systeme.</p>
 
-      <h4>Was beeinflusst den Preis?</h4>
+      <h4>Was beeinflusst den Preis einer Solaranlage?</h4>
       <ul>
-        <li><strong>Dachtyp:</strong> Schrägdach ist günstiger als Flachdach (Aufständerung nötig)</li>
-        <li><strong>Modultyp:</strong> Mono-PERC-Module bieten das beste Preis-Leistungs-Verhältnis, TOPCon/HJT-Module sind effizienter aber teurer</li>
-        <li><strong>Wechselrichter:</strong> String-Wechselrichter (günstiger) vs. Mikro-Wechselrichter (höherer Ertrag bei Verschattung)</li>
-        <li><strong>Region:</strong> In ländlichen Gebieten sind Installationskosten oft niedriger als in Großstädten</li>
-        <li><strong>Speicher:</strong> Ein Batteriespeicher addiert ca. 500–800 €/kWh zum Gesamtpreis</li>
+        <li><strong>Dachtyp:</strong> Schrägdächer sind günstiger als Flachdächer (Aufständerung nötig). Dachziegel-integrierte Systeme kosten mehr, sehen aber eleganter aus</li>
+        <li><strong>Modultyp:</strong> Mono-PERC-Module bieten das beste Preis-Leistungs-Verhältnis, TOPCon- und HJT-Module sind 5-10 % effizienter, aber teurer. Bifaziale Module können auf Flachdächern bis zu 10 % Mehrertrag bringen</li>
+        <li><strong>Wechselrichter:</strong> String-Wechselrichter (günstiger, bewährt) vs. Mikro-Wechselrichter (höherer Ertrag bei Teilverschattung, einfacheres Monitoring pro Modul)</li>
+        <li><strong>Region:</strong> Die Installationskosten in München oder Hamburg liegen oft 10-15 % über denen in ländlichen Regionen. Gleichzeitig ist der Solarertrag im Süden Deutschlands (Bayern, Baden-Württemberg) bis zu 20 % höher als im Norden</li>
+        <li><strong>Speicher:</strong> Ein Batteriespeicher addiert ca. 500–800 €/kWh zum Gesamtpreis, steigert aber den Eigenverbrauch erheblich</li>
+        <li><strong>Zusatzkomponenten:</strong> Wallbox (800–2.000 €), Energiemanagement-System (300–800 €), Zählerschrankumbau (500–1.500 €) — diese Kosten werden oft vergessen</li>
       </ul>
+
+      <h4>Kostenentwicklung und Prognose</h4>
+      <p>Die Modulpreise sind seit 2020 stark geschwankt: Während sie 2021/2022 durch Lieferkettenprobleme kurzzeitig stiegen, sind sie seit Mitte 2023 auf historische Tiefstände gefallen. Experten erwarten, dass die Preise 2026-2027 auf dem aktuellen Niveau stagnieren oder leicht steigen — vor allem wegen steigender Arbeitskosten für die Montage. Der beste Zeitpunkt zum Kauf ist daher jetzt.</p>
+
+      <p>Unser <a href="#rechner" onclick="startCalculator()">kostenloser PV-Rechner</a> berechnet dir auf Basis deiner individuellen Daten — Standort, Dachneigung, Verbrauch — wie viel eine Anlage in deinem Fall kosten würde und wann sie sich amortisiert.</p>
 
       <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Jetzt Preise vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
@@ -1761,28 +1800,46 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
     <!-- Artikel 2: Rendite -->
     <article class="blog-article" id="blog-rendite">
       <h3>2. Rendite einer Solaranlage: So rechnest du richtig</h3>
-      <p>Eine Photovoltaikanlage ist nicht nur gut für die Umwelt — sie ist auch eine der besten Geldanlagen. Die Rendite einer PV-Anlage liegt typischerweise bei <strong>5–10% pro Jahr</strong>, und das steuerfrei.</p>
+      <p>Eine Photovoltaikanlage ist nicht nur gut für die Umwelt — sie ist auch eine der besten Geldanlagen im aktuellen Marktumfeld. Die Rendite einer PV-Anlage liegt typischerweise bei <strong>5–10 % pro Jahr</strong>, und das steuerfrei. Über die gesamte Laufzeit von 25-30 Jahren erwirtschaftet eine durchschnittliche 10-kWp-Anlage einen Gewinn von 20.000–40.000 €.</p>
 
       <div class="blog-key-figure">
         <span class="fig-val">8–12 Jahre</span>
-        <span class="fig-desc">typische Amortisationszeit — danach produziert deine Anlage bis zu 20 Jahre lang kostenlosen Strom</span>
+        <span class="fig-desc">typische Amortisationszeit — danach produziert deine Anlage bis zu 20 weitere Jahre kostenlosen Strom</span>
       </div>
 
-      <h4>Wie berechnet sich die Rendite?</h4>
+      <h4>Wie berechnet sich die PV-Rendite?</h4>
       <p>Die PV-Rendite setzt sich aus zwei Einnahmeströmen zusammen:</p>
       <ul>
-        <li><strong>Eigenverbrauch:</strong> Jede kWh, die du selbst nutzt, spart dir den vollen Strompreis (ca. 32–36 ct/kWh). Das ist der größte Hebel.</li>
-        <li><strong>Einspeisung:</strong> Überschüssiger Strom wird ins Netz eingespeist und mit der gesetzlich garantierten Einspeisevergütung vergütet (ca. 8,03 ct/kWh für Anlagen bis 10 kWp).</li>
+        <li><strong>Eigenverbrauch (größter Hebel):</strong> Jede kWh, die du selbst nutzt, spart dir den vollen Strompreis (ca. 32–36 ct/kWh in 2026). Bei einem Eigenverbrauchsanteil von 30 % und einer 10-kWp-Anlage sparst du ca. 1.000–1.100 €/Jahr allein durch Eigenverbrauch.</li>
+        <li><strong>Einspeisung:</strong> Überschüssiger Strom wird ins Netz eingespeist und mit der gesetzlich garantierten Einspeisevergütung vergütet (ca. 8,03 ct/kWh für Teileinspeisung ≤10 kWp, ca. 12,86 ct/kWh für Volleinspeisung). Die Vergütung ist für 20 Jahre ab Inbetriebnahme garantiert.</li>
+      </ul>
+
+      <h4>Rechenbeispiel: 10 kWp Anlage in Bremen</h4>
+      <p>Investition: 14.000 € | Ertrag: 9.200 kWh/Jahr | Eigenverbrauch: 35 % | Strompreis: 34 ct/kWh</p>
+      <ul>
+        <li>Eigenverbrauch: 3.220 kWh × 0,34 € = <strong>1.095 €/Jahr</strong> Ersparnis</li>
+        <li>Einspeisung: 5.980 kWh × 0,0803 € = <strong>480 €/Jahr</strong> Einnahmen</li>
+        <li>Gesamtvorteil: <strong>1.575 €/Jahr</strong> → Amortisation nach ca. <strong>8,9 Jahren</strong></li>
+        <li>Gewinn über 25 Jahre (inkl. 2 % Strompreissteigerung): ca. <strong>32.000 €</strong></li>
       </ul>
 
       <h4>PV-Rendite vs. klassische Geldanlagen</h4>
       <ul>
-        <li><strong>Solaranlage:</strong> 5–10% p.a. — steuerfrei (Eigenverbrauch unter 30 kWp)</li>
-        <li><strong>ETF-Sparplan:</strong> Ø 7% p.a. — abzüglich ca. 26% Kapitalertragssteuer = effektiv ~5,2%</li>
-        <li><strong>Tagesgeld:</strong> 2,0–2,5% p.a. — ebenfalls steuerpflichtig</li>
-        <li><strong>Inflation:</strong> ca. 2,0% — frisst sichere Anlagen auf</li>
+        <li><strong>Solaranlage:</strong> 5–10 % p.a. — steuerfrei (Eigenverbrauch unter 30 kWp seit 2023)</li>
+        <li><strong>ETF-Sparplan (MSCI World):</strong> Ø 7 % p.a. brutto — abzüglich ca. 26,4 % Abgeltungssteuer = effektiv ~5,2 %</li>
+        <li><strong>Tagesgeld:</strong> 2,0–2,5 % p.a. — ebenfalls steuerpflichtig, real (nach Inflation) oft negativ</li>
+        <li><strong>Festgeld 10 Jahre:</strong> ca. 2,5–3,0 % p.a. — gebunden, steuerpflichtig, kein Inflationsschutz</li>
+        <li><strong>Inflation:</strong> ca. 2,0 % — frisst sichere Anlagen auf</li>
       </ul>
-      <p>Der entscheidende Vorteil: Strom aus Eigenverbrauch ist <strong>steuerfrei</strong>. Damit schlägt eine PV-Anlage die meisten Geldanlagen nach Steuern deutlich.</p>
+      <p>Der entscheidende Vorteil: Strom aus Eigenverbrauch ist <strong>steuerfrei</strong>. Zudem steigt die Rendite mit jedem Strompreisanstieg automatisch — eine PV-Anlage ist damit ein natürlicher <strong>Inflationsschutz</strong>. Während Tagesgeld-Zinsen sinken können, produziert deine Anlage zuverlässig über Jahrzehnte.</p>
+
+      <h4>Welche Faktoren beeinflussen die Rendite?</h4>
+      <ul>
+        <li><strong>Standort:</strong> Süddeutschland (Bayern, BaWü) liefert bis zu 1.200 kWh/kWp, Norddeutschland (Niedersachsen, SH) ca. 900–1.000 kWh/kWp</li>
+        <li><strong>Eigenverbrauchsquote:</strong> Jede zusätzliche kWh Eigenverbrauch steigert die Rendite überproportional — ein Speicher kann den Eigenverbrauch von 30 % auf 60-70 % anheben</li>
+        <li><strong>Strompreisentwicklung:</strong> Bei 3 % jährlicher Strompreissteigerung statt 2 % steigt der 25-Jahres-Gewinn um ca. 5.000–8.000 €</li>
+        <li><strong>Anlagenpreis:</strong> Durch Angebotsvergleich lassen sich 15-30 % sparen — das verbessert die Rendite erheblich</li>
+      </ul>
 
       <a href="#rechner" class="blog-cta" onclick="startCalculator()">Deine persönliche Rendite berechnen →</a>
     </article>
@@ -1790,92 +1847,156 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
     <!-- Artikel 3: Speicher -->
     <article class="blog-article" id="blog-speicher">
       <h3>3. Batteriespeicher: Wann lohnt er sich wirklich?</h3>
-      <p>Ein Batteriespeicher erhöht deinen Eigenverbrauch von typischerweise 25–35% auf 50–70%. Ob sich die Mehrkosten rechnen, hängt von mehreren Faktoren ab.</p>
+      <p>Ein Batteriespeicher erhöht deinen Eigenverbrauch von typischerweise 25–35 % auf 50–70 %. Das klingt verlockend — aber ob sich die Mehrkosten von 5.000–10.000 € tatsächlich rechnen, hängt von deinem Verbrauchsprofil, dem Strompreis und der Speichergröße ab. Wir zeigen dir, wann ein Speicher wirtschaftlich Sinn macht und wann du besser darauf verzichtest.</p>
 
       <div class="blog-key-figure">
         <span class="fig-val">500–800 €/kWh</span>
         <span class="fig-desc">Kosten pro kWh Speicherkapazität (2026) — ein 10 kWh Speicher kostet ca. 5.000–8.000 €</span>
       </div>
 
-      <h4>Wann lohnt sich ein Speicher?</h4>
+      <h4>Wann lohnt sich ein Batteriespeicher?</h4>
       <ul>
-        <li><strong>Hoher Abendverbrauch:</strong> Familien, die tagsüber arbeiten und abends viel Strom nutzen, profitieren am meisten</li>
-        <li><strong>E-Auto:</strong> Wer das E-Auto über Nacht lädt, kann gespeicherten Solarstrom nutzen statt teuren Netzstrom</li>
-        <li><strong>Wärmepumpe:</strong> In Kombination mit einer Wärmepumpe steigt der Eigenverbrauch nochmals deutlich</li>
-        <li><strong>Hoher Strompreis:</strong> Je höher der Netzstrompreis, desto mehr spart jede selbst verbrauchte kWh</li>
+        <li><strong>Hoher Abendverbrauch:</strong> Familien, die tagsüber arbeiten und abends kochen, waschen und den Fernseher nutzen, profitieren am meisten. Ohne Speicher geht der gesamte Tagesüberschuss für nur 8 ct/kWh ins Netz — mit Speicher nutzt du ihn abends selbst und sparst 34 ct/kWh</li>
+        <li><strong>E-Auto:</strong> Wer das E-Auto über Nacht mit Solarstrom lädt, spart gegenüber Netzstrom ca. 800–1.200 €/Jahr. Eine Wallbox mit PV-Überschussladung optimiert das automatisch</li>
+        <li><strong>Wärmepumpe:</strong> In Kombination mit einer Wärmepumpe steigt der Gesamtverbrauch auf 8.000–12.000 kWh/Jahr — ein Speicher hilft, den teuren Winterstrom zu reduzieren</li>
+        <li><strong>Hoher Strompreis:</strong> Je höher der Netzstrompreis, desto mehr spart jede selbst verbrauchte kWh. Ab 30 ct/kWh rechnet sich ein Speicher fast immer</li>
+        <li><strong>Notstromfunktion:</strong> Viele moderne Speicher bieten Notstrom bei Netzausfall — ein Bonus, der nicht in Euro messbar ist, aber Sicherheit gibt</li>
+      </ul>
+
+      <h4>Wann lohnt sich ein Speicher eher nicht?</h4>
+      <ul>
+        <li>Bei sehr kleinen Anlagen unter 5 kWp — hier reicht der Tagesertrag oft nicht zum Laden</li>
+        <li>Wenn du tagsüber zu Hause bist und den Strom direkt verbrauchst (z.B. Home Office)</li>
+        <li>Bei ohnehin hohem Eigenverbrauch über 50 % — der Speicher bringt dann nur marginale Verbesserung</li>
       </ul>
 
       <h4>Richtige Speichergröße wählen</h4>
-      <p>Als Faustregel gilt: <strong>1–1,5 kWh Speicher pro kWp PV-Leistung</strong>. Ein zu großer Speicher amortisiert sich langsamer, weil die zusätzliche Kapazität selten vollständig genutzt wird.</p>
+      <p>Als Faustregel gilt: <strong>1–1,5 kWh Speicher pro kWp PV-Leistung</strong>. Ein zu großer Speicher amortisiert sich langsamer, weil die zusätzliche Kapazität selten vollständig genutzt wird. Zu klein bringt wenig Effekt.</p>
       <ul>
-        <li>5 kWp Anlage → 5–7 kWh Speicher</li>
-        <li>10 kWp Anlage → 10–12 kWh Speicher</li>
-        <li>15 kWp Anlage → 12–15 kWh Speicher</li>
+        <li><strong>5 kWp Anlage</strong> → 5–7 kWh Speicher (2-Personen-Haushalt)</li>
+        <li><strong>10 kWp Anlage</strong> → 10–12 kWh Speicher (Familie, 4.000 kWh/Jahr)</li>
+        <li><strong>15 kWp Anlage</strong> → 12–15 kWh Speicher (mit E-Auto oder Wärmepumpe)</li>
       </ul>
+
+      <h4>Speicher-Technologien im Vergleich</h4>
+      <ul>
+        <li><strong>Lithium-Eisenphosphat (LFP):</strong> Standard in 2026, 6.000-10.000 Zyklen Lebensdauer, sehr sicher, kein Brandrisiko. Hersteller: BYD, CATL, Pylontech</li>
+        <li><strong>NMC (Nickel-Mangan-Cobalt):</strong> Kompakter, aber weniger Zyklen (3.000-5.000). Wird zunehmend von LFP verdrängt</li>
+        <li><strong>Natrium-Ionen:</strong> Neue Technologie, günstiger, aber noch geringe Verfügbarkeit. Ab 2027 relevanter</li>
+      </ul>
+      <p>Die meisten Hersteller geben 10 Jahre Garantie auf den Speicher. Bei LFP-Technologie ist eine Lebensdauer von 15-20 Jahren realistisch — das bedeutet, der Speicher hält genauso lange wie die PV-Anlage selbst.</p>
+
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Speicher-Angebote vergleichen auf Tarifcheck.de * →</a>
+      <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
     <!-- Artikel 4: Eigenverbrauch -->
     <article class="blog-article" id="blog-eigenverbrauch">
-      <h3>4. Eigenverbrauch maximieren — die 5 besten Strategien</h3>
-      <p>Je mehr Solarstrom du selbst verbrauchst, desto höher deine Ersparnis. Denn Eigenverbrauch spart dir 32+ ct/kWh, während die Einspeisung nur ca. 8 ct/kWh bringt.</p>
+      <h3>4. Eigenverbrauch maximieren — die 7 besten Strategien</h3>
+      <p>Je mehr Solarstrom du selbst verbrauchst, desto höher deine Ersparnis. Der Grund ist einfach: Eigenverbrauch spart dir <strong>32–36 ct/kWh</strong> (den vollen Strompreis), während die Einspeisung nur ca. 8 ct/kWh bringt. Die Differenz von über 25 ct/kWh pro Kilowattstunde macht den Eigenverbrauch zum wichtigsten Hebel für die Wirtschaftlichkeit deiner PV-Anlage.</p>
+
+      <div class="blog-key-figure">
+        <span class="fig-val">25 ct/kWh</span>
+        <span class="fig-desc">Differenz zwischen Eigenverbrauch und Einspeisung — jede selbst genutzte kWh ist das 4-fache wert</span>
+      </div>
 
       <h4>Strategie 1: Verbrauch in die Sonnenstunden legen</h4>
-      <p>Waschmaschine, Spülmaschine und Trockner tagsüber laufen lassen — am besten zwischen 10 und 15 Uhr, wenn die PV-Anlage am meisten produziert. Viele Geräte haben Timer-Funktionen.</p>
+      <p>Waschmaschine, Spülmaschine und Trockner tagsüber laufen lassen — am besten zwischen 10 und 15 Uhr, wenn die PV-Anlage am meisten produziert. Viele Geräte haben Timer-Funktionen dafür. Allein durch bewusstes Timing kannst du den Eigenverbrauch um 5-10 Prozentpunkte steigern, ohne einen Cent zu investieren.</p>
 
       <h4>Strategie 2: Batteriespeicher nutzen</h4>
-      <p>Ein Speicher fängt den Überschuss tagsüber auf und gibt ihn abends ab. Das steigert den Eigenverbrauch von ~30% auf ~60%.</p>
+      <p>Ein Speicher fängt den Überschuss tagsüber auf und gibt ihn abends und nachts ab. Das steigert den Eigenverbrauch von typischen 25–30 % auf 55–70 %. Bei einer 10-kWp-Anlage mit 10-kWh-Speicher bedeutet das ca. 600–900 € zusätzliche Ersparnis pro Jahr gegenüber einer Anlage ohne Speicher.</p>
 
-      <h4>Strategie 3: E-Auto tagsüber laden</h4>
-      <p>Wer ein E-Auto hat und tagsüber zu Hause laden kann (z.B. Home Office), spart besonders viel. Eine Wallbox mit PV-Überschussladung optimiert das automatisch.</p>
+      <h4>Strategie 3: E-Auto mit Solarstrom laden</h4>
+      <p>Wer ein E-Auto hat und tagsüber zu Hause laden kann (z.B. im Home Office oder am Wochenende), spart besonders viel. Bei 15.000 km/Jahr verbraucht ein E-Auto ca. 2.500–3.000 kWh — das entspricht einer Ersparnis von <strong>850–1.000 €/Jahr</strong> gegenüber Netzstrom. Eine Wallbox mit PV-Überschussladung (z.B. go-e, Fronius Wattpilot, oder openWB) optimiert das vollautomatisch.</p>
 
       <h4>Strategie 4: Wärmepumpe koppeln</h4>
-      <p>Eine Wärmepumpe verbraucht im Winter zwar mehr als die PV produziert, aber in der Übergangszeit (Frühjahr/Herbst) kann ein großer Teil des Wärmepumpenstroms solar gedeckt werden.</p>
+      <p>Eine Wärmepumpe verbraucht im Winter zwar mehr als die PV produziert, aber in der Übergangszeit (März–Mai, September–November) kann ein großer Teil des Wärmepumpenstroms solar gedeckt werden. Bei einer Luft-Wasser-Wärmepumpe mit 4.000 kWh/Jahr Verbrauch sind 30–40 % solarer Deckungsgrad realistisch — das spart nochmals 400–550 €/Jahr.</p>
 
       <h4>Strategie 5: Smart Home & Energiemanagement</h4>
-      <p>Ein Energiemanagementsystem (EMS) steuert Speicher, Wallbox und Wärmepumpe automatisch nach PV-Produktion. Marken wie Fronius, SMA oder Huawei bieten integrierte Lösungen.</p>
+      <p>Ein Energiemanagementsystem (EMS) steuert Speicher, Wallbox und Wärmepumpe automatisch nach PV-Produktion. Das System erkennt Überschüsse und verteilt sie intelligent auf die Verbraucher. Führende Systeme: Fronius Symo GEN24, SMA Sunny Home Manager 2.0, Huawei FusionSolar, oder die Open-Source-Lösung evcc.</p>
+
+      <h4>Strategie 6: Warmwasser mit Solarstrom erzeugen</h4>
+      <p>Ein Heizstab im Warmwasserspeicher (z.B. my-PV ELWA oder AC ELWA-E) nutzt PV-Überschuss stufenlos zur Warmwasserbereitung. Kosten: ca. 800–1.200 €. Damit lässt sich im Sommer die Heizung komplett abschalten — Ersparnis: ca. 150–300 €/Jahr an Gas- oder Ölkosten.</p>
+
+      <h4>Strategie 7: Cloud-Speicher und Community-Modelle</h4>
+      <p>Anbieter wie sonnen, Senec oder E.ON bieten virtuelle Stromspeicher (Cloud-Tarife): Du speist überschüssigen Strom ins Netz ein und bekommst ihn im Winter „zurück". Die Wirtschaftlichkeit hängt stark von den Tarifbedingungen ab — vergleiche die monatlichen Gebühren kritisch mit dem tatsächlichen Nutzen.</p>
+
+      <p>Mit unserem <a href="#rechner" onclick="startCalculator()">PV-Rechner</a> kannst du den Effekt von Speicher, E-Auto und Wärmepumpe auf deinen Eigenverbrauch direkt simulieren.</p>
     </article>
 
     <!-- Artikel 5: Förderung -->
     <article class="blog-article" id="blog-foerderung">
       <h3>5. Förderungen & Steuervorteile für PV-Anlagen 2026</h3>
-      <p>Deutschland fördert den Ausbau privater Solaranlagen auf mehreren Ebenen. Hier ein Überblick der wichtigsten Programme:</p>
+      <p>Deutschland fördert den Ausbau privater Solaranlagen auf mehreren Ebenen. Die Förderlandschaft ist komplex — wir haben die wichtigsten Programme für 2026 zusammengestellt, damit du kein Geld verschenkst. Insgesamt können die Steuervorteile und Förderungen die effektiven Kosten deiner Anlage um <strong>20-40 %</strong> reduzieren.</p>
+
+      <div class="blog-key-figure">
+        <span class="fig-val">0 % MwSt</span>
+        <span class="fig-desc">auf PV-Anlagen, Speicher und Installation seit 2023 — spart dir 19 % der Brutto-Investition</span>
+      </div>
 
       <h4>Bundesweite Förderungen</h4>
       <ul>
-        <li><strong>0% Mehrwertsteuer</strong> auf PV-Anlagen, Speicher und Installation (seit 01/2023, für Anlagen bis 30 kWp)</li>
-        <li><strong>Einspeisevergütung (EEG)</strong> — gesetzlich garantiert für 20 Jahre: ca. 8,03 ct/kWh (Teileinspeisung, ≤10 kWp), ca. 6,95 ct/kWh (>10 kWp)</li>
-        <li><strong>KfW-Kredit 270</strong> — zinsgünstiger Kredit für erneuerbare Energien</li>
-        <li><strong>Einkommensteuerfrei</strong> — Einnahmen aus PV-Anlagen bis 30 kWp sind seit 2023 von der Einkommensteuer befreit</li>
+        <li><strong>0 % Mehrwertsteuer</strong> auf PV-Anlagen, Speicher und Installation (seit 01/2023, für Anlagen bis 30 kWp auf Wohngebäuden). Gilt auch für Batteriespeicher, die nachgerüstet werden, sowie für Ersatzteile und Erweiterungen</li>
+        <li><strong>Einspeisevergütung (EEG 2023)</strong> — gesetzlich garantiert für 20 Jahre ab Inbetriebnahme: ca. 8,03 ct/kWh (Teileinspeisung, ≤10 kWp), ca. 12,86 ct/kWh (Volleinspeisung, ≤10 kWp). Die Degression beträgt 1 % halbjährlich</li>
+        <li><strong>KfW-Kredit 270</strong> — zinsgünstiger Kredit der Kreditanstalt für Wiederaufbau für Erneuerbare Energien. Finanzierung bis 100 % der Investition möglich, tilgungsfreie Anlaufjahre, ab ca. 4,5 % effektiver Jahreszins (Stand 2026)</li>
+        <li><strong>Einkommensteuerfrei</strong> — Einnahmen und Entnahmen aus PV-Anlagen bis 30 kWp sind seit 2023 komplett von der Einkommensteuer befreit (§ 3 Nr. 72 EStG). Keine Gewerbeanmeldung nötig, keine EÜR, keine Umsatzsteuer-Erklärung</li>
+        <li><strong>Wallbox-Förderung:</strong> KfW-Programm 442 (Solarstrom für Elektroautos) — Zuschuss bis zu 10.200 € für die Kombination PV + Speicher + Wallbox (wenn verfügbar, Budget-Programm mit begrenzten Mitteln)</li>
       </ul>
 
-      <h4>Regionale Förderungen</h4>
-      <p>Viele Bundesländer und Kommunen bieten zusätzliche Förderprogramme. Beispiele:</p>
+      <h4>Regionale Förderungen nach Bundesland</h4>
+      <p>Viele Bundesländer und Kommunen bieten zusätzliche Förderprogramme. Die wichtigsten im Überblick:</p>
       <ul>
-        <li><strong>NRW:</strong> progres.nrw — Förderung für Batteriespeicher</li>
-        <li><strong>Bayern:</strong> EnergieBonusBayern — Zuschüsse für PV + Speicher</li>
-        <li><strong>Berlin:</strong> SolarPLUS — bis zu 15.000 € für Speicher</li>
-        <li><strong>Baden-Württemberg:</strong> Förderprogramm Netzdienliche Speicher</li>
+        <li><strong>Nordrhein-Westfalen:</strong> progres.nrw — Förderung für Batteriespeicher, Wallboxen und Steuersysteme</li>
+        <li><strong>Bayern:</strong> EnergieBonusBayern — Zuschüsse für PV + Speicher, zusätzlich kommunale Programme in München, Nürnberg, Augsburg</li>
+        <li><strong>Berlin:</strong> SolarPLUS — bis zu 15.000 € für Speicher, zusätzlich Berliner Stadtwerke-Bonus</li>
+        <li><strong>Baden-Württemberg:</strong> Förderprogramm Netzdienliche Speicher, L-Bank Klimakredit</li>
+        <li><strong>Niedersachsen:</strong> NBank-Förderung für PV auf Nichtwohngebäuden, kommunale Programme in Hannover und Bremen</li>
+        <li><strong>Schleswig-Holstein:</strong> Klimaschutz-Förderprogramm, Speicherförderung durch Kommunen</li>
+        <li><strong>Hamburg:</strong> IFB-Förderung Erneuerbare Wärme, Hamburger Energiepass</li>
+        <li><strong>Sachsen:</strong> SAB-Förderung Speicher und Ladeinfrastruktur</li>
       </ul>
-      <p>Prüfe auf <a href="https://www.foerderdatenbank.de" target="_blank" rel="noopener noreferrer" style="color:var(--primary-dark);font-weight:600">foerderdatenbank.de</a> welche Programme in deiner Region verfügbar sind.</p>
+
+      <h4>Tipps zur Förderung</h4>
+      <ul>
+        <li>Fördermittel <strong>immer vor dem Kauf</strong> beantragen — nachträgliche Anträge werden meist abgelehnt</li>
+        <li>Kommunale Förderungen prüfen: Viele Städte (z.B. Freiburg, Heidelberg, Münster) bieten eigene Zuschüsse von 500–2.000 €</li>
+        <li>Förderungen sind kombinierbar: 0 % MwSt + Landesförderung + kommunaler Zuschuss + KfW-Kredit</li>
+        <li>Budget-Programme sind schnell ausgeschöpft — frühzeitig informieren und beantragen</li>
+      </ul>
+      <p>Prüfe auf <a href="https://www.foerderdatenbank.de" target="_blank" rel="noopener noreferrer" style="color:var(--primary-dark);font-weight:600">foerderdatenbank.de</a> welche Programme in deiner Region aktuell verfügbar sind.</p>
+
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Kostenlos Fördermöglichkeiten prüfen auf Tarifcheck.de * →</a>
+      <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
     <!-- Artikel 6: Stromtarif -->
     <article class="blog-article" id="blog-stromtarif">
       <h3>6. Den richtigen Stromtarif für PV-Besitzer wählen</h3>
-      <p>Auch mit einer Solaranlage beziehst du weiterhin Netzstrom — vor allem im Winter und nachts. Der richtige Stromtarif spart dir zusätzlich hunderte Euro pro Jahr.</p>
-
-      <h4>Worauf PV-Besitzer achten sollten</h4>
-      <ul>
-        <li><strong>Geringere Abnahmemenge:</strong> Mit PV sinkt dein Netzbezug oft auf 1.500–2.500 kWh/Jahr. Manche Tarife werden bei kleinen Mengen relativ teuer wegen hoher Grundgebühren.</li>
-        <li><strong>Dynamische Stromtarife:</strong> Tarife wie Tibber oder aWATTar bieten stundenweise variable Preise. In Kombination mit einem Speicher kannst du gezielt günstig laden.</li>
-        <li><strong>Wärmepumpen-Tarif:</strong> Für Wärmepumpen gibt es spezielle günstigere Tarife mit separatem Zähler.</li>
-        <li><strong>Einspeise-Management:</strong> Manche Anbieter bieten spezielle PV-Tarife mit optimiertem Einspeise-Handling.</li>
-      </ul>
+      <p>Auch mit einer Solaranlage beziehst du weiterhin Netzstrom — vor allem im Winter, bei schlechtem Wetter und nachts. Der richtige Stromtarif kann dir zusätzlich <strong>200–500 €/Jahr</strong> sparen. Als PV-Besitzer hast du andere Anforderungen als ein normaler Haushalt: Du brauchst weniger Strom vom Netz, verbrauchst ihn zu anderen Zeiten, und kannst mit einem Speicher sogar gezielt günstig einkaufen.</p>
 
       <div class="blog-key-figure">
-        <span class="fig-val">200–400 €/Jahr</span>
-        <span class="fig-desc">zusätzliche Ersparnis durch den Wechsel zum optimalen Stromtarif — laut Verbraucherzentrale</span>
+        <span class="fig-val">200–500 €/Jahr</span>
+        <span class="fig-desc">zusätzliche Ersparnis durch den Wechsel zum optimalen Stromtarif für PV-Besitzer</span>
       </div>
+
+      <h4>Worauf PV-Besitzer beim Stromtarif achten sollten</h4>
+      <ul>
+        <li><strong>Niedrige Grundgebühr:</strong> Mit PV sinkt dein Netzbezug oft auf 1.500–2.500 kWh/Jahr. Tarife mit hoher Grundgebühr (>12 €/Monat) werden bei kleiner Abnahmemenge unverhältnismäßig teuer. Achte auf das Verhältnis Grundgebühr zu Arbeitspreis</li>
+        <li><strong>Dynamische Stromtarife:</strong> Anbieter wie Tibber, aWATTar oder Ostrom bieten stundenweise variable Preise basierend auf dem Börsenstrompreis. In Kombination mit einem Speicher kannst du nachts günstig laden (oft unter 15 ct/kWh) und tagsüber den eigenen Solarstrom nutzen</li>
+        <li><strong>Wärmepumpen-Tarif:</strong> Für Wärmepumpen gibt es spezielle günstigere Tarife (ca. 22-28 ct/kWh) mit separatem Zähler. Die Ersparnis gegenüber dem normalen Hausstromtarif beträgt ca. 200-400 €/Jahr</li>
+        <li><strong>Cloud-Tarife:</strong> Anbieter wie Senec oder sonnen bieten Cloud-Speicher: Du speist Solarüberschuss ins Netz ein und beziehst ihn im Winter zurück. Monatliche Kosten: 20-40 €. Lohnt sich nur bei hohem Winterverbrauch</li>
+        <li><strong>Ökostrom:</strong> Wer den Restbedarf mit echtem Ökostrom deckt, rundet die persönliche Energiewende ab. Preisaufschlag: nur noch 1-2 ct/kWh gegenüber Normalstrom</li>
+      </ul>
+
+      <h4>Dynamische Tarife mit Speicher: So funktioniert die Strategie</h4>
+      <p>Die Kombination aus PV-Anlage, Batteriespeicher und dynamischem Stromtarif ist die Königsdisziplin der Energieoptimierung:</p>
+      <ul>
+        <li><strong>Tagsüber:</strong> PV produziert Strom → Eigenverbrauch + Speicher laden + Überschuss einspeisen</li>
+        <li><strong>Abends/Nachts:</strong> Speicher entladen → kein Netzbezug nötig</li>
+        <li><strong>Günstige Börsenpreise (nachts):</strong> Speicher über Netz laden für 10-15 ct/kWh statt 34 ct/kWh</li>
+        <li><strong>Teure Börsenpreise (Spitzenzeiten):</strong> Gespeicherten Strom nutzen oder sogar gewinnbringend einspeisen</li>
+      </ul>
+      <p>Energiemanagementsysteme wie <strong>evcc</strong> (Open Source) oder <strong>Home Assistant</strong> mit dem Tibber-Plugin automatisieren diese Strategie vollständig.</p>
 
       <p>Vergleiche jetzt deinen Stromtarif und spare zusätzlich zu deiner PV-Anlage:</p>
       <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Stromtarif vergleichen auf Tarifcheck.de * →</a>
@@ -1885,22 +2006,45 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
     <!-- Artikel 7: Anbieter vergleichen -->
     <article class="blog-article" id="blog-anbieter">
       <h3>7. Solaranlage kaufen: So findest du den besten Anbieter</h3>
-      <p>Der Markt für Solaranlagen ist groß und unübersichtlich. Damit du nicht zu viel zahlst oder an einen unseriösen Anbieter gerätst, solltest du mehrere Angebote vergleichen.</p>
+      <p>Der Markt für Solaranlagen in Deutschland umfasst tausende Installationsbetriebe — von lokalen Handwerkern bis zu bundesweiten Anbietern wie Enpal, 1Komma5° oder Zolar. Damit du nicht zu viel zahlst oder an einen unseriösen Anbieter gerätst, solltest du <strong>immer mehrere Angebote vergleichen</strong>. Die Preisunterschiede können bei identischer Technik bis zu 30 % betragen.</p>
+
+      <div class="blog-key-figure">
+        <span class="fig-val">bis zu 30 %</span>
+        <span class="fig-desc">Preisunterschied zwischen dem günstigsten und teuersten Angebot — deshalb immer mindestens 3 Angebote vergleichen</span>
+      </div>
 
       <h4>Checkliste für den Anbietervergleich</h4>
       <ul>
-        <li><strong>Mindestens 3 Angebote einholen</strong> — Preise variieren bis zu 30% zwischen Anbietern</li>
-        <li><strong>Leistungsgarantie prüfen:</strong> Gute Module bieten 25–30 Jahre Leistungsgarantie (mind. 80% der Nennleistung)</li>
-        <li><strong>Wechselrichter-Qualität:</strong> Der Wechselrichter ist die häufigste Fehlerquelle — setze auf Marken wie Fronius, SMA, Huawei oder Enphase</li>
-        <li><strong>Montage-Erfahrung:</strong> Frage nach Referenzen und der Anzahl installierter Anlagen</li>
-        <li><strong>Gewährleistung:</strong> Mindestens 5 Jahre auf die Installation, besser 10 Jahre</li>
-        <li><strong>Monitoring:</strong> Eine App zur Überwachung von Ertrag und Verbrauch sollte enthalten sein</li>
+        <li><strong>Mindestens 3 Angebote einholen</strong> — nutze Vergleichsportale, um schnell regionale Anbieter zu finden. Vergleiche nicht nur den Preis, sondern auch Leistungsumfang und Service</li>
+        <li><strong>Leistungsgarantie prüfen:</strong> Gute Module bieten 25–30 Jahre Leistungsgarantie (mind. 80 % der Nennleistung nach 25 Jahren). Premium-Hersteller: SunPower, REC, LG, Maxeon</li>
+        <li><strong>Wechselrichter-Qualität:</strong> Der Wechselrichter ist die häufigste Fehlerquelle — setze auf bewährte Marken wie Fronius, SMA, Huawei, Kostal oder Enphase (Mikrowechselrichter). Lebensdauer: 10-15 Jahre, dann Austausch nötig (ca. 1.500–2.500 €)</li>
+        <li><strong>Montage-Erfahrung:</strong> Frage nach Referenzen, der Anzahl installierter Anlagen und Fotos von bisherigen Projekten. Ein Betrieb mit 100+ installierten Anlagen ist vertrauenswürdiger als ein Newcomer</li>
+        <li><strong>Gewährleistung:</strong> Mindestens 5 Jahre auf die Installation (gesetzlich: 2 Jahre). Gute Betriebe bieten 10 Jahre. Achte darauf, dass die Gewährleistung auch die Dachdurchdringung und Dichtigkeit umfasst</li>
+        <li><strong>Monitoring:</strong> Eine App zur Überwachung von Ertrag und Verbrauch in Echtzeit sollte im Angebot enthalten sein. So erkennst du Störungen sofort</li>
+        <li><strong>Versicherung:</strong> Frage, ob der Betrieb eine Betriebshaftpflicht hat und ob Schäden am Dach während der Montage abgedeckt sind</li>
+      </ul>
+
+      <h4>Lokaler Handwerker vs. bundesweiter Anbieter</h4>
+      <ul>
+        <li><strong>Lokaler Solarteur:</strong> Persönlicher Ansprechpartner, schneller Service bei Problemen, oft günstiger. Nachteil: Verfügbarkeit variiert, längere Wartezeiten in Boom-Phasen</li>
+        <li><strong>Bundesweite Anbieter (Enpal, 1Komma5°, Zolar):</strong> Standardisierte Prozesse, oft Finanzierungsmodelle inklusive, teilweise Miet-/Pacht-Modelle. Nachteil: Weniger individuell, Service über Subunternehmer</li>
+        <li><strong>Vergleichsportale (Tarifcheck, Check24):</strong> Vermitteln zwischen dir und lokalen Anbietern — du erhältst mehrere Angebote und kannst den besten wählen. Kostenlos und unverbindlich</li>
+      </ul>
+
+      <h4>Warnsignale erkennen</h4>
+      <ul>
+        <li>Anbieter drängt auf schnelle Unterschrift oder bietet „nur heute gültigen" Rabatt</li>
+        <li>Keine Vor-Ort-Besichtigung des Dachs vor dem Angebot</li>
+        <li>Unrealistisch hohe Ertragsversprechen (über 1.200 kWh/kWp in Norddeutschland)</li>
+        <li>Keine klare Aufschlüsselung der Kosten (Module, Wechselrichter, Montage, Zähler)</li>
+        <li>Kein schriftliches Angebot mit technischen Details</li>
       </ul>
 
       <h4>Kostenlos Angebote vergleichen</h4>
-      <p>Über Vergleichsportale wie Tarifcheck.de erhältst du <strong>kostenlos und unverbindlich</strong> bis zu 3 Angebote von geprüften Fachbetrieben in deiner Region. So sparst du Zeit und findest den besten Preis.</p>
+      <p>Über Vergleichsportale wie Tarifcheck.de erhältst du <strong>kostenlos und unverbindlich</strong> bis zu 3 Angebote von geprüften Fachbetrieben in deiner Region — egal ob du in München, Hamburg, Berlin, Köln oder auf dem Land wohnst. So sparst du Zeit und findest den besten Preis für deine individuelle Situation.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Kostenlos Angebote vergleichen →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Kostenlos Angebote vergleichen auf Tarifcheck.de * →</a>
+      <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
   </div>
