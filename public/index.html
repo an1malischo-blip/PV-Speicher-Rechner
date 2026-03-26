@@ -82,8 +82,11 @@
 }
 </script>
 
+<!-- Google Analytics 4 (loaded after cookie consent) -->
+<script>window.gaConsent = false;</script>
+
 <style>
-/* ═══ RESET & BASIS ═══ */
+/* RESET & BASIS */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -122,7 +125,7 @@ body {
 
 .container { max-width: 600px; margin: 0 auto; padding: 0 16px; }
 
-/* ═══ HERO LANDING PAGE ═══ */
+/* HERO LANDING PAGE */
 .hero-landing {
   position: relative;
   min-height: 100vh;
@@ -136,7 +139,6 @@ body {
   text-align: center;
 }
 
-/* Animierter Gradient-Hintergrund */
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background:
@@ -150,7 +152,6 @@ body {
   100% { opacity: 1; transform: scale(1.05); }
 }
 
-/* Subtiles Dot-Grid-Pattern */
 .hero-landing::before {
   content: '';
   position: absolute; inset: 0; z-index: 0;
@@ -159,7 +160,6 @@ body {
   pointer-events: none;
 }
 
-/* Glühende Linie Sonne → Dach */
 .hero-glow-line {
   position: absolute;
   top: 10%; right: 25%;
@@ -193,7 +193,6 @@ body {
 }
 
 
-/* Hero-Bild */
 .hero-scene {
   position: relative;
   width: 100%;
@@ -208,7 +207,6 @@ body {
   display: block;
   animation: heroFloat 6s ease-in-out infinite;
   will-change: transform;
-  /* Ränder nahtlos in Seitenhintergrund überblenden + Logo unten rechts ausblenden */
   -webkit-mask-image:
     linear-gradient(to bottom, transparent 0%, black 8%, black 75%, transparent 100%),
     linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
@@ -227,7 +225,6 @@ body {
   50% { transform: translateY(-12px); }
 }
 
-/* Hero-Text */
 .hero-content {
   position: relative;
   z-index: 3;
@@ -258,7 +255,6 @@ body {
   animation: heroTextIn 1s ease-out 0.6s both;
 }
 
-/* Hero Stats */
 .hero-stats {
   display: flex;
   justify-content: center;
@@ -280,7 +276,6 @@ body {
   margin-top: 2px;
 }
 
-/* Hero CTA */
 .hero-cta {
   animation: heroTextIn 1s ease-out 1s both;
 }
@@ -318,7 +313,6 @@ body {
   50% { transform: translateX(100%) rotate(45deg); }
 }
 
-/* Hero Trust */
 .hero-trust {
   display: flex;
   justify-content: center;
@@ -336,7 +330,6 @@ body {
 }
 .hero-trust-item svg { flex-shrink: 0; }
 
-/* Scroll-Indikator */
 .scroll-indicator {
   position: absolute;
   bottom: 20px; left: 50%;
@@ -355,7 +348,6 @@ body {
   50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
 }
 
-/* Feature-Karten unter Hero */
 .features-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -381,13 +373,12 @@ body {
 .feature-title { font-size: 0.85rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
 .feature-desc { font-size: 0.72rem; color: var(--gray-500); line-height: 1.4; }
 
-/* Dark mode feature cards */
 [data-theme="dark"] .feature-card {
   background: rgba(30,41,59,0.95);
   border-color: rgba(71,85,105,0.5);
 }
 
-/* ═══ SITE HEADER (sticky) ═══ */
+/* SITE HEADER */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: rgba(15,23,42,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
@@ -435,11 +426,10 @@ body {
   }
   .site-nav.open { position: static; }
 }
-/* Offset body for fixed header */
 body { padding-top: 56px; }
 .hero-landing { margin-top: -56px; padding-top: 56px; }
 
-/* ═══ BLOG SECTION ═══ */
+/* BLOG SECTION */
 .blog-section {
   padding: 60px 0 40px;
   background: var(--bg);
@@ -497,7 +487,6 @@ body { padding-top: 56px; }
 .blog-key-figure .fig-val { font-size: 1.3rem; font-weight: 800; color: var(--primary-dark); white-space: nowrap; }
 .blog-key-figure .fig-desc { font-size: 0.85rem; color: var(--gray-600); }
 
-/* Hero responsive */
 @media (max-width: 480px) {
   .hero-landing h1 { font-size: 1.5rem; }
   .hero-scene { width: 260px; height: 240px; }
@@ -510,7 +499,7 @@ body { padding-top: 56px; }
   .hero-landing h1 { font-size: 2.4rem; }
 }
 
-/* ═══ FORTSCHRITTSBALKEN ═══ */
+/* FORTSCHRITTSBALKEN */
 .progress-wrap {
   background: var(--white); padding: 16px 0; position: sticky; top: 0;
   z-index: 10; border-bottom: 1px solid var(--gray-200);
@@ -519,7 +508,7 @@ body { padding-top: 56px; }
 .progress-bar { height: 6px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
 .progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-dark)); border-radius: 3px; transition: width 0.4s ease; }
 
-/* ═══ STEPS ═══ */
+/* STEPS */
 .steps-wrapper { padding: 24px 0 40px; min-height: 360px; }
 .steps-wrapper.fade-enter { animation: fadeSlideIn 0.5s ease both; }
 @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -529,7 +518,6 @@ body { padding-top: 56px; }
 .step-question { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
 .step-hint { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 20px; }
 
-/* Rechner-Intro-Header (nach Hero) */
 .calc-intro {
   text-align: center;
   padding: 32px 16px 0;
@@ -548,7 +536,7 @@ body { padding-top: 56px; }
   margin-bottom: 8px;
 }
 
-/* ═══ FORM ELEMENTE ═══ */
+/* FORM ELEMENTE */
 input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select {
   width: 100%; padding: 14px 16px; font-size: 1rem; border: 2px solid var(--gray-200);
   border-radius: var(--radius); background: var(--white); color: var(--gray-900); transition: border-color 0.2s; -webkit-appearance: none;
@@ -568,7 +556,6 @@ select {
 .error-msg { color: var(--danger); font-size: 0.8rem; margin-top: 4px; display: none; }
 .error-msg.visible { display: block; }
 
-/* Tooltips */
 .info-tip {
   position: relative; display: inline-flex; align-items: center; justify-content: center;
   width: 18px; height: 18px; background: var(--gray-200); color: var(--gray-500);
@@ -582,7 +569,6 @@ select {
   line-height: 1.4; width: 240px; text-align: left; z-index: 30; pointer-events: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
-/* Tooltip nicht außerhalb des Viewports */
 .kpi-card .info-tip .tip-text { left: auto; right: -10px; transform: none; }
 .kpi-card .info-tip .tip-text::after { left: auto; right: 14px; transform: none; }
 .info-tip .tip-text::after {
@@ -591,7 +577,6 @@ select {
 }
 .info-tip:hover .tip-text, .info-tip:focus .tip-text { display: block; }
 
-/* Radio-Karten */
 .radio-group { display: flex; flex-direction: column; gap: 10px; }
 .radio-card { position: relative; }
 .radio-card input[type="radio"] { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
@@ -614,7 +599,6 @@ select {
 }
 .radio-icon { font-size: 1.3rem; }
 
-/* Toggles */
 .toggle-group { display: flex; flex-direction: column; gap: 12px; }
 .toggle-item {
   display: flex; align-items: center; justify-content: space-between;
@@ -637,7 +621,7 @@ select {
 .toggle-switch input:checked + .toggle-slider::before { transform: translateX(24px); }
 .toggle-switch input:focus-visible + .toggle-slider { outline: 3px solid var(--primary); outline-offset: 2px; }
 
-/* ═══ BUTTONS ═══ */
+/* BUTTONS */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 52px; padding: 14px 28px; font-size: 1rem; font-weight: 700;
@@ -654,7 +638,7 @@ select {
 .btn-row .btn { flex: 1; }
 .btn-row .btn-secondary { flex: 0 0 auto; width: auto; min-width: 100px; }
 
-/* ═══ ERGEBNISSEITE ═══ */
+/* ERGEBNISSEITE */
 .result-page { display: none; padding-bottom: 100px; }
 .result-page.active { display: block; animation: fadeIn 0.5s ease; }
 
@@ -671,7 +655,6 @@ select {
 .hero-20y .big-num { font-size: 1.5rem; font-weight: 800; color: var(--accent-dark); }
 .hero-20y .big-label { font-size: 0.8rem; color: var(--gray-500); }
 
-/* KPI Cards */
 .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
 .kpi-card { background: var(--white); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); text-align: center; }
 .kpi-card .kpi-icon { font-size: 1.6rem; margin-bottom: 4px; }
@@ -679,14 +662,12 @@ select {
 .kpi-card .kpi-label { font-size: 0.75rem; color: var(--gray-500); margin-top: 2px; }
 .kpi-card.highlight { border: 2px solid var(--accent); background: linear-gradient(135deg, #ECFDF5, #D1FAE5); }
 
-/* Chart-Sektionen */
 .chart-section {
   background: var(--white); border-radius: var(--radius); padding: 20px;
   box-shadow: var(--shadow); margin: 20px 0;
 }
 .chart-section h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; color: var(--gray-700); }
 
-/* Balkendiagramm */
 .bar-chart { display: flex; flex-direction: column; gap: 12px; }
 .bar-row { display: flex; align-items: center; gap: 12px; }
 .bar-label { width: 80px; font-size: 0.8rem; color: var(--gray-500); text-align: right; flex-shrink: 0; }
@@ -696,7 +677,6 @@ select {
 .bar-fill.after { background: linear-gradient(90deg, var(--accent), var(--accent-dark)); }
 .bar-amount { font-size: 0.85rem; font-weight: 700; color: var(--gray-700); width: 70px; flex-shrink: 0; }
 
-/* Donut-Chart */
 .donut-wrap { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .donut-svg { width: 160px; height: 160px; transform: rotate(-90deg); }
 .donut-center { font-size: 0.9rem; font-weight: 700; fill: var(--gray-900); }
@@ -705,14 +685,12 @@ select {
 .legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
 .legend-val { font-weight: 700; margin-left: auto; padding-left: 8px; }
 
-/* Monats-Chart (SVG) */
 .month-chart-wrap { overflow-x: auto; }
 .month-chart-wrap svg { display: block; width: 100%; height: auto; }
 .month-bar { transition: height 0.6s ease, y 0.6s ease; }
 .month-label { font-size: 10px; fill: var(--gray-400); text-anchor: middle; }
 .month-val { font-size: 8px; fill: var(--gray-500); text-anchor: middle; }
 
-/* 20-Jahres-Chart */
 .cashflow-chart svg { display: block; width: 100%; height: auto; }
 .cf-area { transition: d 0.6s ease; }
 .cf-line { stroke-width: 2; fill: none; }
@@ -720,7 +698,6 @@ select {
 .cf-label { font-size: 9px; fill: var(--gray-500); }
 .cf-breakeven { stroke: var(--primary); stroke-width: 2; stroke-dasharray: 6 3; }
 
-/* Slider */
 .slider-section { background: var(--white); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); margin: 20px 0; }
 .slider-row { margin-bottom: 16px; }
 .slider-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
@@ -740,14 +717,11 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2); border: 3px solid var(--white);
 }
 
-/* Methodik */
 .methodik-box {
   background: var(--gray-100); border-radius: var(--radius); padding: 14px 16px;
   margin: 20px 0; font-size: 0.8rem; color: var(--gray-500); line-height: 1.5;
 }
 .methodik-box strong { color: var(--gray-700); }
-
-/* ═══ P2: CONVERSION & TRUST ═══ */
 
 /* Urgency-Banner */
 .urgency-banner {
@@ -765,7 +739,6 @@ input[type="range"]::-moz-range-thumb {
 .urgency-banner .urgency-icon { font-size: 1.3rem; flex-shrink: 0; }
 .urgency-banner strong { color: var(--primary-dark); }
 
-/* Speicher-Vergleich Side-by-Side */
 .compare-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -814,7 +787,6 @@ input[type="range"]::-moz-range-thumb {
 .compare-val { font-weight: 700; color: var(--gray-900); }
 .compare-highlight { color: var(--accent-dark); font-weight: 800; }
 
-/* CO₂-Äquivalente */
 .co2-equivalents {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -831,7 +803,6 @@ input[type="range"]::-moz-range-thumb {
 .co2-eq-val { font-size: 1.1rem; font-weight: 800; color: var(--accent-dark); margin: 4px 0 2px; }
 .co2-eq-label { font-size: 0.7rem; color: var(--gray-500); line-height: 1.3; }
 
-/* Rendite-Vergleich */
 .rendite-compare {
   display: flex;
   flex-direction: column;
@@ -876,7 +847,6 @@ input[type="range"]::-moz-range-thumb {
   right: auto; left: calc(100% + 8px); color: var(--gray-700);
 }
 
-/* Social Proof Section */
 .social-proof {
   display: flex;
   align-items: center;
@@ -899,7 +869,6 @@ input[type="range"]::-moz-range-thumb {
 .proof-stars { color: var(--primary); letter-spacing: -1px; }
 .proof-num { font-weight: 800; color: var(--accent-dark); font-size: 0.95rem; }
 
-/* Sticky CTA */
 .sticky-cta {
   position: fixed; bottom: 0; left: 0; right: 0; background: var(--white);
   border-top: 1px solid var(--gray-200); padding: 12px 16px; z-index: 20; display: none;
@@ -907,7 +876,6 @@ input[type="range"]::-moz-range-thumb {
 .sticky-cta .container { display: flex; gap: 10px; }
 .sticky-cta .btn { flex: 1; min-height: 48px; font-size: 0.9rem; }
 
-/* Tarifcheck */
 .tariff-section {
   background: var(--white); border-radius: var(--radius); padding: 24px 20px;
   box-shadow: var(--shadow-lg); margin: 28px 0; border: 2px solid var(--primary);
@@ -938,7 +906,6 @@ input[type="range"]::-moz-range-thumb {
 .tariff-name { font-weight: 700; font-size: 0.9rem; color: var(--gray-800); }
 .tariff-desc { font-size: 0.75rem; color: var(--gray-400); }
 
-/* FAQ */
 .faq-section { padding: 40px 0 20px; }
 .faq-section .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
 .faq-section h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 20px; text-align: center; color: var(--gray-900); }
@@ -949,7 +916,6 @@ details summary::after { content: '+'; font-size: 1.2rem; color: var(--gray-400)
 details[open] summary::after { content: '−'; }
 details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-500); line-height: 1.6; }
 
-/* Legal Pages */
 .legal-page {
   display: none; padding: 40px 0 60px; background: var(--bg);
 }
@@ -962,7 +928,6 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 .legal-page a { color: var(--primary-dark); }
 .legal-back { margin-bottom: 20px; }
 
-/* Cookie Consent */
 .cookie-banner {
   display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
   background: var(--white); border-top: 2px solid var(--gray-200);
@@ -974,20 +939,17 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 .cookie-banner .cookie-btns { display: flex; gap: 10px; flex-wrap: wrap; }
 .cookie-banner .cookie-btns .btn { min-width: 140px; font-size: 0.85rem; padding: 10px 20px; }
 
-/* Affiliate Badge */
 .affiliate-badge {
   display: inline-block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.05em; color: var(--gray-400); background: var(--gray-100);
   padding: 2px 8px; border-radius: 4px; margin-left: 6px; vertical-align: middle;
 }
 
-/* Footer */
 .footer { text-align: center; padding: 24px 0 32px; font-size: 0.75rem; color: var(--gray-400); }
 .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 10px; }
 .footer-links a { color: var(--gray-500); text-decoration: none; font-weight: 500; }
 .footer-links a:hover { color: var(--primary); text-decoration: underline; }
 
-/* Responsive */
 @media (max-width: 479px) {
   .co2-equivalents { grid-template-columns: 1fr !important; }
   .compare-grid { grid-template-columns: 1fr !important; }
@@ -1003,7 +965,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 }
 .hidden { display: none !important; }
 
-/* ═══ SCROLL-REVEAL SYSTEM ═══ */
+/* SCROLL-REVEAL */
 [data-reveal] {
   opacity: 0;
   transform: translateY(30px);
@@ -1028,7 +990,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
   .chart-section { break-inside: avoid; page-break-inside: avoid; }
 }
 
-/* ═══ P3: DARK MODE ═══ */
+/* DARK MODE */
 [data-theme="dark"] {
   --bg: #0F172A;
   --white: #1E293B;
@@ -1135,6 +1097,20 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+/* Email Capture */
+.email-capture { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #ECFDF5 100%); border-radius: var(--radius); padding: 28px 20px; text-align: center; margin: 28px 0; border: 2px solid var(--primary); }
+.email-capture-icon { font-size: 2rem; margin-bottom: 8px; }
+.email-capture h3 { font-size: 1.15rem; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
+.email-capture-sub { font-size: 0.9rem; color: var(--gray-600); margin-bottom: 16px; }
+.email-capture-row { display: flex; gap: 10px; max-width: 420px; margin: 0 auto; }
+.email-capture-row input { flex: 1; min-width: 0; }
+.email-capture-btn { flex: 0 0 auto; min-height: 48px; width: auto; padding: 12px 24px; font-size: 0.9rem; }
+.email-capture-privacy { font-size: 0.75rem; color: var(--gray-400); margin-top: 10px; }
+.email-capture-success { margin-top: 14px; }
+.email-success-icon { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--accent); color: var(--white); border-radius: 50%; font-size: 1.2rem; margin-bottom: 6px; }
+.email-capture-success p { font-size: 0.9rem; color: var(--accent-dark); font-weight: 600; }
+[data-theme="dark"] .email-capture { background: linear-gradient(135deg, #44330a 0%, #3d2e09 50%, #0d3320 100%); }
+@media (max-width: 479px) { .email-capture-row { flex-direction: column; } .email-capture-btn { width: 100%; } }
 </style>
 </head>
 <body>
@@ -1152,7 +1128,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <a href="#rechner" class="nav-link" onclick="startCalculator()">Rechner</a>
       <a href="#blog" class="nav-link">Ratgeber</a>
       <a href="#faq-section" class="nav-link">FAQ</a>
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="nav-link-cta">Angebot sichern</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="nav-link-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Angebot sichern</a>
       <button class="mobile-menu-btn" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menü" type="button">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
@@ -1169,14 +1145,14 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
   <div class="hero-scene" aria-hidden="true">
     <picture>
       <source srcset="hero-bg.webp" type="image/webp">
-      <img src="hero-bg.png" alt="Haus mit Solaranlage und Batteriespeicher in grüner Landschaft – Illustration für den kostenlosen Photovoltaik-Rechner" width="700" height="400" loading="eager">
+      <img src="hero-bg-compressed.jpg" alt="Haus mit Photovoltaik-Solaranlage und Batteriespeicher in grüner Landschaft – Illustration für den kostenlosen Photovoltaik-Rechner" width="700" height="400" loading="eager">
     </picture>
   </div>
 
   <!-- Hero Content -->
   <div class="hero-content">
     <h1>Dein Dach. <span class="highlight">Deine Energie.</span><br>Deine Ersparnis.</h1>
-    <p class="hero-subtitle">Berechne in 2 Minuten, wie viel du mit einer Solaranlage wirklich sparst – wissenschaftlich fundiert, komplett kostenlos.</p>
+    <p class="hero-subtitle">Berechne in 2 Minuten, wie viel du mit einer Photovoltaik-Anlage wirklich sparst – wissenschaftlich fundiert, komplett kostenlos.</p>
 
     <!-- Statistiken -->
     <div class="hero-stats">
@@ -1230,7 +1206,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
   <div class="feature-card">
     <div class="feature-icon" aria-hidden="true">&#9889;</div>
     <div class="feature-title">Sofort-Ergebnis</div>
-    <div class="feature-desc">Ertrag, Kosten &amp; Ersparnis in nur 2 Minuten berechnet</div>
+    <div class="feature-desc">Photovoltaik-Ertrag, Kosten &amp; Ersparnis in nur 2 Minuten berechnet</div>
   </div>
   <div class="feature-card">
     <div class="feature-icon" aria-hidden="true">&#128200;</div>
@@ -1240,13 +1216,13 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
   <div class="feature-card">
     <div class="feature-icon" aria-hidden="true">&#127968;</div>
     <div class="feature-title">Dein Dach, dein Preis</div>
-    <div class="feature-desc">Regionaler Ertrag, Speicher, E-Auto &amp; Waermepumpe inkl.</div>
+    <div class="feature-desc">Regionaler Photovoltaik-Ertrag, Speicher, E-Auto &amp; Waermepumpe inkl.</div>
   </div>
 </div>
 
 <!-- ═══ RECHNER-INTRO ═══ -->
 <div class="calc-intro hidden" id="calcIntro">
-  <h2>Dein persoenlicher PV-Check</h2>
+  <h2>Dein persönlicher Photovoltaik-Check</h2>
   <p>7 kurze Fragen – dann bekommst du dein individuelles Ergebnis.</p>
 </div>
 
@@ -1673,7 +1649,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
     <section class="tariff-section" id="leadSection" aria-label="Solaranlage Angebot">
       <div class="tariff-header">
         <span class="tariff-badge">Anzeige</span>
-        <h3>Jetzt Solaranlage vergleichen & sparen</h3>
+        <h3>Jetzt Photovoltaik-Anlage vergleichen & sparen</h3>
         <p style="color:var(--gray-500);margin-bottom:16px;font-size:0.95rem">Vergleiche kostenlos Solaranlagen-Angebote von geprüften Fachbetrieben in deiner Region – powered by Tarifcheck.de</p>
       </div>
       <div class="tariff-widget" id="tcpp-iframe-solar" style="width:100%;min-height:200px"></div>
@@ -1681,7 +1657,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <div class="tariff-divider"></div>
       <div class="tariff-alt">
         <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:12px">Oder direkt zum Solaranlagen-Vergleich:</p>
-        <a class="btn btn-accent tariff-direct-link" href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-accent tariff-direct-link" href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">
           Solaranlage vergleichen auf Tarifcheck.de
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style="margin-left:6px"><path d="M6.354 5.5H2a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-4.354l2 2V14a2.5 2.5 0 0 1-2.5 2.5H2A2.5 2.5 0 0 1-.5 14V6A2.5 2.5 0 0 1 2 3.5h4.354l-2 2z"/><path d="M9 0h7v7l-2.5-2.5L9.854 8.146a.5.5 0 0 1-.708-.708L12.793 3.5 10.5 1z" transform="translate(0,0)"/></svg>
         </a>
@@ -1716,20 +1692,38 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       </div>
     </section>
 
+    <!-- Email Capture -->
+    <div class="email-capture" id="emailCapture">
+      <div class="email-capture-icon" aria-hidden="true">&#9993;</div>
+      <h3>Ergebnis per E-Mail erhalten</h3>
+      <p class="email-capture-sub">Wir senden Ihnen Ihre persönliche PV-Berechnung als PDF — kostenlos.</p>
+      <form class="email-capture-form" id="emailCaptureForm" onsubmit="return handleEmailCapture(event)">
+        <div class="email-capture-row">
+          <input type="email" id="emailCaptureInput" placeholder="Ihre E-Mail-Adresse" required aria-label="E-Mail-Adresse">
+          <button type="submit" class="btn btn-primary email-capture-btn">Absenden</button>
+        </div>
+      </form>
+      <p class="email-capture-privacy">Ihre E-Mail wird nicht weitergegeben.</p>
+      <div class="email-capture-success" id="emailCaptureSuccess" style="display:none">
+        <span class="email-success-icon" aria-hidden="true">&#10003;</span>
+        <p>Vielen Dank! Wir haben Ihre Anfrage gespeichert.</p>
+      </div>
+    </div>
+
   </section>
 </main>
 
 <!-- FAQ (immer sichtbar, außerhalb der Ergebnisseite) -->
 <section class="faq-section" id="faq-section" aria-label="Häufige Fragen">
   <div class="container">
-    <h2>Häufige Fragen</h2>
+    <h2>Häufige Fragen zur Photovoltaik</h2>
     <details><summary>Was kostet eine PV-Anlage mit Speicher 2026?</summary><div class="faq-body">Eine PV-Anlage kostet ca. 1.200–1.800 € pro kWp. Ein Speicher ca. 500–900 € pro kWh. Eine 10 kWp Anlage mit 10 kWh Speicher: ca. 18.000–26.000 € (0% MwSt seit 2023).</div></details>
     <details><summary>Wie lange dauert die Amortisation?</summary><div class="faq-body">Typischerweise 8–14 Jahre. Je höher der Eigenverbrauch und Strompreis, desto schneller.</div></details>
     <details><summary>Wie hoch ist die Einspeisevergütung?</summary><div class="faq-body">Ca. 8,03 ct/kWh für Anlagen bis 10 kWp (Teileinspeisung). 20 Jahre gesetzlich garantiert. Sinkt halbjährlich um ca. 1%.</div></details>
     <details><summary>Lohnt sich ein Batteriespeicher?</summary><div class="faq-body">Ein Speicher erhöht den Eigenverbrauch von ca. 25-35% auf 50-70%. Da selbst verbrauchter Strom ca. 32 ct/kWh spart vs. 8 ct/kWh Einspeisung, lohnt sich der Speicher oft trotz höherer Investition.</div></details>
     <details><summary>Welche Förderungen gibt es?</summary><div class="faq-body">0% MwSt auf PV-Anlagen (seit 2023). KfW-Kredite (KfW 270). Regionale Programme variieren – informiere dich auf foerderdatenbank.de.</div></details>
-    <details><summary>Wie finde ich den besten Anbieter?</summary><div class="faq-body">Vergleiche mindestens 3 Angebote. Achte auf Modulqualität (25+ Jahre Garantie), Wechselrichter-Marke und Montage-Erfahrung. Über <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600">Tarifcheck.de</a> erhältst du kostenlos bis zu 3 Angebote von geprüften Fachbetrieben.</div></details>
-    <details><summary>Welchen Stromtarif brauche ich mit PV?</summary><div class="faq-body">Mit PV sinkt dein Netzbezug. Achte auf niedrige Grundgebühren und prüfe dynamische Tarife (z.B. Tibber). Für Wärmepumpen gibt es spezielle günstigere Tarife. <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600">Vergleiche jetzt deinen Tarif</a>.</div></details>
+    <details><summary>Wie finde ich den besten Anbieter?</summary><div class="faq-body">Vergleiche mindestens 3 Angebote. Achte auf Modulqualität (25+ Jahre Garantie), Wechselrichter-Marke und Montage-Erfahrung. Über <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Tarifcheck.de</a> erhältst du kostenlos bis zu 3 Angebote von geprüften Fachbetrieben.</div></details>
+    <details><summary>Welchen Stromtarif brauche ich mit PV?</summary><div class="faq-body">Mit PV sinkt dein Netzbezug. Achte auf niedrige Grundgebühren und prüfe dynamische Tarife (z.B. Tibber). Für Wärmepumpen gibt es spezielle günstigere Tarife. <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Vergleiche jetzt deinen Tarif</a>.</div></details>
   </div>
 </section>
 
@@ -1748,7 +1742,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
   <div class="container">
     <div class="blog-header">
       <h2>Ratgeber: Photovoltaik & Stromspeicher 2026</h2>
-      <p>Alles, was du vor dem Kauf einer Solaranlage wissen musst — verständlich erklärt, mit aktuellen Zahlen.</p>
+      <p>Alles, was du vor dem Kauf einer Photovoltaik-Solaranlage wissen musst — verständlich erklärt, mit aktuellen Zahlen.</p>
     </div>
 
     <nav class="blog-toc">
@@ -1801,7 +1795,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 
       <p>Unser <a href="#rechner" onclick="startCalculator()">kostenloser PV-Rechner</a> berechnet dir auf Basis deiner individuellen Daten — Standort, Dachneigung, Verbrauch — wie viel eine Anlage in deinem Fall kosten würde und wann sie sich amortisiert.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Jetzt Preise vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Jetzt Preise vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -1894,7 +1888,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       </ul>
       <p>Die meisten Hersteller geben 10 Jahre Garantie auf den Speicher. Bei LFP-Technologie ist eine Lebensdauer von 15-20 Jahren realistisch — das bedeutet, der Speicher hält genauso lange wie die PV-Anlage selbst.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Speicher-Angebote vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Speicher-Angebote vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -1973,7 +1967,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       </ul>
       <p>Prüfe auf <a href="https://www.foerderdatenbank.de" target="_blank" rel="noopener noreferrer" style="color:var(--primary-dark);font-weight:600">foerderdatenbank.de</a> welche Programme in deiner Region aktuell verfügbar sind.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Kostenlos Fördermöglichkeiten prüfen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Kostenlos Fördermöglichkeiten prüfen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -2007,7 +2001,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <p>Energiemanagementsysteme wie <strong>evcc</strong> (Open Source) oder <strong>Home Assistant</strong> mit dem Tibber-Plugin automatisieren diese Strategie vollständig.</p>
 
       <p>Vergleiche jetzt deinen Stromtarif und spare zusätzlich zu deiner PV-Anlage:</p>
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Stromtarif vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Stromtarif vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -2051,7 +2045,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <h4>Kostenlos Angebote vergleichen</h4>
       <p>Über Vergleichsportale wie Tarifcheck.de erhältst du <strong>kostenlos und unverbindlich</strong> bis zu 3 Angebote von geprüften Fachbetrieben in deiner Region — egal ob du in München, Hamburg, Berlin, Köln oder auf dem Land wohnst. So sparst du Zeit und findest den besten Preis für deine individuelle Situation.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta">Kostenlos Angebote vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Kostenlos Angebote vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -2180,15 +2174,21 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <a href="#" onclick="openLegalPage('datenschutz-page');return false">Datenschutzerklärung</a>
       <a href="#" onclick="showCookieBanner();return false">Cookie-Einstellungen</a>
     </nav>
-    <p>Alle Angaben ohne Gewähr. Ersetzt keine individuelle Fachberatung.</p>
+    <p>Alle Angaben ohne Gewähr. Ersetzt keine individuelle Photovoltaik-Fachberatung.</p>
     <p style="margin-top:4px">© 2026 PV-Speicher-Rechner · CH Distribution · Methodik: HTW Berlin &amp; PVGIS</p>
+    <div class="cross-links" style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:0.8rem;color:#888;">
+      <p style="margin:0 0 6px 0;font-weight:600;color:#999;">Weitere Rechner von uns</p>
+      <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;">
+        <a href="https://fitness-rechner.de" target="_blank" rel="noopener" style="color:#888;text-decoration:none;">Fitness- &amp; Supplement-Rechner</a>
+        <a href="https://petrechner.de" target="_blank" rel="noopener" style="color:#888;text-decoration:none;">Futterrechner Hund &amp; Katze</a>
+        <a href="https://zahnkosten-rechner.de" target="_blank" rel="noopener" style="color:#888;text-decoration:none;">Zahnersatz-Kostenrechner</a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   PV-Speicher-Rechner V3 – P0 + P1 (Charts, Counter, Slider)
-   ═══════════════════════════════════════════════════════════ */
+/* PV-Speicher-Rechner V3 */
 
 let currentStep = 1;
 const totalSteps = 7;
@@ -2564,6 +2564,7 @@ function calculate() {
   document.getElementById('resultPage').classList.add('active');
   document.getElementById('stickyCta').style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  if(window.gtag) gtag('event', 'calculator_complete', {calculator: 'pv_rechner', page: location.pathname});
 }
 
 /* ═══ ERGEBNISSE RENDERN (auch für Slider) ═══ */
@@ -2811,6 +2812,20 @@ function exportPDF() {
   setTimeout(() => window.print(), 300);
 }
 
+/* ═══ EMAIL CAPTURE ═══ */
+function handleEmailCapture(e) {
+  e.preventDefault();
+  var email = document.getElementById('emailCaptureInput').value;
+  if (!email) return false;
+  var stored = JSON.parse(localStorage.getItem('pv_email_captures') || '[]');
+  stored.push({ email: email, date: new Date().toISOString(), url: window.location.href });
+  localStorage.setItem('pv_email_captures', JSON.stringify(stored));
+  document.getElementById('emailCaptureForm').style.display = 'none';
+  document.getElementById('emailCaptureSuccess').style.display = 'block';
+  if(window.gtag) gtag('event', 'email_signup', {page: location.pathname});
+  return false;
+}
+
 /* ═══ P3: ERGEBNIS-SHARING VIA URL ═══ */
 function shareResults() {
   // Alle relevanten Eingabewerte in URL-Parameter kodieren
@@ -2891,7 +2906,7 @@ function loadFromURL() {
   return true;
 }
 
-/* ═══ P3: DARK MODE ═══ */
+/* DARK MODE */
 function toggleDarkMode() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const newTheme = isDark ? 'light' : 'dark';
@@ -3030,17 +3045,21 @@ function acceptCookies() {
 }
 
 function loadGA4() {
-  if (document.getElementById('ga4-script')) return;
+  if (window.gaLoaded) return;
+  window.gaLoaded = true;
   var s = document.createElement('script');
   s.id = 'ga4-script';
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=G-N75ZWVQRCG';
   document.head.appendChild(s);
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag = gtag;
-  gtag('js', new Date());
-  gtag('config', 'G-N75ZWVQRCG', { anonymize_ip: true });
+  s.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-N75ZWVQRCG', { anonymize_ip: true });
+    window.gaConsent = true;
+  };
 }
 
 function declineCookies() {
