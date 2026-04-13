@@ -1,0 +1,39 @@
+# PV-Speicher-Rechner
+
+> Kostenloser Photovoltaik-Rechner für Deutschland — berechne Ertrag, Eigenverbrauch, Amortisation und Ersparnis deiner Solaranlage mit Speicher.
+
+## Was dieser Rechner macht
+
+Der PV-Speicher-Rechner ist ein interaktives Online-Tool, das Hausbesitzern in Deutschland hilft, die Wirtschaftlichkeit einer Photovoltaikanlage zu berechnen. Eingaben: Verbrauch, Dachfläche, Postleitzahl, Anlagengröße, Speicherkapazität, E-Auto und Wärmepumpe. Ausgabe: Ertragsprognose, Eigenverbrauchsquote, Amortisationszeit, 20-Jahres-Cashflow und CO₂-Einsparung.
+
+## Ratgeber-Artikel
+
+- **Was kostet eine Photovoltaikanlage 2026?** — Kosten pro kWp, Speicherpreise, 0% MwSt-Regelung
+- **Rendite & Amortisation einer Solaranlage** — ROI-Berechnung, Eigenverbrauch vs. Einspeisung
+- **Batteriespeicher: Wann lohnt er sich?** — Wirtschaftlichkeitsvergleich mit/ohne Speicher
+- **Eigenverbrauch maximieren** — 7 Strategien: Speicher, E-Auto, Wärmepumpe, Smart Home
+- **Förderungen & Steuervorteile 2026** — KfW 270, EEG-Einspeisevergütung, Einkommensteuerbefreiung
+- **Stromtarif für PV-Besitzer** — dynamische Tarife, Zweirichtungszähler, Tibber
+- **Solaranlage kaufen: Den besten Anbieter finden** — Angebotsvergleich, Qualitätskriterien
+
+## FAQ
+
+- Was kostet eine PV-Anlage mit Speicher 2026? → ca. 18.000–26.000 € für 10 kWp mit 10 kWh Speicher (0% MwSt)
+- Wie lange dauert die Amortisation? → 8–14 Jahre je nach Eigenverbrauch und Strompreis
+- Wie hoch ist die Einspeisevergütung 2026? → ca. 8,03 ct/kWh (Teileinspeisung), 20 Jahre garantiert
+- Lohnt sich ein Batteriespeicher? → Erhöht Eigenverbrauch von 25–35% auf 50–70%
+- Welche Förderungen gibt es? → 0% MwSt, KfW 270, regionale Programme
+- Wie maximiere ich den Eigenverbrauch? → Speicher, E-Auto tagsüber laden, Wärmepumpe koppeln
+
+## Technische Details
+
+- Kostenloses Web-Tool, keine Registrierung nötig
+- Berechnung basiert auf Methodik HTW Berlin & PVGIS
+- Daten: PVGIS-Ertragsdaten, aktuelle EEG-Einspeisevergütung, regionaler Strompreis
+- Sprache: Deutsch
+- Betreiber: CH Distribution, Bremen
+
+## Kontakt & Impressum
+
+- Domain: https://pv-speicher-rechner.de/
+- Betreiber: CH Distribution, Langwedeler Straße 82, 28307 Bremen

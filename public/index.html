@@ -15,14 +15,14 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="https://pv-speicher-rechner.de/">
-<meta property="og:image" content="https://pv-speicher-rechner.de/hero-bg.png">
-<meta property="og:image:width" content="2752">
-<meta property="og:image:height" content="1536">
+<meta property="og:image" content="https://pv-speicher-rechner.de/hero-bg-compressed.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1071">
 <meta property="og:image:alt" content="Haus mit Solaranlage und Batteriespeicher – Kostenloser PV-Rechner">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PV-Rechner: Lohnt sich eine Solaranlage für mich?">
 <meta name="twitter:description" content="Jetzt kostenlos berechnen: Ertrag, Ersparnis &amp; Amortisation deiner PV-Anlage mit Speicher.">
-<meta name="twitter:image" content="https://pv-speicher-rechner.de/hero-bg.png">
+<meta name="twitter:image" content="https://pv-speicher-rechner.de/hero-bg-compressed.jpg">
 
 <!-- Schema.org: WebApplication -->
 <script type="application/ld+json">
@@ -69,7 +69,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "PV-Speicher-Rechner",
-  "url": "https://pv-speicher-rechner.de",
+  "url": "https://pv-speicher-rechner.de/",
   "logo": "https://pv-speicher-rechner.de/favicon.svg",
   "description": "Kostenloser Photovoltaik-Rechner fuer Deutschland: Berechne Ertrag, Kosten, Eigenverbrauch und Amortisation deiner Solaranlage mit Speicher.",
   "address": {
@@ -79,6 +79,44 @@
     "postalCode": "28307",
     "addressCountry": "DE"
   }
+}
+</script>
+
+<!-- Schema.org: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PV-Speicher-Rechner",
+  "url": "https://pv-speicher-rechner.de/"
+}
+</script>
+
+<!-- Schema.org: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PV-Rechner",
+      "item": "https://pv-speicher-rechner.de/#rechner"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber Photovoltaik",
+      "item": "https://pv-speicher-rechner.de/#blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Häufige Fragen",
+      "item": "https://pv-speicher-rechner.de/#faq-section"
+    }
+  ]
 }
 </script>
 
@@ -1128,7 +1166,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <a href="#rechner" class="nav-link" onclick="startCalculator()">Rechner</a>
       <a href="#blog" class="nav-link">Ratgeber</a>
       <a href="#faq-section" class="nav-link">FAQ</a>
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="nav-link-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Angebot sichern</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" class="nav-link-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Angebot sichern</a>
       <button class="mobile-menu-btn" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menü" type="button">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
@@ -1657,7 +1695,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <div class="tariff-divider"></div>
       <div class="tariff-alt">
         <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:12px">Oder direkt zum Solaranlagen-Vergleich:</p>
-        <a class="btn btn-accent tariff-direct-link" href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">
+        <a class="btn btn-accent tariff-direct-link" href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">
           Solaranlage vergleichen auf Tarifcheck.de
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style="margin-left:6px"><path d="M6.354 5.5H2a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-4.354l2 2V14a2.5 2.5 0 0 1-2.5 2.5H2A2.5 2.5 0 0 1-.5 14V6A2.5 2.5 0 0 1 2 3.5h4.354l-2 2z"/><path d="M9 0h7v7l-2.5-2.5L9.854 8.146a.5.5 0 0 1-.708-.708L12.793 3.5 10.5 1z" transform="translate(0,0)"/></svg>
         </a>
@@ -1722,8 +1760,8 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
     <details><summary>Wie hoch ist die Einspeisevergütung?</summary><div class="faq-body">Ca. 8,03 ct/kWh für Anlagen bis 10 kWp (Teileinspeisung). 20 Jahre gesetzlich garantiert. Sinkt halbjährlich um ca. 1%.</div></details>
     <details><summary>Lohnt sich ein Batteriespeicher?</summary><div class="faq-body">Ein Speicher erhöht den Eigenverbrauch von ca. 25-35% auf 50-70%. Da selbst verbrauchter Strom ca. 32 ct/kWh spart vs. 8 ct/kWh Einspeisung, lohnt sich der Speicher oft trotz höherer Investition.</div></details>
     <details><summary>Welche Förderungen gibt es?</summary><div class="faq-body">0% MwSt auf PV-Anlagen (seit 2023). KfW-Kredite (KfW 270). Regionale Programme variieren – informiere dich auf foerderdatenbank.de.</div></details>
-    <details><summary>Wie finde ich den besten Anbieter?</summary><div class="faq-body">Vergleiche mindestens 3 Angebote. Achte auf Modulqualität (25+ Jahre Garantie), Wechselrichter-Marke und Montage-Erfahrung. Über <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Tarifcheck.de</a> erhältst du kostenlos bis zu 3 Angebote von geprüften Fachbetrieben.</div></details>
-    <details><summary>Welchen Stromtarif brauche ich mit PV?</summary><div class="faq-body">Mit PV sinkt dein Netzbezug. Achte auf niedrige Grundgebühren und prüfe dynamische Tarife (z.B. Tibber). Für Wärmepumpen gibt es spezielle günstigere Tarife. <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Vergleiche jetzt deinen Tarif</a>.</div></details>
+    <details><summary>Wie finde ich den besten Anbieter?</summary><div class="faq-body">Vergleiche mindestens 3 Angebote. Achte auf Modulqualität (25+ Jahre Garantie), Wechselrichter-Marke und Montage-Erfahrung. Über <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--primary);font-weight:600" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Tarifcheck.de</a> erhältst du kostenlos bis zu 3 Angebote von geprüften Fachbetrieben.</div></details>
+    <details><summary>Welchen Stromtarif brauche ich mit PV?</summary><div class="faq-body">Mit PV sinkt dein Netzbezug. Achte auf niedrige Grundgebühren und prüfe dynamische Tarife (z.B. Tibber). Für Wärmepumpen gibt es spezielle günstigere Tarife. <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--primary);font-weight:600" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Vergleiche jetzt deinen Tarif</a>.</div></details>
   </div>
 </section>
 
@@ -1795,7 +1833,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
 
       <p>Unser <a href="#rechner" onclick="startCalculator()">kostenloser PV-Rechner</a> berechnet dir auf Basis deiner individuellen Daten — Standort, Dachneigung, Verbrauch — wie viel eine Anlage in deinem Fall kosten würde und wann sie sich amortisiert.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Jetzt Preise vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Jetzt Preise vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -1888,7 +1926,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       </ul>
       <p>Die meisten Hersteller geben 10 Jahre Garantie auf den Speicher. Bei LFP-Technologie ist eine Lebensdauer von 15-20 Jahren realistisch — das bedeutet, der Speicher hält genauso lange wie die PV-Anlage selbst.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Speicher-Angebote vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Speicher-Angebote vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -1967,7 +2005,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       </ul>
       <p>Prüfe auf <a href="https://www.foerderdatenbank.de" target="_blank" rel="noopener noreferrer" style="color:var(--primary-dark);font-weight:600">foerderdatenbank.de</a> welche Programme in deiner Region aktuell verfügbar sind.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Kostenlos Fördermöglichkeiten prüfen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Kostenlos Fördermöglichkeiten prüfen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -2001,7 +2039,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <p>Energiemanagementsysteme wie <strong>evcc</strong> (Open Source) oder <strong>Home Assistant</strong> mit dem Tibber-Plugin automatisieren diese Strategie vollständig.</p>
 
       <p>Vergleiche jetzt deinen Stromtarif und spare zusätzlich zu deiner PV-Anlage:</p>
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Stromtarif vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Stromtarif vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -2045,7 +2083,7 @@ details .faq-body { padding: 0 16px 14px; font-size: 0.85rem; color: var(--gray-
       <h4>Kostenlos Angebote vergleichen</h4>
       <p>Über Vergleichsportale wie Tarifcheck.de erhältst du <strong>kostenlos und unverbindlich</strong> bis zu 3 Angebote von geprüften Fachbetrieben in deiner Region — egal ob du in München, Hamburg, Berlin, Köln oder auf dem Land wohnst. So sparst du Zeit und findest den besten Preis für deine individuelle Situation.</p>
 
-      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Kostenlos Angebote vergleichen auf Tarifcheck.de * →</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" class="blog-cta" onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Kostenlos Angebote vergleichen auf Tarifcheck.de * →</a>
       <p style="font-size:0.7rem;color:var(--gray-400);margin-top:4px">* Affiliate-Link — für dich entstehen keine Mehrkosten.</p>
     </article>
 
@@ -3068,7 +3106,7 @@ function declineCookies() {
   // Fallback anzeigen
   const container = document.getElementById('tcpp-iframe-solar');
   if (container) {
-    container.innerHTML = '<div style="text-align:center;padding:24px;background:var(--gray-100);border-radius:8px"><p style="margin-bottom:12px;color:var(--gray-600);font-size:0.9rem">Der Solaranlagen-Vergleichsrechner wurde nicht geladen, da du Cookies abgelehnt hast.</p><a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.85rem">Direkt zu Tarifcheck.de →</a></div>';
+    container.innerHTML = '<div style="text-align:center;padding:24px;background:var(--gray-100);border-radius:8px"><p style="margin-bottom:12px;color:var(--gray-600);font-size:0.9rem">Der Solaranlagen-Vergleichsrechner wurde nicht geladen, da du Cookies abgelehnt hast.</p><a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary" style="font-size:0.85rem">Direkt zu Tarifcheck.de →</a></div>';
   }
 }
 
