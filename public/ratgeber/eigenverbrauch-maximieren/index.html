@@ -46,6 +46,41 @@
 }
 </script>
 
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist eine gute Eigenverbrauchsquote?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ohne Speicher liegt die typische Eigenverbrauchsquote bei 25–35 %. Mit Speicher steigt sie auf 60–75 %. Wer zusätzlich Wärmepumpe oder E-Auto integriert, erreicht 80 %+ — das gilt als sehr gut. Mehr als 90 % sind technisch kaum sinnvoll, da die Überdimensionierung unwirtschaftlich wird." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie kann ich meinen PV-Eigenverbrauch erhöhen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Die wirksamsten Hebel: große Verbraucher (Wäsche, Spülmaschine, Wallbox) in die Mittagsstunden verschieben, Warmwasser per Heizstab oder Wärmepumpe mit PV-Strom erzeugen, einen Batteriespeicher ergänzen, und ein Energiemanagement-System nutzen, das Geräte automatisch bei Solarüberschuss startet." }
+    },
+    {
+      "@type": "Question",
+      "name": "Lohnt sich eine Wärmepumpe in Kombination mit PV?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, besonders stark. Die Wärmepumpe hebt den jährlichen Stromverbrauch um 3.000–5.000 kWh, lässt sich aber mit PV-Strom versorgen. Das senkt Heizkosten deutlich und erhöht die Eigenverbrauchsquote um 15–25 Prozentpunkte. Viele Hybrid-Wärmepumpen lassen sich per SG-Ready-Signal PV-gesteuert betreiben." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Autarkie und Eigenverbrauch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Eigenverbrauch = Anteil des selbst erzeugten Stroms, der direkt genutzt wird. Autarkie = Anteil des Hausverbrauchs, der aus eigener Erzeugung gedeckt wird. Beispiel: Eine Anlage produziert 10.000 kWh, Haushalt braucht 5.000 kWh, nutzt davon 3.000 kWh selbst. Eigenverbrauch = 30 %, Autarkiegrad = 60 %." }
+    },
+    {
+      "@type": "Question",
+      "name": "Bringt ein E-Auto mehr PV-Eigenverbrauch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, enorm. Ein E-Auto mit 15.000 km Jahresfahrleistung verbraucht rund 3.000 kWh zusätzlich. Lädt man überwiegend tagsüber mit Solarüberschuss, steigt die Eigenverbrauchsquote um bis zu 20 Prozentpunkte. Wichtig: Wallbox mit PV-Überschussladen (z.B. go-e, openWB) nutzen." }
+    }
+  ]
+}
+</script>
+
 <!-- GA4 (wird erst nach Cookie-Zustimmung geladen) -->
 <script>window.gaConsent = false;</script>
 
@@ -228,6 +263,35 @@ body {
   border: 1px solid #A7F3D0; margin-bottom: 10px;
 }
 .updated-badge svg { width: 12px; height: 12px; }
+
+/* FAQ-SEKTION */
+.faq-section {
+  margin: 36px 0 16px;
+  padding-top: 24px;
+  border-top: 2px solid var(--gray-200);
+}
+.faq-section h2 {
+  font-size: 1.25rem; font-weight: 800;
+  color: var(--gray-900); margin-bottom: 8px;
+}
+.faq-section .faq-intro {
+  font-size: 0.88rem; color: var(--gray-500);
+  margin-bottom: 18px;
+}
+.faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-size: 0.98rem; font-weight: 700;
+  color: var(--gray-900); margin: 0 0 8px;
+  line-height: 1.4;
+}
+.faq-item p {
+  font-size: 0.9rem; line-height: 1.7;
+  color: var(--gray-600); margin: 0;
+}
 
 /* TRUST-BOX (Methodik & Quellen) */
 .trust-box {
@@ -445,6 +509,36 @@ body {
             Angebote mit Speicher vergleichen auf Tarifcheck.de *
           </a>
           <p class="affiliate-note">* Affiliate-Link: Wir erhalten eine Provision, wenn du über diesen Link ein Angebot anforderst. Für dich entstehen keine Mehrkosten.</p>
+
+          <section class="faq-section" aria-label="Häufig gestellte Fragen">
+            <h2>Häufig gestellte Fragen zum PV-Eigenverbrauch</h2>
+            <p class="faq-intro">Die wichtigsten Fragen rund um Eigenverbrauch, Autarkie und Sektorenkopplung:</p>
+
+            <div class="faq-item">
+              <h3>Was ist eine gute Eigenverbrauchsquote?</h3>
+              <p>Ohne Speicher liegt die typische Eigenverbrauchsquote bei 25–35 %. Mit Speicher steigt sie auf 60–75 %. Wer zusätzlich Wärmepumpe oder E-Auto integriert, erreicht 80 %+ — das gilt als sehr gut. Mehr als 90 % sind technisch kaum sinnvoll, da die Überdimensionierung unwirtschaftlich wird.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Wie kann ich meinen PV-Eigenverbrauch erhöhen?</h3>
+              <p>Die wirksamsten Hebel: große Verbraucher (Wäsche, Spülmaschine, Wallbox) in die Mittagsstunden verschieben, Warmwasser per Heizstab oder Wärmepumpe mit PV-Strom erzeugen, einen Batteriespeicher ergänzen, und ein Energiemanagement-System nutzen, das Geräte automatisch bei Solarüberschuss startet.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Lohnt sich eine Wärmepumpe in Kombination mit PV?</h3>
+              <p>Ja, besonders stark. Die Wärmepumpe hebt den jährlichen Stromverbrauch um 3.000–5.000 kWh, lässt sich aber mit PV-Strom versorgen. Das senkt Heizkosten deutlich und erhöht die Eigenverbrauchsquote um 15–25 Prozentpunkte. Viele Hybrid-Wärmepumpen lassen sich per SG-Ready-Signal PV-gesteuert betreiben.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Was ist der Unterschied zwischen Autarkie und Eigenverbrauch?</h3>
+              <p>Eigenverbrauch = Anteil des selbst erzeugten Stroms, der direkt genutzt wird. Autarkie = Anteil des Hausverbrauchs, der aus eigener Erzeugung gedeckt wird. Beispiel: Eine Anlage produziert 10.000 kWh, Haushalt braucht 5.000 kWh, nutzt davon 3.000 kWh selbst. Eigenverbrauch = 30 %, Autarkiegrad = 60 %.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Bringt ein E-Auto mehr PV-Eigenverbrauch?</h3>
+              <p>Ja, enorm. Ein E-Auto mit 15.000 km Jahresfahrleistung verbraucht rund 3.000 kWh zusätzlich. Lädt man überwiegend tagsüber mit Solarüberschuss, steigt die Eigenverbrauchsquote um bis zu 20 Prozentpunkte. Wichtig: Wallbox mit PV-Überschussladen (z.B. go-e, openWB) nutzen.</p>
+            </div>
+          </section>
 
           <aside class="trust-box" aria-label="Methodik und Quellen">
             <h3>Methodik & Quellen</h3>

@@ -46,6 +46,41 @@
 }
 </script>
 
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welcher Stromtarif passt zu einer PV-Anlage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "PV-Besitzer sollten auf einen Tarif mit niedrigem Arbeitspreis (je kWh) achten, da ein hoher Grundpreis die Ersparnis durch Eigenverbrauch relativiert. Ein günstiger Ökostromtarif oder ein flexibler Tarif mit PV-Bonus passt meist besser als ein Grundversorgertarif. Wichtig: Reststrombezug bleibt trotz PV nötig." }
+    },
+    {
+      "@type": "Question",
+      "name": "Lohnt sich ein dynamischer Stromtarif mit PV?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, vor allem in Kombination mit Speicher und smartem Energiemanagement. Dynamische Tarife (z.B. Tibber, Rabot) folgen den Börsenstrompreisen. Bei negativen Preisen speichert man Netzstrom, bei hohen Preisen entlädt man den Speicher. Ohne Speicher ist der Vorteil deutlich kleiner." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Einspeisevergütung und Direktvermarktung?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bei der Einspeisevergütung (Standard bis 100 kWp) bekommt man einen festen Cent-Betrag pro eingespeister kWh. Bei der Direktvermarktung verkauft der Anlagenbetreiber den Strom selbst (oder über einen Dienstleister) an der Börse — rentabler, aber mit mehr Aufwand und schwankenden Preisen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Sollte ich nach der PV-Installation den Stromanbieter wechseln?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oft ja. Nach der Installation sinkt der Netzbezug auf 25–40 % des vorherigen Verbrauchs. Viele Grundversorgertarife sind darauf nicht optimiert. Ein Anbieterwechsel zu einem günstigeren Ökostrom- oder Dynamik-Tarif spart häufig 100–300 Euro jährlich — und dauert wenige Minuten online." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist ein Zwei-Richtungs-Zähler und brauche ich den?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ein Zwei-Richtungs-Zähler misst Strombezug und Einspeisung separat. Für jede PV-Anlage mit Einspeisung ist er Pflicht. Der Einbau erfolgt durch den Netzbetreiber, Kosten liegen je nach Region bei 50–100 Euro jährlich. Moderne Messeinrichtungen (mME) oder Smart Meter erfüllen diese Funktion ebenfalls." }
+    }
+  ]
+}
+</script>
+
 <!-- GA4 (wird erst nach Cookie-Zustimmung geladen) -->
 <script>window.gaConsent = false;</script>
 
@@ -224,6 +259,35 @@ body {
   border: 1px solid #A7F3D0; margin-bottom: 10px;
 }
 .updated-badge svg { width: 12px; height: 12px; }
+
+/* FAQ-SEKTION */
+.faq-section {
+  margin: 36px 0 16px;
+  padding-top: 24px;
+  border-top: 2px solid var(--gray-200);
+}
+.faq-section h2 {
+  font-size: 1.25rem; font-weight: 800;
+  color: var(--gray-900); margin-bottom: 8px;
+}
+.faq-section .faq-intro {
+  font-size: 0.88rem; color: var(--gray-500);
+  margin-bottom: 18px;
+}
+.faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-size: 0.98rem; font-weight: 700;
+  color: var(--gray-900); margin: 0 0 8px;
+  line-height: 1.4;
+}
+.faq-item p {
+  font-size: 0.9rem; line-height: 1.7;
+  color: var(--gray-600); margin: 0;
+}
 
 /* TRUST-BOX (Methodik & Quellen) */
 .trust-box {
@@ -418,6 +482,32 @@ body {
             Stromtarif vergleichen auf Tarifcheck.de *
           </a>
           <p class="affiliate-note">* Affiliate-Link: Wir erhalten eine Provision, wenn du über diesen Link ein Angebot anforderst. Für dich entstehen keine Mehrkosten.</p>
+
+          <section class="faq-section" aria-label="Häufig gestellte Fragen">
+            <h2>Häufig gestellte Fragen zum Stromtarif mit PV-Anlage</h2>
+            <p class="faq-intro">Die wichtigsten Fragen zu Tarifwahl, Einspeisung und dynamischen Strompreisen:</p>
+
+            <div class="faq-item">
+              <h3>Welcher Stromtarif passt zu einer PV-Anlage?</h3>
+              <p>PV-Besitzer sollten auf einen Tarif mit niedrigem Arbeitspreis (je kWh) achten, da ein hoher Grundpreis die Ersparnis durch Eigenverbrauch relativiert. Ein günstiger Ökostromtarif oder ein flexibler Tarif mit PV-Bonus passt meist besser als ein Grundversorgertarif. Wichtig: Reststrombezug bleibt trotz PV nötig.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Lohnt sich ein dynamischer Stromtarif mit PV?</h3>
+              <p>Ja, vor allem in Kombination mit Speicher und smartem Energiemanagement. Dynamische Tarife (z.B. Tibber, Rabot) folgen den Börsenstrompreisen. Bei negativen Preisen speichert man Netzstrom, bei hohen Preisen entlädt man den Speicher. Ohne Speicher ist der Vorteil deutlich kleiner.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Was ist der Unterschied zwischen Einspeisevergütung und Direktvermarktung?</h3>
+              <p>Bei der Einspeisevergütung (Standard bis 100 kWp) bekommt man einen festen Cent-Betrag pro eingespeister kWh. Bei der Direktvermarktung verkauft der Anlagenbetreiber den Strom selbst (oder über einen Dienstleister) an der Börse — rentabler, aber mit mehr Aufwand und schwankenden Preisen.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Sollte ich nach der PV-Installation den Stromanbieter wechseln?</h3>
+              <p>Oft ja. Nach der Installation sinkt der Netzbezug auf 25–40 % des vorherigen Verbrauchs. Viele Grundversorgertarife sind darauf nicht optimiert. Ein Anbieterwechsel zu einem günstigeren Ökostrom- oder Dynamik-Tarif spart häufig 100–300 Euro jährlich — und dauert wenige Minuten online.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Was ist ein Zwei-Richtungs-Zähler und brauche ich den?</h3>
+              <p>Ein Zwei-Richtungs-Zähler misst Strombezug und Einspeisung separat. Für jede PV-Anlage mit Einspeisung ist er Pflicht. Der Einbau erfolgt durch den Netzbetreiber, Kosten liegen je nach Region bei 50–100 Euro jährlich. Moderne Messeinrichtungen (mME) oder Smart Meter erfüllen diese Funktion ebenfalls.</p>
+            </div>
+          </section>
 
           <aside class="trust-box" aria-label="Methodik und Quellen">
             <h3>Methodik & Quellen</h3>

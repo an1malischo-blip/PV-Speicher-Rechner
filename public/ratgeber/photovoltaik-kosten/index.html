@@ -47,6 +47,41 @@
 }
 </script>
 
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was kostet eine 10 kWp Photovoltaikanlage 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Eine schlüsselfertige 10 kWp Aufdach-Anlage kostet 2026 zwischen 12.000 und 16.000 Euro inklusive Montage, Wechselrichter und Verkabelung. Durch die 0 % Mehrwertsteuer ist der Endpreis identisch mit dem Nettopreis. Ein Batteriespeicher kommt mit etwa 500–800 Euro pro Kilowattstunde dazu." }
+    },
+    {
+      "@type": "Question",
+      "name": "Lohnt sich eine Photovoltaikanlage 2026 noch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, der aktuelle Strompreis von rund 35–40 Cent pro kWh und Modulpreise auf historischem Tief sorgen weiterhin für attraktive Renditen von 5–8 % pro Jahr. Bei einer durchschnittlichen Anlage amortisiert sich die Investition nach 10–12 Jahren, danach produziert sie 15–20 Jahre lang weitgehend kostenlosen Strom." }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich auf meine Photovoltaikanlage Einkommensteuer zahlen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nein. Seit 2022 sind Einnahmen und Entnahmen aus PV-Anlagen bis 30 kWp auf Einfamilienhäusern von der Einkommensteuer befreit (§ 3 Nr. 72 EStG). Auch die 0 %-MwSt-Regelung gilt beim Kauf. Eine Gewerbeanmeldung ist in den meisten Fällen nicht mehr nötig." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet eine PV-Anlage inklusive Speicher?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Eine typische 10 kWp Anlage mit 8 kWh Speicher liegt 2026 bei 18.000–22.000 Euro. Der Speicher alleine kostet zwischen 4.000 und 7.000 Euro, abhängig von Kapazität und Hersteller. Durch den höheren Eigenverbrauch verkürzt der Speicher die Amortisationszeit oft nicht signifikant, erhöht aber die Autarkie." }
+    },
+    {
+      "@type": "Question",
+      "name": "Sind die Preise für Solaranlagen 2026 weiter gefallen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Die Modulpreise liegen seit Ende 2023 auf historischem Tiefstand. Laut Fraunhofer ISE sind sie seit 2010 um über 75 % gefallen. Für 2026 erwarten Experten stagnierende oder leicht steigende Preise — vor allem durch steigende Arbeitskosten für die Montage. Der Kauf lohnt sich daher jetzt." }
+    }
+  ]
+}
+</script>
+
 <!-- GA4 (wird erst nach Cookie-Zustimmung geladen) -->
 <script>window.gaConsent = false;</script>
 
@@ -211,6 +246,35 @@ body {
   border: 1px solid #A7F3D0; margin-bottom: 10px;
 }
 .updated-badge svg { width: 12px; height: 12px; }
+
+/* FAQ-SEKTION */
+.faq-section {
+  margin: 36px 0 16px;
+  padding-top: 24px;
+  border-top: 2px solid var(--gray-200);
+}
+.faq-section h2 {
+  font-size: 1.25rem; font-weight: 800;
+  color: var(--gray-900); margin-bottom: 8px;
+}
+.faq-section .faq-intro {
+  font-size: 0.88rem; color: var(--gray-500);
+  margin-bottom: 18px;
+}
+.faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-size: 0.98rem; font-weight: 700;
+  color: var(--gray-900); margin: 0 0 8px;
+  line-height: 1.4;
+}
+.faq-item p {
+  font-size: 0.9rem; line-height: 1.7;
+  color: var(--gray-600); margin: 0;
+}
 
 /* TRUST-BOX (Methodik & Quellen) */
 .trust-box {
@@ -404,6 +468,36 @@ body {
             Jetzt Preise vergleichen auf Tarifcheck.de *
           </a>
           <p class="affiliate-note">* Affiliate-Link: Wir erhalten eine Provision, wenn du über diesen Link ein Angebot anforderst. Für dich entstehen keine Mehrkosten.</p>
+
+          <section class="faq-section" aria-label="Häufig gestellte Fragen">
+            <h2>Häufig gestellte Fragen zu PV-Kosten</h2>
+            <p class="faq-intro">Die meistgestellten Fragen unserer Nutzer rund um Anschaffungskosten, Steuern und Wirtschaftlichkeit:</p>
+
+            <div class="faq-item">
+              <h3>Was kostet eine 10 kWp Photovoltaikanlage 2026?</h3>
+              <p>Eine schlüsselfertige 10 kWp Aufdach-Anlage kostet 2026 zwischen 12.000 und 16.000 Euro inklusive Montage, Wechselrichter und Verkabelung. Durch die 0 % Mehrwertsteuer ist der Endpreis identisch mit dem Nettopreis. Ein Batteriespeicher kommt mit etwa 500–800 Euro pro Kilowattstunde dazu.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Lohnt sich eine Photovoltaikanlage 2026 noch?</h3>
+              <p>Ja. Der aktuelle Strompreis von rund 35–40 Cent pro kWh und Modulpreise auf historischem Tief sorgen weiterhin für attraktive Renditen von 5–8 % pro Jahr. Bei einer durchschnittlichen Anlage amortisiert sich die Investition nach 10–12 Jahren, danach produziert sie 15–20 Jahre lang weitgehend kostenlosen Strom.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Muss ich auf meine Photovoltaikanlage Einkommensteuer zahlen?</h3>
+              <p>Nein. Seit 2022 sind Einnahmen und Entnahmen aus PV-Anlagen bis 30 kWp auf Einfamilienhäusern von der Einkommensteuer befreit (§ 3 Nr. 72 EStG). Auch die 0 %-MwSt-Regelung gilt beim Kauf. Eine Gewerbeanmeldung ist in den meisten Fällen nicht mehr nötig.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Was kostet eine PV-Anlage inklusive Speicher?</h3>
+              <p>Eine typische 10 kWp Anlage mit 8 kWh Speicher liegt 2026 bei 18.000–22.000 Euro. Der Speicher alleine kostet zwischen 4.000 und 7.000 Euro, abhängig von Kapazität und Hersteller. Durch den höheren Eigenverbrauch verkürzt der Speicher die Amortisationszeit oft nicht signifikant, erhöht aber die Autarkie.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Sind die Preise für Solaranlagen 2026 weiter gefallen?</h3>
+              <p>Die Modulpreise liegen seit Ende 2023 auf historischem Tiefstand. Laut Fraunhofer ISE sind sie seit 2010 um über 75 % gefallen. Für 2026 erwarten Experten stagnierende oder leicht steigende Preise — vor allem durch steigende Arbeitskosten für die Montage. Der Kauf lohnt sich daher jetzt.</p>
+            </div>
+          </section>
 
           <aside class="trust-box" aria-label="Methodik und Quellen">
             <h3>Methodik & Quellen</h3>

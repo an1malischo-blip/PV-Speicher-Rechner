@@ -46,6 +46,41 @@
 }
 </script>
 
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welche Förderungen gibt es 2026 für Photovoltaik?",
+      "acceptedAnswer": { "@type": "Answer", "text": "2026 gibt es drei zentrale Förderbausteine: die 0 %-Mehrwertsteuer auf Kauf und Installation (bis 30 kWp), die Einkommensteuerbefreiung nach § 3 Nr. 72 EStG, sowie zinsgünstige KfW-Kredite (Programm 270). Einige Bundesländer und Kommunen ergänzen mit Zuschüssen zwischen 500 und 3.000 Euro, vor allem für Speicher." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie hoch ist die Einspeisevergütung 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Für PV-Anlagen mit Teileinspeisung liegt die Vergütung 2026 bei etwa 7,95 Cent/kWh (bis 10 kWp) und 6,88 Cent/kWh (10–40 kWp-Anteil). Bei Volleinspeisung sind es rund 12,60 Cent/kWh (bis 10 kWp). Die aktuellen Sätze veröffentlicht die Bundesnetzagentur halbjährlich." }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich auf Einnahmen aus meiner PV-Anlage Steuern zahlen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In den meisten Fällen nein. Seit 2022 sind PV-Anlagen bis 30 kWp auf Einfamilienhäusern von der Einkommensteuer befreit. Das gilt auch rückwirkend für Bestandsanlagen. Eine Gewerbeanmeldung ist für diese Fälle nicht nötig. Die 0 %-MwSt gilt beim Kauf und Installation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es 2026 noch einen KfW-Kredit für PV?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Das KfW-Programm 270 („Erneuerbare Energien – Standard“) vergibt weiterhin zinsgünstige Kredite für PV und Speicher. Konditionen werden alle 2–4 Wochen angepasst — aktuell rund 4–5 % effektiver Jahreszins. Der bekannte Zuschuss 442 für Ladestationen ist hingegen ausgelaufen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Werden Batteriespeicher separat gefördert?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Seit 2023 gilt die 0 % Mehrwertsteuer auch für Speicher, sofern sie zusammen mit einer PV-Anlage bis 30 kWp installiert werden. Direkte Zuschüsse gibt es nur noch regional — etwa in Bayern, Berlin oder einigen Städten. Die aktuelle Förderdatenbank des Bundes listet alle verfügbaren Programme auf." }
+    }
+  ]
+}
+</script>
+
 <!-- GA4 (wird erst nach Cookie-Zustimmung geladen) -->
 <script>window.gaConsent = false;</script>
 
@@ -262,6 +297,35 @@ body {
   border: 1px solid #A7F3D0; margin-bottom: 10px;
 }
 .updated-badge svg { width: 12px; height: 12px; }
+
+/* FAQ-SEKTION */
+.faq-section {
+  margin: 36px 0 16px;
+  padding-top: 24px;
+  border-top: 2px solid var(--gray-200);
+}
+.faq-section h2 {
+  font-size: 1.25rem; font-weight: 800;
+  color: var(--gray-900); margin-bottom: 8px;
+}
+.faq-section .faq-intro {
+  font-size: 0.88rem; color: var(--gray-500);
+  margin-bottom: 18px;
+}
+.faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-size: 0.98rem; font-weight: 700;
+  color: var(--gray-900); margin: 0 0 8px;
+  line-height: 1.4;
+}
+.faq-item p {
+  font-size: 0.9rem; line-height: 1.7;
+  color: var(--gray-600); margin: 0;
+}
 
 /* TRUST-BOX (Methodik & Quellen) */
 .trust-box {
@@ -519,6 +583,36 @@ body {
             Kostenlos Fördermöglichkeiten prüfen auf Tarifcheck.de *
           </a>
           <p class="affiliate-note">* Affiliate-Link: Wir erhalten eine Provision, wenn du über diesen Link ein Angebot anforderst. Für dich entstehen keine Mehrkosten.</p>
+
+          <section class="faq-section" aria-label="Häufig gestellte Fragen">
+            <h2>Häufig gestellte Fragen zur PV-Förderung</h2>
+            <p class="faq-intro">Die wichtigsten Fragen rund um Einspeisevergütung, Steuerbefreiung und Förderprogramme:</p>
+
+            <div class="faq-item">
+              <h3>Welche Förderungen gibt es 2026 für Photovoltaik?</h3>
+              <p>2026 gibt es drei zentrale Förderbausteine: die 0 %-Mehrwertsteuer auf Kauf und Installation (bis 30 kWp), die Einkommensteuerbefreiung nach § 3 Nr. 72 EStG, sowie zinsgünstige KfW-Kredite (Programm 270). Einige Bundesländer und Kommunen ergänzen mit Zuschüssen zwischen 500 und 3.000 Euro, vor allem für Speicher.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Wie hoch ist die Einspeisevergütung 2026?</h3>
+              <p>Für PV-Anlagen mit Teileinspeisung liegt die Vergütung 2026 bei etwa 7,95 Cent/kWh (bis 10 kWp) und 6,88 Cent/kWh (10–40 kWp-Anteil). Bei Volleinspeisung sind es rund 12,60 Cent/kWh (bis 10 kWp). Die aktuellen Sätze veröffentlicht die Bundesnetzagentur halbjährlich.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Muss ich auf Einnahmen aus meiner PV-Anlage Steuern zahlen?</h3>
+              <p>In den meisten Fällen nein. Seit 2022 sind PV-Anlagen bis 30 kWp auf Einfamilienhäusern von der Einkommensteuer befreit. Das gilt auch rückwirkend für Bestandsanlagen. Eine Gewerbeanmeldung ist für diese Fälle nicht nötig. Die 0 %-MwSt gilt beim Kauf und Installation.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Gibt es 2026 noch einen KfW-Kredit für PV?</h3>
+              <p>Ja. Das KfW-Programm 270 („Erneuerbare Energien – Standard“) vergibt weiterhin zinsgünstige Kredite für PV und Speicher. Konditionen werden alle 2–4 Wochen angepasst — aktuell rund 4–5 % effektiver Jahreszins. Der bekannte Zuschuss 442 für Ladestationen ist hingegen ausgelaufen.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Werden Batteriespeicher separat gefördert?</h3>
+              <p>Seit 2023 gilt die 0 % Mehrwertsteuer auch für Speicher, sofern sie zusammen mit einer PV-Anlage bis 30 kWp installiert werden. Direkte Zuschüsse gibt es nur noch regional — etwa in Bayern, Berlin oder einigen Städten. Die aktuelle Förderdatenbank des Bundes listet alle verfügbaren Programme auf.</p>
+            </div>
+          </section>
 
           <aside class="trust-box" aria-label="Methodik und Quellen">
             <h3>Methodik & Quellen</h3>

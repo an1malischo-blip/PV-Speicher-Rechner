@@ -26,6 +26,41 @@
   }
   </script>
 
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Lohnt sich ein Batteriespeicher 2026 wirtschaftlich?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Rein finanziell rechnet sich ein Speicher nur knapp: Die zusätzlichen Kosten von 4.000–8.000 Euro verlängern die Amortisationszeit oft um 2–4 Jahre. Er lohnt sich vor allem, wenn Unabhängigkeit, hoher Eigenverbrauch oder die Kombination mit Wärmepumpe und E-Auto wichtig sind." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie groß sollte mein PV-Speicher sein?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Als Faustregel gilt: 1 kWh Speicherkapazität pro 1.000 kWh Jahresverbrauch. Ein 4-Personen-Haushalt mit 4.500 kWh benötigt also etwa 4,5–5 kWh Speicher. Größere Speicher erhöhen die Autarkie nur noch geringfügig und lohnen sich selten." }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Speicher-Technologie ist 2026 die beste?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Lithium-Eisenphosphat (LFP) hat sich als Standard durchgesetzt: brandsicher, 6.000+ Ladezyklen, 10 Jahre Herstellergarantie. Nickel-basierte Lithium-Ionen-Akkus bieten etwas höhere Energiedichte, sind aber weniger robust. Blei-Akkus sind veraltet." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange hält ein moderner PV-Speicher?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Qualitätsspeicher halten 15–20 Jahre bei 6.000–8.000 Ladezyklen. Hersteller wie BYD, Sonnen oder Fronius geben 10 Jahre Garantie auf 70 % der ursprünglichen Kapazität. Die HTW Berlin Stromspeicher-Inspektion zeigt jährlich, welche Modelle dieses Versprechen halten." }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich einen Batteriespeicher nachträglich installieren?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja, AC-gekoppelte Speicher lassen sich jederzeit nachrüsten. DC-Kopplung (günstiger, effizienter) funktioniert nur mit kompatiblem Wechselrichter — oft muss dieser mitgetauscht werden. Nachrüstung kostet meist 10–15 % mehr als die Kombi-Installation." }
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N75ZWVQRCG"></script>
   <script>
@@ -99,6 +134,35 @@
       border: 1px solid #A7F3D0; margin-bottom: 10px;
     }
     .updated-badge svg { width: 12px; height: 12px; }
+
+    /* FAQ-SEKTION */
+    .faq-section {
+      margin: 36px 0 16px;
+      padding-top: 24px;
+      border-top: 2px solid var(--gray-200);
+    }
+    .faq-section h2 {
+      font-size: 1.25rem; font-weight: 800;
+      color: var(--gray-900); margin-bottom: 8px;
+    }
+    .faq-section .faq-intro {
+      font-size: 0.88rem; color: var(--gray-500);
+      margin-bottom: 18px;
+    }
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 {
+      font-size: 0.98rem; font-weight: 700;
+      color: var(--gray-900); margin: 0 0 8px;
+      line-height: 1.4;
+    }
+    .faq-item p {
+      font-size: 0.9rem; line-height: 1.7;
+      color: var(--gray-600); margin: 0;
+    }
 
     /* TRUST-BOX (Methodik & Quellen) */
     .trust-box {
@@ -322,6 +386,36 @@
             </a>
             <p class="affiliate-note" style="margin-top: 10px;">* Partnerlink — für dich kostenlos, wir erhalten ggf. eine Provision.</p>
           </div>
+
+          <section class="faq-section" aria-label="Häufig gestellte Fragen">
+            <h2>Häufig gestellte Fragen zum Batteriespeicher</h2>
+            <p class="faq-intro">Die wichtigsten Fragen zu Wirtschaftlichkeit, Kapazität und Lebensdauer von PV-Speichern:</p>
+
+            <div class="faq-item">
+              <h3>Lohnt sich ein Batteriespeicher 2026 wirtschaftlich?</h3>
+              <p>Rein finanziell rechnet sich ein Speicher nur knapp: Die zusätzlichen Kosten von 4.000–8.000 Euro verlängern die Amortisationszeit oft um 2–4 Jahre. Er lohnt sich vor allem, wenn Unabhängigkeit, hoher Eigenverbrauch oder die Kombination mit Wärmepumpe und E-Auto wichtig sind.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Wie groß sollte mein PV-Speicher sein?</h3>
+              <p>Als Faustregel gilt: 1 kWh Speicherkapazität pro 1.000 kWh Jahresverbrauch. Ein 4-Personen-Haushalt mit 4.500 kWh benötigt also etwa 4,5–5 kWh Speicher. Größere Speicher erhöhen die Autarkie nur noch geringfügig und lohnen sich selten.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Welche Speicher-Technologie ist 2026 die beste?</h3>
+              <p>Lithium-Eisenphosphat (LFP) hat sich als Standard durchgesetzt: brandsicher, 6.000+ Ladezyklen, 10 Jahre Herstellergarantie. Nickel-basierte Lithium-Ionen-Akkus bieten etwas höhere Energiedichte, sind aber weniger robust. Blei-Akkus sind veraltet.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Wie lange hält ein moderner PV-Speicher?</h3>
+              <p>Qualitätsspeicher halten 15–20 Jahre bei 6.000–8.000 Ladezyklen. Hersteller wie BYD, Sonnen oder Fronius geben 10 Jahre Garantie auf 70 % der ursprünglichen Kapazität. Die HTW Berlin Stromspeicher-Inspektion zeigt jährlich, welche Modelle dieses Versprechen halten.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Kann ich einen Batteriespeicher nachträglich installieren?</h3>
+              <p>Ja, AC-gekoppelte Speicher lassen sich jederzeit nachrüsten. DC-Kopplung (günstiger, effizienter) funktioniert nur mit kompatiblem Wechselrichter — oft muss dieser mitgetauscht werden. Nachrüstung kostet meist 10–15 % mehr als die Kombi-Installation.</p>
+            </div>
+          </section>
 
           <aside class="trust-box" aria-label="Methodik und Quellen">
             <h3>Methodik & Quellen</h3>

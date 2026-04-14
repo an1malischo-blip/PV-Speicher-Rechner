@@ -46,6 +46,41 @@
 }
 </script>
 
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie finde ich einen seriösen PV-Installateur?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Gute Anhaltspunkte: das RAL-Gütezeichen Solar, Mitgliedschaft im BSW-Solar, Handwerkskammer-Eintragung, mindestens 5 Jahre Markterfahrung und echte Google-Bewertungen mit Detailkommentaren. Persönliche Empfehlungen aus dem Umfeld sind oft der beste Filter. Misstrauen bei Drückerkolonnen an der Haustür." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Angebote sollte ich einholen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mindestens drei, idealerweise fünf. Dabei mindestens ein lokaler Handwerksbetrieb, ein regionaler Solarspezialist und ein Online-Vergleichsportal. Die Preisspanne bei identischem Leistungsumfang beträgt häufig 15–25 % — der Vergleich rechnet sich also in jedem Fall." }
+    },
+    {
+      "@type": "Question",
+      "name": "Worauf muss ich beim Vertrag mit einem Solarinstallateur achten?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Wichtige Punkte: detaillierte Leistungsbeschreibung (alle Komponenten mit Marke und Modell), verbindliche Ertragsprognose, Garantiezeiten auf Module (mind. 25 Jahre), Wechselrichter (mind. 10 Jahre) und Handwerk (mind. 2 Jahre), Festpreis ohne offene Pauschalen, klarer Fertigstellungstermin mit Vertragsstrafe bei Verzug." }
+    },
+    {
+      "@type": "Question",
+      "name": "Lokaler Handwerksbetrieb oder deutschlandweiter Anbieter — was ist besser?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lokale Betriebe punkten mit Vor-Ort-Service, direkter Ansprechbarkeit und regionaler Erfahrung (Dachformen, Behörden). Deutschlandweite Anbieter bieten oft standardisierte Prozesse und günstigere Preise durch Volumen. Für komplexe Dächer eher lokal, für einfache Standardinstallationen sind beide sinnvoll." }
+    },
+    {
+      "@type": "Question",
+      "name": "Woran erkenne ich unseriöse PV-Anbieter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rote Flaggen: unrealistisch niedrige Preise, Hochdruck-Verkauf mit „heute-nur\"-Rabatten, keine festen Komponenten im Angebot, fehlende Referenzen, Vorauszahlung über 50 % verlangt, negative Bewertungen zu Folgeproblemen. Die Verbraucherzentrale warnt zudem vor Haustürgeschäften ohne Bedenkzeit." }
+    }
+  ]
+}
+</script>
+
 <!-- GA4 (wird erst nach Cookie-Zustimmung geladen) -->
 <script>window.gaConsent = false;</script>
 
@@ -250,6 +285,35 @@ body {
   border: 1px solid #A7F3D0; margin-bottom: 10px;
 }
 .updated-badge svg { width: 12px; height: 12px; }
+
+/* FAQ-SEKTION */
+.faq-section {
+  margin: 36px 0 16px;
+  padding-top: 24px;
+  border-top: 2px solid var(--gray-200);
+}
+.faq-section h2 {
+  font-size: 1.25rem; font-weight: 800;
+  color: var(--gray-900); margin-bottom: 8px;
+}
+.faq-section .faq-intro {
+  font-size: 0.88rem; color: var(--gray-500);
+  margin-bottom: 18px;
+}
+.faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-size: 0.98rem; font-weight: 700;
+  color: var(--gray-900); margin: 0 0 8px;
+  line-height: 1.4;
+}
+.faq-item p {
+  font-size: 0.9rem; line-height: 1.7;
+  color: var(--gray-600); margin: 0;
+}
 
 /* TRUST-BOX (Methodik & Quellen) */
 .trust-box {
@@ -462,6 +526,36 @@ body {
             Kostenlos Angebote vergleichen auf Tarifcheck.de *
           </a>
           <p class="affiliate-note">* Affiliate-Link: Wir erhalten eine Provision, wenn du über diesen Link ein Angebot anforderst. Für dich entstehen keine Mehrkosten.</p>
+
+          <section class="faq-section" aria-label="Häufig gestellte Fragen">
+            <h2>Häufig gestellte Fragen zur Anbieterwahl</h2>
+            <p class="faq-intro">Die wichtigsten Fragen rund um Installateur-Auswahl, Vertrag und Qualitätskriterien:</p>
+
+            <div class="faq-item">
+              <h3>Wie finde ich einen seriösen PV-Installateur?</h3>
+              <p>Gute Anhaltspunkte: das RAL-Gütezeichen Solar, Mitgliedschaft im BSW-Solar, Handwerkskammer-Eintragung, mindestens 5 Jahre Markterfahrung und echte Google-Bewertungen mit Detailkommentaren. Persönliche Empfehlungen aus dem Umfeld sind oft der beste Filter. Misstrauen bei Drückerkolonnen an der Haustür.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Wie viele Angebote sollte ich einholen?</h3>
+              <p>Mindestens drei, idealerweise fünf. Dabei mindestens ein lokaler Handwerksbetrieb, ein regionaler Solarspezialist und ein Online-Vergleichsportal. Die Preisspanne bei identischem Leistungsumfang beträgt häufig 15–25 % — der Vergleich rechnet sich also in jedem Fall.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Worauf muss ich beim Vertrag mit einem Solarinstallateur achten?</h3>
+              <p>Wichtige Punkte: detaillierte Leistungsbeschreibung (alle Komponenten mit Marke und Modell), verbindliche Ertragsprognose, Garantiezeiten auf Module (mind. 25 Jahre), Wechselrichter (mind. 10 Jahre) und Handwerk (mind. 2 Jahre), Festpreis ohne offene Pauschalen, klarer Fertigstellungstermin mit Vertragsstrafe bei Verzug.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Lokaler Handwerksbetrieb oder deutschlandweiter Anbieter — was ist besser?</h3>
+              <p>Lokale Betriebe punkten mit Vor-Ort-Service, direkter Ansprechbarkeit und regionaler Erfahrung (Dachformen, Behörden). Deutschlandweite Anbieter bieten oft standardisierte Prozesse und günstigere Preise durch Volumen. Für komplexe Dächer eher lokal, für einfache Standardinstallationen sind beide sinnvoll.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Woran erkenne ich unseriöse PV-Anbieter?</h3>
+              <p>Rote Flaggen: unrealistisch niedrige Preise, Hochdruck-Verkauf mit „heute-nur"-Rabatten, keine festen Komponenten im Angebot, fehlende Referenzen, Vorauszahlung über 50 % verlangt, negative Bewertungen zu Folgeproblemen. Die Verbraucherzentrale warnt zudem vor Haustürgeschäften ohne Bedenkzeit.</p>
+            </div>
+          </section>
 
           <aside class="trust-box" aria-label="Methodik und Quellen">
             <h3>Methodik & Quellen</h3>
