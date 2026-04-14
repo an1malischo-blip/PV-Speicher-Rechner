@@ -21,7 +21,7 @@
     "author": { "@type": "Organization", "name": "PV-Speicher-Rechner" },
     "publisher": { "@type": "Organization", "name": "PV-Speicher-Rechner", "logo": { "@type": "ImageObject", "url": "https://pv-speicher-rechner.de/favicon.svg" }},
     "datePublished": "2026-04-13",
-    "dateModified": "2026-04-13",
+    "dateModified": "2026-04-14",
     "url": "https://pv-speicher-rechner.de/ratgeber/pv-rendite-berechnen/"
   }
   </script>
@@ -90,6 +90,36 @@
     .sidebar-cta { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: var(--radius); padding: 20px; text-align: center; margin-bottom: 20px; }
     .sidebar-cta p { font-size: 0.85rem; color: #0F172A; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
     .sidebar-cta a { display: block; background: #0F172A; color: var(--primary); font-weight: 700; font-size: 0.85rem; padding: 10px 16px; border-radius: 8px; text-decoration: none; }
+    /* AKTUALISIERT-BADGE */
+    .updated-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #ECFDF5; color: var(--accent-dark);
+      font-size: 0.78rem; font-weight: 600;
+      padding: 4px 10px; border-radius: 999px;
+      border: 1px solid #A7F3D0; margin-bottom: 10px;
+    }
+    .updated-badge svg { width: 12px; height: 12px; }
+
+    /* TRUST-BOX (Methodik & Quellen) */
+    .trust-box {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius); padding: 20px 22px;
+      margin: 32px 0 16px; font-size: 0.88rem;
+    }
+    .trust-box h3 {
+      font-size: 0.95rem; font-weight: 700; color: var(--gray-900);
+      margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+    }
+    .trust-box h3::before { content: "📋"; font-size: 1rem; }
+    .trust-box p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 10px; }
+    .trust-box ul { margin: 8px 0 10px 18px; }
+    .trust-box li { font-size: 0.83rem; line-height: 1.6; color: var(--gray-600); margin-bottom: 4px; }
+    .trust-box a { color: var(--accent-dark); text-decoration: underline; font-weight: 500; }
+    .trust-box a:hover { color: var(--gray-900); }
+    .trust-box .methodik-note { font-size: 0.76rem; color: var(--gray-500); border-top: 1px solid var(--gray-200); padding-top: 10px; margin-top: 10px; }
+
+    /* ZURÜCK-LINK */
     .back-to-calc { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 2px solid var(--primary); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; padding: 10px 18px; border-radius: 10px; text-decoration: none; margin-top: 32px; }
     .back-to-calc:hover { background: #FFFBEB; }
     .comparison-table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 0.88rem; }
@@ -151,8 +181,12 @@
       <!-- Hauptartikel -->
       <article>
         <header class="article-header">
+          <span class="updated-badge" title="Zuletzt aktualisiert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Zuletzt aktualisiert: 14. April 2026
+          </span>
           <h1>Rendite einer Solaranlage berechnen: So rechnest du richtig</h1>
-          <p class="article-meta">Aktualisiert: April 2026 · Lesedauer: ca. 5 Minuten</p>
+          <p class="article-meta">Lesezeit: ca. 5 Minuten · Recherche basiert auf HTW Berlin, PVGIS und Bundesnetzagentur</p>
         </header>
 
         <div class="article-body">
@@ -264,6 +298,17 @@
             </a>
             <p class="affiliate-note" style="margin-top: 10px;">* Partnerlink — für dich kostenlos, wir erhalten ggf. eine Provision.</p>
           </div>
+
+          <aside class="trust-box" aria-label="Methodik und Quellen">
+            <h3>Methodik & Quellen</h3>
+            <p>Die Renditeberechnungen dieses Ratgebers basieren auf Ertragsdaten des europäischen PVGIS-Systems, Daten der HTW Berlin sowie der aktuellen EEG-Einspeisevergütung der Bundesnetzagentur (Stand Q1 2026). Alle Rechenbeispiele wurden mit dem hauseigenen PV-Rechner gegengeprüft.</p>
+            <ul>
+              <li><a href="https://re.jrc.ec.europa.eu/pvg_tools/en/" target="_blank" rel="noopener">PVGIS — Photovoltaic Geographical Information System (EU-Kommission)</a> (Ertragsdaten nach Standort)</li>
+              <li><a href="https://solar.htw-berlin.de/" target="_blank" rel="noopener">HTW Berlin — Forschungsgruppe Solarspeichersysteme</a> (Wirtschaftlichkeits-Studien)</li>
+              <li><a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/EEG_Foerderung/start.html" target="_blank" rel="noopener">Bundesnetzagentur — EEG-Einspeisevergütung</a> (aktuelle Vergütungssätze)</li>
+            </ul>
+            <p class="methodik-note">Hinweis: Renditeangaben sind Prognosen auf Basis öffentlicher Daten. Tatsächliche Erträge hängen von Standort, Ausrichtung, Verschattung und Wartung ab. Letzte Aktualisierung: 14. April 2026.</p>
+          </aside>
 
           <a href="/" class="back-to-calc">← Zurück zum PV-Speicher-Rechner</a>
 

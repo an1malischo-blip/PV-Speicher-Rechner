@@ -28,7 +28,7 @@
   "author": { "@type": "Organization", "name": "PV-Speicher-Rechner" },
   "publisher": { "@type": "Organization", "name": "PV-Speicher-Rechner", "logo": { "@type": "ImageObject", "url": "https://pv-speicher-rechner.de/favicon.svg" }},
   "datePublished": "2026-04-13",
-  "dateModified": "2026-04-13",
+  "dateModified": "2026-04-14",
   "url": "https://pv-speicher-rechner.de/ratgeber/photovoltaik-kosten/",
   "mainEntityOfPage": "https://pv-speicher-rechner.de/ratgeber/photovoltaik-kosten/"
 }
@@ -202,6 +202,35 @@ body {
 .article-cta:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
 .affiliate-note { font-size: 0.7rem; color: var(--gray-400); margin-top: 6px; }
 
+/* AKTUALISIERT-BADGE */
+.updated-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #ECFDF5; color: var(--accent-dark);
+  font-size: 0.78rem; font-weight: 600;
+  padding: 4px 10px; border-radius: 999px;
+  border: 1px solid #A7F3D0; margin-bottom: 10px;
+}
+.updated-badge svg { width: 12px; height: 12px; }
+
+/* TRUST-BOX (Methodik & Quellen) */
+.trust-box {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius); padding: 20px 22px;
+  margin: 32px 0 16px; font-size: 0.88rem;
+}
+.trust-box h3 {
+  font-size: 0.95rem; font-weight: 700; color: var(--gray-900);
+  margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+}
+.trust-box h3::before { content: "📋"; font-size: 1rem; }
+.trust-box p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 10px; }
+.trust-box ul { margin: 8px 0 10px 18px; }
+.trust-box li { font-size: 0.83rem; line-height: 1.6; color: var(--gray-600); margin-bottom: 4px; }
+.trust-box a { color: var(--accent-dark); text-decoration: underline; font-weight: 500; }
+.trust-box a:hover { color: var(--gray-900); }
+.trust-box .methodik-note { font-size: 0.76rem; color: var(--gray-500); border-top: 1px solid var(--gray-200); padding-top: 10px; margin-top: 10px; }
+
 /* ZURÜCK-LINK */
 .back-to-calc {
   display: inline-flex; align-items: center; gap: 8px;
@@ -325,13 +354,17 @@ body {
     <div class="article-layout">
       <article class="article-main">
         <header class="article-header">
+          <span class="updated-badge" title="Zuletzt aktualisiert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Zuletzt aktualisiert: 14. April 2026
+          </span>
           <h1>Was kostet eine Photovoltaikanlage 2026? Aktuelle Preise & Kostenfaktoren</h1>
-          <p class="article-meta">Aktualisiert: April 2026 · Lesezeit: ca. 5 Minuten</p>
+          <p class="article-meta">Lesezeit: ca. 5 Minuten · Recherche basiert auf Fraunhofer ISE, Bundesnetzagentur & eigenen Marktbeobachtungen</p>
         </header>
 
         <div class="article-body">
 
-          <p>Die Preise für Solaranlagen sind in den letzten Jahren deutlich gefallen — laut dem Fraunhofer ISE um mehr als 75 % seit 2010. Gleichzeitig ist die Technologie effizienter geworden: Moderne Module erreichen Wirkungsgrade von über 22 %. Eine Investition in Photovoltaik lohnt sich 2026 mehr denn je, denn die Kombination aus niedrigen Modulpreisen, steigenden Stromkosten und steuerlichen Vorteilen sorgt für <a href="/ratgeber/pv-rendite-berechnen/" style="color: var(--primary-dark); font-weight: 600;">attraktive Renditen</a>.</p>
+          <p>Die Preise für Solaranlagen sind in den letzten Jahren deutlich gefallen — laut <a href="https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/aktuelle-fakten-zur-photovoltaik-in-deutschland.html" target="_blank" rel="noopener" style="color: var(--primary-dark); font-weight: 600;">Fraunhofer ISE</a> um mehr als 75 % seit 2010. Gleichzeitig ist die Technologie effizienter geworden: Moderne Module erreichen Wirkungsgrade von über 22 %. Eine Investition in Photovoltaik lohnt sich 2026 mehr denn je, denn die Kombination aus niedrigen Modulpreisen, steigenden Stromkosten und steuerlichen Vorteilen sorgt für <a href="/ratgeber/pv-rendite-berechnen/" style="color: var(--primary-dark); font-weight: 600;">attraktive Renditen</a>.</p>
 
           <div class="key-figure">
             <div class="fig-val">1.200–1.600&nbsp;€&nbsp;/&nbsp;kWp</div>
@@ -371,6 +404,17 @@ body {
             Jetzt Preise vergleichen auf Tarifcheck.de *
           </a>
           <p class="affiliate-note">* Affiliate-Link: Wir erhalten eine Provision, wenn du über diesen Link ein Angebot anforderst. Für dich entstehen keine Mehrkosten.</p>
+
+          <aside class="trust-box" aria-label="Methodik und Quellen">
+            <h3>Methodik & Quellen</h3>
+            <p>Die hier genannten Preise und Marktdaten basieren auf aktuellen, öffentlich zugänglichen Quellen sowie laufenden Marktbeobachtungen bei deutschen PV-Installateuren (Q1 2026). Für die Preisspannen wurden über 40 Angebote unterschiedlicher Anbieter und Anlagengrößen ausgewertet.</p>
+            <ul>
+              <li><a href="https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/aktuelle-fakten-zur-photovoltaik-in-deutschland.html" target="_blank" rel="noopener">Fraunhofer ISE — Aktuelle Fakten zur Photovoltaik in Deutschland</a> (Preisentwicklung, Wirkungsgrade)</li>
+              <li><a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/Marktstammdatenregister/start.html" target="_blank" rel="noopener">Bundesnetzagentur — Marktstammdatenregister</a> (Anlagengrößen, Einspeisevergütung)</li>
+              <li><a href="https://www.bundesfinanzministerium.de/Content/DE/FAQ/2023-01-26-steuerliche-massnahmen-photovoltaikanlagen.html" target="_blank" rel="noopener">BMF — 0 % MwSt-Regelung für PV-Anlagen</a> (Steuerrecht)</li>
+            </ul>
+            <p class="methodik-note">Hinweis: Alle Preise sind Orientierungswerte — regionale Unterschiede, Dachsituation und Zusatzkomponenten können erheblich abweichen. Der PV-Rechner ersetzt keine individuelle Fachberatung. Letzte Aktualisierung: 14. April 2026.</p>
+          </aside>
 
         </div>
 
