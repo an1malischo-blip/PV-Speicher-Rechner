@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PV-Förderungen 2026: 0% MwSt, KfW-Kredit, EEG & Landesförderungen – PV-Speicher-Rechner</title>
+<meta name="description" content="Alle Förderungen für Solaranlagen 2026: 0% MwSt, Einspeisevergütung 8,03 ct/kWh, KfW 270, Einkommensteuerbefreiung. Landesförderungen Bayern, NRW, Berlin & mehr.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pv-speicher-rechner.de/ratgeber/pv-foerderung/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PV-Förderungen 2026: 0% MwSt, KfW 270, EEG & Landesförderungen">
+<meta property="og:description" content="Alle aktuellen Förderungen für Photovoltaik 2026: 0% MwSt, 8,03 ct/kWh Einspeisevergütung, KfW-Kredit und Landesförderungen für Bayern, NRW, Berlin & mehr.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://pv-speicher-rechner.de/ratgeber/pv-foerderung/">
+<meta property="og:image" content="https://pv-speicher-rechner.de/hero-bg-compressed.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Förderungen & Steuervorteile für PV-Anlagen 2026: Vollständige Übersicht",
+  "description": "Alle aktuellen Förderungen für Photovoltaik 2026: 0% MwSt, EEG-Einspeisevergütung, KfW-Kredit 270, Einkommensteuerbefreiung und Landesförderungen.",
+  "author": { "@type": "Organization", "name": "PV-Speicher-Rechner" },
+  "publisher": { "@type": "Organization", "name": "PV-Speicher-Rechner", "logo": { "@type": "ImageObject", "url": "https://pv-speicher-rechner.de/favicon.svg" }},
+  "datePublished": "2026-04-13",
+  "dateModified": "2026-04-13",
+  "url": "https://pv-speicher-rechner.de/ratgeber/pv-foerderung/"
+}
+</script>
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "PV-Rechner", "item": "https://pv-speicher-rechner.de/" },
+    { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://pv-speicher-rechner.de/#blog" },
+    { "@type": "ListItem", "position": 3, "name": "PV-Förderungen 2026", "item": "https://pv-speicher-rechner.de/ratgeber/pv-foerderung/" }
+  ]
+}
+</script>
+
+<!-- GA4 (wird erst nach Cookie-Zustimmung geladen) -->
+<script>window.gaConsent = false;</script>
+
+<style>
+/* RESET & BASIS */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --primary: #F59E0B; --primary-dark: #D97706;
+  --accent: #10B981; --accent-dark: #059669;
+  --bg: #F9FAFB; --white: #FFFFFF;
+  --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+  --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+  --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --radius: 12px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--gray-900);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 56px;
+}
+.container { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+/* HEADER */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(15,23,42,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; max-width: 900px;
+}
+.site-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: #F1F5F9;
+  font-weight: 800; font-size: 1.05rem;
+}
+.site-logo-icon {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--accent-dark));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.site-nav { display: flex; align-items: center; gap: 6px; }
+.nav-link {
+  color: #94A3B8; text-decoration: none;
+  font-size: 0.82rem; font-weight: 500;
+  padding: 6px 12px; border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.nav-link:hover, .nav-link.active { color: #F1F5F9; background: rgba(255,255,255,0.08); }
+.nav-link-cta {
+  color: #0F172A; background: var(--primary);
+  font-weight: 700; padding: 8px 16px; border-radius: 8px;
+  font-size: 0.82rem; text-decoration: none;
+  transition: background 0.2s;
+}
+.nav-link-cta:hover { background: var(--primary-dark); }
+.mobile-menu-btn {
+  display: none; background: none; border: none;
+  color: #F1F5F9; cursor: pointer; padding: 6px;
+}
+@media (max-width: 640px) {
+  .site-nav .nav-link { display: none; }
+  .mobile-menu-btn { display: block; }
+  .site-nav.open .nav-link {
+    display: block;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: rgba(15,23,42,0.98);
+    backdrop-filter: blur(12px);
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .site-nav.open { position: static; }
+}
+
+/* BREADCRUMB */
+.breadcrumb { padding: 16px 0 0; font-size: 0.8rem; color: var(--gray-500); }
+.breadcrumb a { color: var(--gray-500); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary-dark); text-decoration: underline; }
+.breadcrumb span { margin: 0 6px; }
+
+/* ARTIKEL-LAYOUT */
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 32px;
+  padding: 24px 0 60px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .article-layout { grid-template-columns: 1fr; }
+  .sidebar { order: -1; }
+}
+
+/* ARTIKEL */
+.article-header { margin-bottom: 28px; }
+.article-header h1 {
+  font-size: 1.7rem; font-weight: 800;
+  color: var(--gray-900); line-height: 1.3; margin-bottom: 12px;
+}
+.article-meta { font-size: 0.8rem; color: var(--gray-400); }
+
+.article-body h2 {
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--gray-900); margin: 28px 0 10px;
+}
+.article-body p {
+  font-size: 0.92rem; line-height: 1.75;
+  color: var(--gray-600); margin-bottom: 14px;
+}
+.article-body ul { margin: 8px 0 16px 20px; }
+.article-body li {
+  font-size: 0.92rem; line-height: 1.75;
+  color: var(--gray-600); margin-bottom: 8px;
+}
+
+/* KEY-FIGURE BOX */
+.key-figure {
+  display: flex; align-items: center; gap: 14px;
+  background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+  border-radius: 10px; padding: 16px 20px; margin: 20px 0;
+  border-left: 4px solid var(--primary);
+}
+.key-figure .fig-val {
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--primary-dark); white-space: nowrap;
+}
+.key-figure .fig-desc { font-size: 0.85rem; color: var(--gray-600); }
+
+/* FÖRDER-KARTE */
+.foerder-card {
+  background: var(--white);
+  border-radius: 10px;
+  border: 1px solid var(--gray-200);
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+.foerder-card .foerder-tag {
+  display: inline-block;
+  background: #ECFDF5; color: var(--accent-dark);
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; padding: 3px 8px; border-radius: 4px;
+  margin-bottom: 8px;
+}
+.foerder-card h3 {
+  font-size: 0.97rem; font-weight: 700; color: var(--gray-900);
+  margin-bottom: 8px;
+}
+.foerder-card p {
+  font-size: 0.88rem; color: var(--gray-600);
+  margin-bottom: 0 !important;
+  line-height: 1.6;
+}
+
+/* BUNDESLAND-TABELLE */
+.land-list { list-style: none; margin: 0 0 16px !important; padding: 0; }
+.land-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-200);
+  font-size: 0.9rem !important;
+}
+.land-list li:last-child { border-bottom: none; }
+.land-list .land-name {
+  font-weight: 700; color: var(--gray-900);
+  min-width: 140px; flex-shrink: 0;
+  font-size: 0.88rem;
+}
+.land-list .land-desc { color: var(--gray-600); font-size: 0.88rem; line-height: 1.5; }
+
+/* TIPP-BOX */
+.tip-box {
+  background: #EFF6FF;
+  border-left: 4px solid #3B82F6;
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 20px 0;
+}
+.tip-box p {
+  font-size: 0.88rem !important;
+  color: #1E40AF !important;
+  margin-bottom: 0 !important;
+}
+.tip-box strong { color: #1D4ED8; }
+
+/* ARTIKEL CTA */
+.article-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #0F172A; font-weight: 700; font-size: 0.9rem;
+  padding: 12px 24px; border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.article-cta:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+.affiliate-note { font-size: 0.7rem; color: var(--gray-400); margin-top: 5px; }
+
+/* ZURÜCK-LINK */
+.back-to-calc {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--white); border: 2px solid var(--primary);
+  color: var(--primary-dark); font-weight: 700; font-size: 0.85rem;
+  padding: 10px 18px; border-radius: 10px; text-decoration: none;
+  margin-top: 32px; transition: background 0.2s;
+}
+.back-to-calc:hover { background: #FFFBEB; }
+
+/* SIDEBAR */
+.sidebar-box {
+  background: var(--white); border-radius: var(--radius);
+  padding: 20px; box-shadow: var(--shadow); margin-bottom: 20px;
+}
+.sidebar-box h3 {
+  font-size: 0.9rem; font-weight: 700; color: var(--gray-900);
+  margin-bottom: 14px; border-bottom: 2px solid var(--primary);
+  padding-bottom: 8px;
+}
+.sidebar-box ul { list-style: none; margin: 0; padding: 0; }
+.sidebar-box li { margin-bottom: 8px; }
+.sidebar-box a {
+  font-size: 0.85rem; color: var(--gray-700); text-decoration: none;
+  display: flex; align-items: flex-start; gap: 6px; line-height: 1.4;
+}
+.sidebar-box a:hover { color: var(--primary-dark); }
+.sidebar-box a::before {
+  content: "→"; color: var(--primary);
+  font-size: 0.8rem; margin-top: 2px; flex-shrink: 0;
+}
+.sidebar-cta {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: var(--radius); padding: 20px; text-align: center;
+  margin-bottom: 20px;
+}
+.sidebar-cta p {
+  font-size: 0.85rem; color: #0F172A; font-weight: 600;
+  margin-bottom: 12px; line-height: 1.4;
+}
+.sidebar-cta a {
+  display: block; background: #0F172A; color: var(--primary);
+  font-weight: 700; font-size: 0.85rem;
+  padding: 10px 16px; border-radius: 8px;
+  text-decoration: none; transition: opacity 0.2s;
+}
+.sidebar-cta a:hover { opacity: 0.85; }
+
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #1E293B; color: #F1F5F9;
+  padding: 16px; z-index: 999;
+  display: none; border-top: 2px solid var(--primary);
+}
+.cookie-banner.visible { display: block; }
+.cookie-banner p { font-size: 0.82rem; line-height: 1.5; margin-bottom: 12px; }
+.cookie-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--primary); color: #0F172A;
+  border: none; font-weight: 700; font-size: 0.82rem;
+  padding: 8px 16px; border-radius: 8px; cursor: pointer;
+}
+.btn-secondary {
+  background: transparent; color: #94A3B8;
+  border: 1px solid #475569; font-weight: 500; font-size: 0.82rem;
+  padding: 8px 16px; border-radius: 8px; cursor: pointer;
+}
+.btn-secondary:hover { color: #F1F5F9; border-color: #94A3B8; }
+
+/* FOOTER */
+.footer {
+  text-align: center; padding: 24px 0 32px;
+  font-size: 0.75rem; color: var(--gray-400);
+  border-top: 1px solid var(--gray-200);
+}
+.footer-links {
+  display: flex; justify-content: center; gap: 16px;
+  margin-bottom: 10px; flex-wrap: wrap;
+}
+.footer-links a { color: var(--gray-500); text-decoration: none; font-weight: 500; }
+.footer-links a:hover { color: var(--primary); text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="/" class="site-logo">
+      <span class="site-logo-icon" aria-hidden="true">☀</span>
+      <span>PV-Rechner</span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation">
+      <a href="/" class="nav-link">Rechner</a>
+      <a href="/#blog" class="nav-link active">Ratgeber</a>
+      <a href="/#faq-section" class="nav-link">FAQ</a>
+      <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage"
+         target="_blank" rel="noopener noreferrer sponsored" class="nav-link-cta"
+         onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Angebot sichern</a>
+      <button class="mobile-menu-btn"
+              onclick="document.getElementById('siteNav').classList.toggle('open')"
+              aria-label="Menü öffnen" type="button">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">PV-Rechner</a>
+      <span>›</span>
+      <a href="/#blog">Ratgeber</a>
+      <span>›</span>
+      <span aria-current="page">PV-Förderungen 2026</span>
+    </nav>
+
+    <div class="article-layout">
+      <article class="article-main">
+        <header class="article-header">
+          <h1>Förderungen &amp; Steuervorteile für PV-Anlagen 2026</h1>
+          <p class="article-meta">Aktualisiert: April 2026 · Lesezeit: ca. 6 Minuten</p>
+        </header>
+
+        <div class="article-body">
+
+          <p>Deutschland fördert den Ausbau privater Solaranlagen auf mehreren Ebenen. Die Förderlandschaft ist komplex — wir haben die wichtigsten Programme für 2026 zusammengestellt, damit du kein Geld verschenkst. Insgesamt können die Steuervorteile und Förderungen die effektiven Kosten deiner Anlage um 20–40 % reduzieren.</p>
+
+          <div class="key-figure">
+            <div class="fig-val">0 % MwSt</div>
+            <div class="fig-desc">auf PV-Anlagen, Speicher und Installation seit 2023 — spart dir 19 % der Brutto-Investition</div>
+          </div>
+
+          <h2>Bundesweite Förderungen im Überblick</h2>
+
+          <div class="foerder-card">
+            <span class="foerder-tag">Steuer</span>
+            <h3>0 % Mehrwertsteuer auf PV-Anlagen</h3>
+            <p>Seit dem 1. Januar 2023 gilt der Nullsteuersatz auf PV-Anlagen bis 30 kWp für Wohngebäude. Das bedeutet: Du zahlst den Nettopreis — ohne 19 % MwSt. Die Regelung gilt auch für Batteriespeicher, die nachgerüstet werden, sowie für Ersatzteile und Erweiterungen bestehender Systeme.</p>
+          </div>
+
+          <div class="foerder-card">
+            <span class="foerder-tag">EEG 2023</span>
+            <h3>Einspeisevergütung — gesetzlich garantiert für 20 Jahre</h3>
+            <p>Für Strom, den du nicht selbst verbrauchst und ins öffentliche Netz einspeist, erhältst du eine gesetzlich garantierte Vergütung. Ab Inbetriebnahme läuft der Vertrag automatisch 20 Jahre. Aktuelle Sätze (Stand 2026):</p>
+            <ul style="margin-top: 10px; margin-left: 18px;">
+              <li>ca. <strong>8,03 ct/kWh</strong> bei Teileinspeisung (Anlagen bis 10 kWp)</li>
+              <li>ca. <strong>12,86 ct/kWh</strong> bei Volleinspeisung (Anlagen bis 10 kWp)</li>
+            </ul>
+            <p style="margin-top: 10px;">Die Degression beträgt 1 % halbjährlich — wer früher installiert, sichert sich höhere Sätze.</p>
+          </div>
+
+          <div class="foerder-card">
+            <span class="foerder-tag">KfW 270</span>
+            <h3>KfW-Kredit für Erneuerbare Energien</h3>
+            <p>Die Kreditanstalt für Wiederaufbau (KfW) finanziert PV-Anlagen und Speicher über das Programm 270 mit zinsgünstigen Krediten. Finanzierung bis zu 100 % der Investitionssumme möglich, mit tilgungsfreien Anlaufjahren. Effektiver Jahreszins ab ca. 4,5 % (Stand 2026). Der Kredit kann mit Landesförderungen kombiniert werden.</p>
+          </div>
+
+          <div class="foerder-card">
+            <span class="foerder-tag">Einkommensteuer</span>
+            <h3>Steuerbefreiung nach § 3 Nr. 72 EStG</h3>
+            <p>Einnahmen und Entnahmen aus PV-Anlagen bis 30 kWp sind seit 2023 komplett von der Einkommensteuer befreit. Das bedeutet: keine Gewerbeanmeldung, keine Einnahmen-Überschuss-Rechnung, keine Umsatzsteuer-Erklärung. Die Vereinfachung gilt rückwirkend ab dem Veranlagungsjahr 2022.</p>
+          </div>
+
+          <div class="foerder-card">
+            <span class="foerder-tag">KfW 442</span>
+            <h3>Solarstrom für Elektroautos — Wallbox-Förderung</h3>
+            <p>Das KfW-Programm 442 fördert die Kombination aus PV-Anlage, Batteriespeicher und Wallbox mit einem Zuschuss von bis zu 10.200 €. Das Programm ist mit begrenzten Mitteln ausgestattet und war zuletzt schnell ausgeschöpft — frühzeitig informieren und Antrag stellen, bevor das Budget erschöpft ist.</p>
+          </div>
+
+          <h2>Regionale Förderungen nach Bundesland</h2>
+          <p>Viele Bundesländer und Kommunen bieten zusätzliche Förderprogramme. Diese lassen sich in der Regel mit den bundesweiten Förderungen kombinieren. Die wichtigsten im Überblick:</p>
+
+          <ul class="land-list">
+            <li>
+              <span class="land-name">Nordrhein-Westfalen</span>
+              <span class="land-desc">progres.nrw — Förderung für Batteriespeicher, Wallboxen und Steuersysteme. Zuschüsse je nach Programmschwerpunkt und verfügbarem Budget.</span>
+            </li>
+            <li>
+              <span class="land-name">Bayern</span>
+              <span class="land-desc">EnergieBonusBayern — Zuschüsse für PV-Anlagen mit Speicher. Zusätzlich kommunale Programme in München, Nürnberg und Augsburg mit eigenen Fördertöpfen.</span>
+            </li>
+            <li>
+              <span class="land-name">Berlin</span>
+              <span class="land-desc">SolarPLUS — bis zu 15.000 € Förderung für Speicher, zuzüglich Berliner Stadtwerke-Bonus für Kunden des Berliner Stadtwerke-Netzwerks.</span>
+            </li>
+            <li>
+              <span class="land-name">Baden-Württemberg</span>
+              <span class="land-desc">Förderprogramm Netzdienliche Speicher sowie L-Bank Klimakredit für energetische Modernisierungen inklusive Photovoltaik und Speicher.</span>
+            </li>
+            <li>
+              <span class="land-name">Niedersachsen</span>
+              <span class="land-desc">NBank-Förderung für PV auf Nichtwohngebäuden, kommunale Programme in Hannover und Bremen mit Zuschüssen für private Haushalte.</span>
+            </li>
+            <li>
+              <span class="land-name">Schleswig-Holstein</span>
+              <span class="land-desc">Klimaschutz-Förderprogramm des Landes sowie Speicherförderung durch einzelne Kommunen und Stadtwerke.</span>
+            </li>
+            <li>
+              <span class="land-name">Hamburg</span>
+              <span class="land-desc">IFB-Förderung Erneuerbare Wärme sowie Hamburger Energiepass — kombinierbare Programme für energetische Sanierung und Stromerzeugung.</span>
+            </li>
+            <li>
+              <span class="land-name">Sachsen</span>
+              <span class="land-desc">SAB-Förderung für Batteriespeicher und Ladeinfrastruktur — Förderanträge über die Sächsische Aufbaubank (SAB).</span>
+            </li>
+          </ul>
+
+          <h2>Tipps zur Förderung</h2>
+
+          <div class="tip-box">
+            <p><strong>Wichtig:</strong> Fördermittel immer vor dem Kauf beantragen — nachträgliche Anträge werden fast immer abgelehnt. Das gilt für KfW-Kredite ebenso wie für Landes- und kommunale Programme.</p>
+          </div>
+
+          <ul>
+            <li><strong>Kommunale Förderungen prüfen:</strong> Viele Städte — z.B. Freiburg, Heidelberg, Münster — bieten eigene Zuschüsse von 500–2.000 € zusätzlich zu Landes- und Bundesförderungen.</li>
+            <li><strong>Kombinierbar:</strong> 0 % MwSt + Landesförderung + kommunaler Zuschuss + KfW-Kredit lassen sich in der Regel miteinander kombinieren. Die Gesamtförderung kann so erheblich sein.</li>
+            <li><strong>Budget-Programme:</strong> Förderungen mit begrenzten Mitteln (wie KfW 442) sind schnell ausgeschöpft. Informiere dich frühzeitig und stelle den Antrag unmittelbar nach Installationsplanung.</li>
+            <li><strong>Datenbank nutzen:</strong> Auf <a href="https://www.foerderdatenbank.de" target="_blank" rel="noopener noreferrer" style="color: var(--primary-dark); font-weight: 600;">foerderdatenbank.de</a> findest du eine aktuelle Übersicht aller Förderungen nach Bundesland und Zielgruppe.</li>
+          </ul>
+
+          <h2>Fördermöglichkeiten kostenlos prüfen</h2>
+          <p>Ein Fachbetrieb kann dir bei der Antragsstellung helfen und sicherstellen, dass du alle verfügbaren Förderungen ausschöpfst. Über Tarifcheck.de kannst du direkt kostenlos Angebote von qualifizierten Installateuren einholen, die die Förderberatung übernehmen:</p>
+
+          <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage"
+             target="_blank" rel="noopener noreferrer sponsored" class="article-cta"
+             onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">
+            Kostenlos Fördermöglichkeiten prüfen auf Tarifcheck.de *
+          </a>
+          <p class="affiliate-note">* Affiliate-Link: Wir erhalten eine Provision, wenn du über diesen Link ein Angebot anforderst. Für dich entstehen keine Mehrkosten.</p>
+
+        </div>
+
+        <a href="/" class="back-to-calc">← Zurück zum PV-Rechner</a>
+      </article>
+
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-cta">
+          <p>Kostenlos Fördermöglichkeiten prüfen &amp; bestes Angebot sichern</p>
+          <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage"
+             target="_blank" rel="noopener noreferrer sponsored"
+             onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">Angebote vergleichen →</a>
+        </div>
+
+        <div class="sidebar-box">
+          <h3>Weitere Ratgeber</h3>
+          <ul>
+            <li><a href="/ratgeber/photovoltaik-kosten/">Was kostet eine Solaranlage 2026?</a></li>
+            <li><a href="/ratgeber/pv-rendite-berechnen/">Rendite einer Solaranlage berechnen</a></li>
+            <li><a href="/ratgeber/batteriespeicher-lohnt/">Lohnt sich ein Batteriespeicher?</a></li>
+            <li><a href="/ratgeber/eigenverbrauch-maximieren/">Eigenverbrauch maximieren</a></li>
+            <li><a href="/ratgeber/stromtarif-pv-anlage/">Den richtigen Stromtarif wählen</a></li>
+            <li><a href="/ratgeber/solaranlage-anbieter/">Anbieter vergleichen</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-box">
+          <h3>Kostenloser PV-Rechner</h3>
+          <p style="font-size:0.85rem;color:var(--gray-600);margin-bottom:12px">Berechne in 2 Minuten, ob sich eine Solaranlage für dich lohnt — inkl. Fördereffekte, Speicher &amp; Eigenverbrauch.</p>
+          <a href="/" style="display:block;background:var(--primary);color:#0F172A;font-weight:700;font-size:0.85rem;padding:10px 16px;border-radius:8px;text-decoration:none;text-align:center;">Jetzt berechnen →</a>
+        </div>
+
+        <div class="sidebar-box">
+          <h3>Schnellübersicht Förderungen</h3>
+          <ul>
+            <li><a href="#bundesweite-foerderungen" style="color: var(--gray-700)">0 % MwSt seit 2023</a></li>
+            <li><a href="#bundesweite-foerderungen" style="color: var(--gray-700)">EEG: 8,03 ct/kWh Einspeisevergütung</a></li>
+            <li><a href="#bundesweite-foerderungen" style="color: var(--gray-700)">KfW 270: Kredit bis 100 %</a></li>
+            <li><a href="#bundesweite-foerderungen" style="color: var(--gray-700)">Einkommensteuerbefreiung</a></li>
+            <li><a href="#bundesweite-foerderungen" style="color: var(--gray-700)">KfW 442: bis 10.200 € Zuschuss</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie-Einstellungen">
+  <div class="container">
+    <p>Diese Seite verwendet Google Analytics zur Analyse des Nutzungsverhaltens. Mehr dazu in unserer <a href="/datenschutz/" style="color:var(--primary)">Datenschutzerklärung</a>.</p>
+    <div class="cookie-btns">
+      <button class="btn-primary" onclick="acceptCookies()" type="button">Akzeptieren</button>
+      <button class="btn-secondary" onclick="declineCookies()" type="button">Nur notwendige</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <nav class="footer-links" aria-label="Rechtliche Links">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutzerklärung</a>
+      <a href="#" onclick="showCookieBanner();return false">Cookie-Einstellungen</a>
+    </nav>
+    <p>Alle Angaben ohne Gewähr. Ersetzt keine individuelle Photovoltaik-Fachberatung.</p>
+    <p style="margin-top:4px">© 2026 PV-Speicher-Rechner · CH Distribution</p>
+  </div>
+</footer>
+
+<script>
+/* Header Scroll-Effekt */
+(function() {
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+    document.getElementById('siteNav').classList.remove('open');
+  }, { passive: true });
+})();
+
+/* Cookie Consent */
+function checkCookieConsent() {
+  const consent = localStorage.getItem('cookie_consent');
+  if (!consent) {
+    document.getElementById('cookieBanner').classList.add('visible');
+  } else if (consent === 'accepted') {
+    loadGA4();
+  }
+}
+
+function acceptCookies() {
+  localStorage.setItem('cookie_consent', 'accepted');
+  document.getElementById('cookieBanner').classList.remove('visible');
+  loadGA4();
+}
+
+function declineCookies() {
+  localStorage.setItem('cookie_consent', 'declined');
+  document.getElementById('cookieBanner').classList.remove('visible');
+}
+
+function showCookieBanner() {
+  localStorage.removeItem('cookie_consent');
+  document.getElementById('cookieBanner').classList.add('visible');
+}
+
+function loadGA4() {
+  if (window.gaLoaded) return;
+  window.gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-N75ZWVQRCG';
+  document.head.appendChild(s);
+  s.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-N75ZWVQRCG', { anonymize_ip: true });
+    window.gaConsent = true;
+  };
+}
+
+// Initialisierung
+checkCookieConsent();
+</script>
+</body>
+</html>

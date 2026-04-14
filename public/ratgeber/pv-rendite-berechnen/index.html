@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rendite einer Solaranlage berechnen 2026: 5–10 % p.a. steuerfrei – PV-Speicher-Rechner</title>
+  <meta name="description" content="Wie rentabel ist eine PV-Anlage wirklich? Rechenbeispiel 10 kWp Bremen, Vergleich mit ETF &amp; Tagesgeld, Amortisation 8–12 Jahre. Rendite kostenlos berechnen.">
+  <link rel="canonical" href="https://pv-speicher-rechner.de/ratgeber/pv-rendite-berechnen/">
+  <meta property="og:title" content="Rendite einer Solaranlage berechnen 2026: 5–10 % p.a. steuerfrei">
+  <meta property="og:description" content="Wie rentabel ist eine PV-Anlage wirklich? Rechenbeispiel 10 kWp Bremen, Vergleich mit ETF &amp; Tagesgeld, Amortisation 8–12 Jahre.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pv-speicher-rechner.de/ratgeber/pv-rendite-berechnen/">
+  <meta name="robots" content="index, follow">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Rendite einer Solaranlage berechnen: So rechnest du richtig",
+    "description": "PV-Rendite 5-10% p.a. steuerfrei — Rechenbeispiel, Vergleich mit ETF und Festgeld, Amortisationszeit 8-12 Jahre.",
+    "author": { "@type": "Organization", "name": "PV-Speicher-Rechner" },
+    "publisher": { "@type": "Organization", "name": "PV-Speicher-Rechner", "logo": { "@type": "ImageObject", "url": "https://pv-speicher-rechner.de/favicon.svg" }},
+    "datePublished": "2026-04-13",
+    "dateModified": "2026-04-13",
+    "url": "https://pv-speicher-rechner.de/ratgeber/pv-rendite-berechnen/"
+  }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N75ZWVQRCG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N75ZWVQRCG');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #F59E0B; --primary-dark: #D97706;
+      --accent: #10B981; --accent-dark: #059669;
+      --bg: #F9FAFB; --white: #FFFFFF;
+      --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --radius: 12px;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--gray-900); line-height: 1.6; min-height: 100vh; padding-top: 56px; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+    .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,23,42,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; max-width: 900px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #F1F5F9; font-weight: 800; font-size: 1.05rem; }
+    .site-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--primary), var(--accent-dark)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .site-nav { display: flex; align-items: center; gap: 6px; }
+    .nav-link { color: #94A3B8; text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 6px 12px; border-radius: 6px; transition: color 0.2s, background 0.2s; white-space: nowrap; }
+    .nav-link:hover, .nav-link.active { color: #F1F5F9; background: rgba(255,255,255,0.08); }
+    .nav-link-cta { color: #0F172A; background: var(--primary); font-weight: 700; padding: 8px 16px; border-radius: 8px; font-size: 0.82rem; text-decoration: none; }
+    .nav-link-cta:hover { background: var(--primary-dark); }
+    .mobile-menu-btn { display: none; background: none; border: none; color: #F1F5F9; cursor: pointer; padding: 6px; }
+    @media (max-width: 640px) { .site-nav .nav-link { display: none; } .mobile-menu-btn { display: block; } .site-nav.open .nav-link { display: block; position: absolute; top: 100%; left: 0; right: 0; background: rgba(15,23,42,0.98); padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); } .site-nav.open { position: static; } }
+    .breadcrumb { padding: 16px 0 0; font-size: 0.8rem; color: var(--gray-500); }
+    .breadcrumb a { color: var(--gray-500); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary-dark); text-decoration: underline; }
+    .breadcrumb span { margin: 0 6px; }
+    .article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 32px; padding: 24px 0 60px; align-items: start; }
+    @media (max-width: 768px) { .article-layout { grid-template-columns: 1fr; } .sidebar { order: -1; } }
+    .article-header { margin-bottom: 28px; }
+    .article-header h1 { font-size: 1.7rem; font-weight: 800; color: var(--gray-900); line-height: 1.3; margin-bottom: 12px; }
+    .article-meta { font-size: 0.8rem; color: var(--gray-400); }
+    .article-body h2 { font-size: 1.1rem; font-weight: 700; color: var(--gray-900); margin: 28px 0 10px; }
+    .article-body p { font-size: 0.92rem; line-height: 1.75; color: var(--gray-600); margin-bottom: 14px; }
+    .article-body ul { margin: 8px 0 16px 20px; }
+    .article-body li { font-size: 0.92rem; line-height: 1.75; color: var(--gray-600); margin-bottom: 8px; }
+    .key-figure { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #FFFBEB, #FEF3C7); border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+    .key-figure .fig-val { font-size: 1.5rem; font-weight: 800; color: var(--primary-dark); white-space: nowrap; }
+    .key-figure .fig-desc { font-size: 0.85rem; color: var(--gray-600); }
+    .article-cta { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #0F172A; font-weight: 700; font-size: 0.9rem; padding: 12px 24px; border-radius: 10px; text-decoration: none; margin-top: 10px; }
+    .article-cta:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+    .affiliate-note { font-size: 0.7rem; color: var(--gray-400); margin-top: 5px; }
+    .sidebar-box { background: var(--white); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); margin-bottom: 20px; }
+    .sidebar-box h3 { font-size: 0.9rem; font-weight: 700; color: var(--gray-900); margin-bottom: 14px; border-bottom: 2px solid var(--primary); padding-bottom: 8px; }
+    .sidebar-box ul { list-style: none; margin: 0; padding: 0; }
+    .sidebar-box li { margin-bottom: 8px; }
+    .sidebar-box a { font-size: 0.85rem; color: var(--gray-700); text-decoration: none; display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; }
+    .sidebar-box a:hover { color: var(--primary-dark); }
+    .sidebar-box a::before { content: "→"; color: var(--primary); font-size: 0.8rem; margin-top: 2px; flex-shrink: 0; }
+    .sidebar-cta { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: var(--radius); padding: 20px; text-align: center; margin-bottom: 20px; }
+    .sidebar-cta p { font-size: 0.85rem; color: #0F172A; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+    .sidebar-cta a { display: block; background: #0F172A; color: var(--primary); font-weight: 700; font-size: 0.85rem; padding: 10px 16px; border-radius: 8px; text-decoration: none; }
+    .back-to-calc { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 2px solid var(--primary); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; padding: 10px 18px; border-radius: 10px; text-decoration: none; margin-top: 32px; }
+    .back-to-calc:hover { background: #FFFBEB; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 0.88rem; }
+    .comparison-table th { background: var(--gray-800); color: var(--white); font-weight: 700; padding: 10px 14px; text-align: left; }
+    .comparison-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); }
+    .comparison-table tr:nth-child(even) td { background: var(--gray-100); }
+    .comparison-table .highlight td { background: #FFFBEB; font-weight: 600; color: var(--gray-900); }
+    .comparison-table .highlight td:first-child { border-left: 3px solid var(--primary); }
+    .calc-box { background: var(--gray-100); border-radius: 10px; padding: 18px 20px; margin: 16px 0 20px; }
+    .calc-box .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--gray-200); font-size: 0.88rem; color: var(--gray-700); }
+    .calc-box .calc-row:last-child { border-bottom: none; font-weight: 700; color: var(--gray-900); font-size: 0.95rem; padding-top: 10px; }
+    .calc-box .calc-row span:last-child { font-weight: 600; color: var(--accent-dark); }
+    .calc-box .calc-row:last-child span:last-child { color: var(--primary-dark); font-size: 1.05rem; }
+    .footer { text-align: center; padding: 24px 0 32px; font-size: 0.75rem; color: var(--gray-400); border-top: 1px solid var(--gray-200); }
+    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+    .footer-links a { color: var(--gray-500); text-decoration: none; font-weight: 500; }
+    .footer-links a:hover { color: var(--primary); }
+    .cta-block { background: var(--gray-100); border-radius: var(--radius); padding: 24px; margin-top: 32px; text-align: center; }
+    .cta-block p { font-size: 0.92rem; color: var(--gray-600); margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <div class="site-logo-icon">☀️</div>
+        PV-Speicher-Rechner
+      </a>
+      <nav class="site-nav" id="siteNav">
+        <a href="/ratgeber/photovoltaik-kosten/" class="nav-link">Kosten</a>
+        <a href="/ratgeber/pv-rendite-berechnen/" class="nav-link active">Rendite</a>
+        <a href="/ratgeber/batteriespeicher-lohnt/" class="nav-link">Speicher</a>
+        <a href="/ratgeber/pv-foerderung/" class="nav-link">Förderung</a>
+        <a href="/" class="nav-link-cta">Zum Rechner →</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menü öffnen">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Startseite</a>
+      <span>›</span>
+      <a href="/ratgeber/">Ratgeber</a>
+      <span>›</span>
+      Rendite berechnen
+    </nav>
+  </div>
+
+  <!-- Artikel-Layout -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Hauptartikel -->
+      <article>
+        <header class="article-header">
+          <h1>Rendite einer Solaranlage berechnen: So rechnest du richtig</h1>
+          <p class="article-meta">Aktualisiert: April 2026 · Lesedauer: ca. 5 Minuten</p>
+        </header>
+
+        <div class="article-body">
+
+          <p>Eine Photovoltaikanlage ist nicht nur gut für die Umwelt — sie ist auch eine der besten Geldanlagen im aktuellen Marktumfeld. Die Rendite einer PV-Anlage liegt typischerweise bei <strong>5–10 % pro Jahr</strong>, und das steuerfrei. Über die gesamte Laufzeit von 25–30 Jahren erwirtschaftet eine durchschnittliche 10-kWp-Anlage einen Gewinn von 20.000–40.000 €.</p>
+
+          <div class="key-figure">
+            <div class="fig-val">8–12 Jahre</div>
+            <div class="fig-desc">typische Amortisationszeit — danach produziert deine Anlage bis zu 20 weitere Jahre kostenlosen Strom</div>
+          </div>
+
+          <h2>Wie berechnet sich die PV-Rendite?</h2>
+          <p>Die PV-Rendite setzt sich aus zwei Einnahmeströmen zusammen:</p>
+          <ul>
+            <li><strong>Eigenverbrauch (größter Hebel):</strong> Jede kWh, die du selbst nutzt, spart dir den vollen Strompreis (ca. 32–36 ct/kWh in 2026). Bei einem Eigenverbrauchsanteil von 30 % und einer 10-kWp-Anlage sparst du ca. 1.000–1.100 €/Jahr allein durch Eigenverbrauch.</li>
+            <li><strong>Einspeisung:</strong> Überschüssiger Strom wird ins Netz eingespeist und mit der gesetzlich garantierten Einspeisevergütung vergütet (ca. 8,03 ct/kWh für Teileinspeisung ≤ 10 kWp, ca. 12,86 ct/kWh für Volleinspeisung). Die Vergütung ist für 20 Jahre ab Inbetriebnahme garantiert.</li>
+          </ul>
+
+          <h2>Rechenbeispiel: 10 kWp Anlage in Bremen</h2>
+          <p>Investition: 14.000 € | Ertrag: 9.200 kWh/Jahr | Eigenverbrauch: 35 % | Strompreis: 34 ct/kWh</p>
+
+          <div class="calc-box">
+            <div class="calc-row">
+              <span>Eigenverbrauch (3.220 kWh × 0,34 €)</span>
+              <span>1.095 €/Jahr Ersparnis</span>
+            </div>
+            <div class="calc-row">
+              <span>Einspeisung (5.980 kWh × 0,0803 €)</span>
+              <span>480 €/Jahr Einnahmen</span>
+            </div>
+            <div class="calc-row">
+              <span>Amortisation (14.000 € ÷ 1.575 €)</span>
+              <span>ca. 8,9 Jahre</span>
+            </div>
+            <div class="calc-row">
+              <span>Gesamtvorteil über 25 Jahre (inkl. 2 % Strompreissteigerung)</span>
+              <span>ca. 32.000 € Gewinn</span>
+            </div>
+          </div>
+
+          <h2>PV-Rendite vs. klassische Geldanlagen</h2>
+          <p>Ein direkter Vergleich zeigt, warum die Solaranlage als Geldanlage zunehmend ernst genommen wird:</p>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Anlageform</th>
+                <th>Rendite p.a.</th>
+                <th>Steuer</th>
+                <th>Inflationsschutz</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight">
+                <td>Solaranlage (10 kWp)</td>
+                <td>5–10 %</td>
+                <td>steuerfrei *</td>
+                <td>ja — steigt mit Strompreis</td>
+              </tr>
+              <tr>
+                <td>ETF-Sparplan (MSCI World)</td>
+                <td>Ø 7 % brutto → ~5,2 % netto</td>
+                <td>26,4 % Abgeltungssteuer</td>
+                <td>teilweise</td>
+              </tr>
+              <tr>
+                <td>Tagesgeld</td>
+                <td>2,0–2,5 %</td>
+                <td>steuerpflichtig</td>
+                <td>nein — real oft negativ</td>
+              </tr>
+              <tr>
+                <td>Festgeld (10 Jahre)</td>
+                <td>2,5–3,0 %</td>
+                <td>steuerpflichtig</td>
+                <td>nein</td>
+              </tr>
+              <tr>
+                <td>Inflation</td>
+                <td>ca. 2,0 %</td>
+                <td>—</td>
+                <td>frisst sichere Anlagen auf</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="affiliate-note">* Eigenverbrauch unter 30 kWp ist seit 2023 einkommenssteuerfrei. Einspeisevergütung über 1.000 €/Jahr ist steuerpflichtig — bei kleinen Anlagen meist irrelevant.</p>
+
+          <p>Der entscheidende Vorteil: Strom aus Eigenverbrauch ist steuerfrei. Zudem steigt die Rendite mit jedem Strompreisanstieg automatisch — eine PV-Anlage ist damit ein natürlicher Inflationsschutz, den weder ETF noch Festgeld bieten können.</p>
+
+          <h2>Welche Faktoren beeinflussen die Rendite?</h2>
+          <ul>
+            <li><strong>Standort:</strong> Süddeutschland (Bayern, Baden-Württemberg) liefert bis zu 1.200 kWh/kWp, Norddeutschland ca. 900–1.000 kWh/kWp. Das macht bei einer 10-kWp-Anlage einen Unterschied von 2.000 kWh/Jahr — entspricht ca. 400–500 € mehr oder weniger Ertrag.</li>
+            <li><strong>Eigenverbrauchsquote:</strong> Jede zusätzliche kWh Eigenverbrauch steigert die Rendite überproportional — ein Speicher kann den Eigenverbrauch von 30 % auf 60–70 % anheben.</li>
+            <li><strong>Strompreisentwicklung:</strong> Bei 3 % jährlicher Strompreissteigerung statt 2 % steigt der 25-Jahres-Gewinn um ca. 5.000–8.000 €.</li>
+            <li><strong>Anlagenpreis:</strong> Durch Angebotsvergleich lassen sich 15–30 % sparen — das verbessert die Rendite erheblich und verkürzt die Amortisationszeit um 1–2 Jahre.</li>
+          </ul>
+
+          <div class="cta-block">
+            <p>Wie hoch ist die Rendite für deine konkrete Situation? Mit unserem kostenlosen Rechner bekommst du in zwei Minuten eine individuelle Auswertung für deinen Standort, Verbrauch und deine Anlagengröße.</p>
+            <a href="/" class="article-cta">→ Jetzt Rendite kostenlos berechnen</a>
+            <br>
+            <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage"
+               target="_blank"
+               rel="noopener noreferrer sponsored"
+               onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})"
+               class="article-cta"
+               style="margin-top: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #fff;">
+              Deine persönliche Rendite berechnen →
+            </a>
+            <p class="affiliate-note" style="margin-top: 10px;">* Partnerlink — für dich kostenlos, wir erhalten ggf. eine Provision.</p>
+          </div>
+
+          <a href="/" class="back-to-calc">← Zurück zum PV-Speicher-Rechner</a>
+
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+
+        <div class="sidebar-cta">
+          <p>Rendite für deinen Haushalt berechnen — kostenlos & unverbindlich</p>
+          <a href="https://a.partner-versicherung.de/click.php?partner_id=199924&ad_id=15&deep=solaranlage"
+             target="_blank"
+             rel="noopener noreferrer sponsored"
+             onclick="if(window.gtag)gtag('event','affiliate_click',{affiliate:'tarifcheck',product:'solar_comparison',page:location.pathname})">
+            Angebote vergleichen *
+          </a>
+          <p class="affiliate-note" style="margin-top: 8px;">* Partnerlink</p>
+        </div>
+
+        <div class="sidebar-box">
+          <h3>Weitere Ratgeber</h3>
+          <ul>
+            <li><a href="/ratgeber/photovoltaik-kosten/">Was kostet eine Solaranlage 2026?</a></li>
+            <li><a href="/ratgeber/pv-rendite-berechnen/">Rendite einer Solaranlage berechnen</a></li>
+            <li><a href="/ratgeber/batteriespeicher-lohnt/">Lohnt sich ein Batteriespeicher?</a></li>
+            <li><a href="/ratgeber/eigenverbrauch-maximieren/">Eigenverbrauch maximieren</a></li>
+            <li><a href="/ratgeber/pv-foerderung/">Förderungen &amp; Steuervorteile</a></li>
+            <li><a href="/ratgeber/stromtarif-pv-anlage/">Den richtigen Stromtarif wählen</a></li>
+            <li><a href="/ratgeber/solaranlage-anbieter/">Anbieter vergleichen</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-box">
+          <h3>Schnell-Überblick</h3>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px; font-size: 0.85rem; color: var(--gray-700);">
+              <strong style="color: var(--primary-dark);">5–10 % p.a.</strong><br>
+              Typische PV-Rendite, steuerfrei
+            </li>
+            <li style="margin-bottom: 10px; font-size: 0.85rem; color: var(--gray-700);">
+              <strong style="color: var(--primary-dark);">8–12 Jahre</strong><br>
+              Amortisationszeit im Durchschnitt
+            </li>
+            <li style="margin-bottom: 10px; font-size: 0.85rem; color: var(--gray-700);">
+              <strong style="color: var(--primary-dark);">20 Jahre</strong><br>
+              Garantierte Einspeisevergütung
+            </li>
+            <li style="font-size: 0.85rem; color: var(--gray-700);">
+              <strong style="color: var(--primary-dark);">25–30 Jahre</strong><br>
+              Typische Anlagenlebensdauer
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/">Rechner</a>
+        <a href="/ratgeber/">Ratgeber</a>
+        <a href="/impressum/">Impressum</a>
+        <a href="/datenschutz/">Datenschutz</a>
+      </div>
+      <p>© 2026 PV-Speicher-Rechner.de — Alle Angaben ohne Gewähr. Keine Finanzberatung.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
