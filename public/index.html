@@ -123,6 +123,12 @@
 <!-- Google Analytics 4 (loaded after cookie consent) -->
 <script>window.gaConsent = false;</script>
 
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
 <style>
 /* RESET & BASIS */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
