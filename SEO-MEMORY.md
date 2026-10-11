@@ -10,20 +10,19 @@
 _Noch keine Daten — erster Lauf steht aus._
 
 ## Performance (GSC, letzte 28 Tage)
-Aktualisiert: 2026-04-12
+Aktualisiert: 2026-10-11
 
 ### Top Seiten
 | URL | Clicks | Impressions | CTR | Position |
 |-----|--------|-------------|-----|----------|
-| http://pv-speicher-rechner.de/ | 0 | 12 | 0.0% | 36.1 |
-| https://pv-speicher-rechner.de/ | 0 | 107 | 0.0% | 12.0 |
+| https://pv-speicher-rechner.de/ | 0 | 15 | 0.0% | 46.4 |
 
 ### Top Keywords
 | Keyword | Clicks | Impressions | Position |
 |---------|--------|-------------|----------|
-| berechnung pv anlage mit speicher | 0 | 1 | 91.0 |
-| ersatzteile bremen-ost -filetype:pdf -filetype:doc -filetype:docx -filetype:xls -filetype:xlsx -filetype:ppt -filetype:pptx -filetype:csv -filetype:zip -filetype:rar | 0 | 1 | 127.0 |
-| photovoltaik rechner mit speicher | 0 | 2 | 84.0 |
-| photovoltaik speicher förderung berechnen | 0 | 6 | 59.5 |
-| pv anlage mit speicher eigenverbrauch berechnen | 0 | 1 | 100.0 |
-| pv-rechner mit speicher | 0 | 1 | 74.0 |
+| energiespeicher rechner | 0 | 1 | 96.0 |
+| photovoltaik rechner mit speicher | 0 | 1 | 93.0 |
+| photovoltaik speicher berechnen | 0 | 1 | 92.0 |
+| photovoltaik-speicher wirtschaftlichkeitsrechner | 0 | 1 | 97.0 |
+| pv speicher berechnung | 0 | 1 | 89.0 |
+| solaranlage mit speicher kosten rechner | 0 | 1 | 87.0 |
