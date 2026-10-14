@@ -1,0 +1,65 @@
+# Webserver für pv-speicher-rechner.de auf Sliplane (Region Deutschland).
+# TLS beendet der Sliplane-Proxy; der Container spricht nur HTTP auf Port 8080.
+# Bildet das bisherige Vercel-Verhalten nach (vercel.json: Header; Vercel-Standard ohne cleanUrls/trailingSlash).
+{
+	admin off
+	auto_https off
+}
+
+# Sicherheits-Header wie bisher in vercel.json
+(sicherheit) {
+	header {
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://form.partner-versicherung.de; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-src https://form.partner-versicherung.de https://a.partner-versicherung.de; object-src 'none'; base-uri 'self'; form-action 'self'"
+		-Server
+	}
+}
+
+:8080 {
+	root * /srv
+	encode zstd gzip
+	import sicherheit
+
+	# Vercel lieferte alles mit diesem Cache-Header aus
+	header Cache-Control "public, max-age=0, must-revalidate"
+
+	# Inhaltstyp wie bisher bei Vercel
+	@xml path *.xml
+	header @xml Content-Type "application/xml"
+
+	# Weiterleitungen in fester Reihenfolge. Zuerst Pfade ablehnen, deren dekodierter Pfad
+	# Backslash, # oder ? enthält: Caddy setzt Regex-Gruppen unkodiert ins Location-Feld,
+	# aus /%5Cfremd.example/a würde sonst /\fremd.example/a (Browser: fremde Domain).
+	route {
+		@unzulaessig path_regexp [\\#?]
+		respond @unzulaessig 400
+
+		# www → Hauptdomain, Pfad und Query bleiben erhalten
+		@www host www.pv-speicher-rechner.de
+		redir @www https://pv-speicher-rechner.de{uri} 308
+
+		# Doppelte Schrägstriche zusammenfassen (wie Vercel). Matcher prüfen den bereinigten
+		# Pfad, {path} ist roh: Weiterleitungen setzen deshalb immer die bereinigten Gruppen ein,
+		# sonst entstünde aus //fremde-domain/a ein Sprung auf eine fremde Seite.
+		@doppelt {
+			expression {path}.contains("//")
+			path_regexp dop ^(.*)$
+		}
+		redir @doppelt {re.dop.1}{?query} 308
+	}
+
+	# Ordner ohne Schrägstrich leitet file_server per 308 auf den Pfad mit Schrägstrich um
+	# (Vercel lieferte beide Formen mit 200 aus; Sitemap und Canonicals nutzen den Schrägstrich)
+	file_server
+
+	# Nicht gefundene Seiten: eigene Seite gibt es nicht, kurzer Text mit Status 404 wie bei Vercel
+	handle_errors 404 {
+		import sicherheit
+		header Cache-Control "public, max-age=0, must-revalidate"
+		header Content-Type "text/plain; charset=utf-8"
+		respond "404: Diese Seite gibt es nicht." 404
+	}
+}

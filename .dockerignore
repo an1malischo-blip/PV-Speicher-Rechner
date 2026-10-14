@@ -1,0 +1,7 @@
+# Build-Kontext klein halten; der Dockerfile kopiert ohnehin nur public/
+.git
+.vercel
+.playwright-mcp
+node_modules
+.DS_Store
+**/.DS_Store
